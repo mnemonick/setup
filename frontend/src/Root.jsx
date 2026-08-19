@@ -319,7 +319,6 @@ export default function() {
             <section style={styles.section}>
               <seading style={styles.seading}>Клавиатура</seading>
 
-
               <content>
                 <p>
                   Клавиатура - Advantage Kinesis 2.
