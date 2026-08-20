@@ -89,6 +89,16 @@ export default function() {
     borderBottom: `1px solid ${colors.border.medium}`,
   };
 
+  styles.heading.content = {
+    left: layout.left,
+    width: layout.width,
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingLeft: 10,
+    paddingRight: 10,
+  };
+
   styles.content = {
     position: 'relative',
     left: layout.left,
@@ -195,7 +205,11 @@ export default function() {
     animationName: 'electron-h-reverse',
   };
 
-  const gridHeight = contentHeight || height - styles.heading.height;
+  styles.wrapper = {
+    position: 'relative', minHeight: '100%', paddingTop: desktop ? 40 : 20,
+  };
+
+  let grid_height = contentHeight || height - styles.heading.height;
 
   return (
     <root style={styles.root}>
@@ -210,41 +224,21 @@ export default function() {
       />
 
       <heading style={styles.heading}>
-        <content
-          style={{
-            left: layout.left,
-            width: layout.width,
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            paddingLeft: 10,
-            paddingRight: 10,
-          }}
-        >
+        <content style={styles.heading.content}>
           <name style={{fontSize: fonts.header}}>Egor Koshelko</name>
         </content>
       </heading>
 
       <viewport ref={viewportRef} style={styles.viewport}>
-        <wrapper
-          ref={wrapperRef} style={{
-          position: 'relative',
-          minHeight: '100%',
-          paddingTop: desktop ? 40 : 20,
-        }}
-        >
+        <wrapper ref={wrapperRef} style={styles.wrapper}>
           {desktop ? <grid-left style={styles.grid.left}>
             <GridElectrons
-              styles={styles.electrons}
-              width={layout.left}
-              height={gridHeight}
+              styles={styles.electrons} width={layout.left} height={grid_height}
             />
           </grid-left> : null}
           {desktop ? <grid-right style={styles.grid.right}>
             <GridElectrons
-              styles={styles.electrons}
-              width={layout.left}
-              height={gridHeight}
+              styles={styles.electrons} width={layout.left} height={grid_height}
             />
           </grid-right> : null}
 
@@ -316,15 +310,14 @@ export default function() {
               </content>
             </section>
 
-            <section style={styles.section}>
+            <section onClick={() => setModal('test')} style={styles.section}>
               <seading style={styles.seading}>Клавиатура</seading>
 
               <content>
                 <p>
                   Клавиатура - Advantage Kinesis 2.
-                  То насколько я обожаю эту клавиатуру словами не описать,
-                  намного
-                  удобнее чем обычные клавиатуры.
+                  В перспективе безусловно планирую перейти на последнюю модель, но пока что имеем что имеем.
+                  То насколько я обожаю эту клавиатуру словами не описать, намного удобнее чем обычные клавиатуры.
                   Логти раздвинуты и удобно нажимать горячие клавиши.
                 </p>
 
@@ -332,17 +325,13 @@ export default function() {
                   Обычные клавиатуры вообще не ориентированы на удобство.
                   Стрелочки, страница вверх вниз, модификаторы - вообще в жопа.
                   Так большой палец используется только для нажатия на пробел.
-                  Большими пальцами я могу нажать 12 клавишь (по 6 на каждый
-                  большой палец).
-                  И что самое важное это самые часто используемые клавиши -
-                  модификаторы, бэкспейс, делете и так далее.
-                  Так же стрелочки находятся нажимаются указательными пальцами и
-                  нет необходимости переноса руки во время навигации.
+                  Большими пальцами я могу нажать 12 клавишь (по 6 на каждый большой палец).
+                  И что самое важное это самые часто используемые клавиши - модификаторы, бэкспейс, делете и так далее.
+                  Так же стрелочки находятся нажимаются указательными пальцами и нет необходимости переноса руки во время навигации.
                 </p>
 
                 <p>
-                  На обычных клавиатурах на суперудобной позиции расположен
-                  капслок.
+                  На обычных клавиатурах на суперудобной позиции расположен капслок.
                   Просто без комментариев.
                 </p>
 
@@ -356,15 +345,14 @@ export default function() {
                   Во первых это фиксинги.
                   Так же виндовая клавиша унесена куда подальше.
                   Раскладка - дворак (на привыкание нужен примерно месяц).
-                  Первый месяц будет очень неудобно, я раньше даже не
+                  Первый месяц будет очень неудобно, я раньше даже не.
                   представлял насколько глубоко в мышцах находится печать.
-
                 </p>
               </content>
             </section>
 
             <section style={styles.section}>
-              <seading style={styles.seading}>Клавиатура</seading>
+              <seading style={styles.seading}>Мышка</seading>
 
               <p>
                 Мышка обязательно симметричная и с хватом.
@@ -658,7 +646,7 @@ export default function() {
             </section>
 
             <section style={styles.section}>
-              <seading style={styles.seading}>Клавиатура</seading>
+              <seading style={styles.seading}>Мышка</seading>
 
               <content style={{padding: desktop ? 20 : 10}}>
                 Тут есть однозначный виннер.
@@ -805,6 +793,8 @@ export default function() {
           </content>
         </wrapper>
       </viewport>
+
+      {typeof modal == 'string' ? <Modal onClose={() => setModal(null)}>{images.photo}</Modal> : null}
     </root>
   );
 }
