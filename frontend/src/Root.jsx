@@ -231,14 +231,21 @@ export default function() {
 
       <viewport ref={viewportRef} style={styles.viewport}>
         <wrapper ref={wrapperRef} style={styles.wrapper}>
-          {desktop ? <grid-left style={styles.grid.left}>
-            <GridElectrons
-              styles={styles.electrons} width={layout.left} height={grid_height}
-            />
-          </grid-left> : null}
+          {
+            desktop ?
+            <grid-left style={styles.grid.left}>
+              <GridElectrons
+                styles={styles.electrons}
+                width={layout.left}
+                height={grid_height}
+              />
+            </grid-left> : null
+          }
           {desktop ? <grid-right style={styles.grid.right}>
             <GridElectrons
-              styles={styles.electrons} width={layout.left} height={grid_height}
+              styles={styles.electrons}
+              width={layout.left}
+              height={grid_height}
             />
           </grid-right> : null}
 
@@ -794,7 +801,9 @@ export default function() {
         </wrapper>
       </viewport>
 
-      {typeof modal == 'string' ? <Modal onClose={() => setModal(null)}>{images.photo}</Modal> : null}
+      {typeof modal == 'string' ? <Modal
+        onClose={() => setModal(null)}
+      >{images.photo}</Modal> : null}
     </root>
   );
 }
