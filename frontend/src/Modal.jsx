@@ -1,15 +1,10 @@
 import {ReactNode, useEffect} from "react";
 import colors from "@/utils/colors";
-import {Styles} from "@/types/Styles";
 import useLayoutSize from "@/hooks/useLayoutSize";
 
-interface ModalProps {
-  children: ReactNode;
-  onClose: (() => void);
-}
 
-export default function (props: ModalProps) {
-  const styles: Styles = {};
+export default function (props) {
+  const styles = {};
   const content = useLayoutSize();
 
   styles.backdrop = {
@@ -47,13 +42,13 @@ export default function (props: ModalProps) {
     </backdrop>
   );
 
-  function onKeyDown(event: KeyboardEvent) {
+  function onKeyDown(event) {
     if (event.key === 'Escape') {
       props.onClose();
     }
   }
 
-  function onClose(event: MouseEvent) {
+  function onClose(event) {
     if (event.target === event.currentTarget) {
       props.onClose();
     }

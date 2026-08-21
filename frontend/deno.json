@@ -1,6 +1,7 @@
 {
   "nodeModulesDir": "auto",
   "imports": {
+    "@biomejs/biome": "npm:@biomejs/biome@^2.5.9",
     "react": "npm:react@^19.2.8",
     "react-dom": "npm:react-dom@^19.2.8",
     "vite": "npm:vite@8.2.1"
