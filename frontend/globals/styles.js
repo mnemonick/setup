@@ -31,7 +31,6 @@ style.textContent = `
   
   a {
   	color: #449cf8; 
-    border-bottom: 1px solid ${colors.link.underscore}; 
     text-decoration: none;
 		position: relative;
 		padding-bottom: 1px;
@@ -42,32 +41,15 @@ style.textContent = `
     cursor: pointer;
 	}
 	
-	code {
-    display: inline !important;
+  a {
     font-family: Play;
     border-radius: 5px;
     padding: 0px 4px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     letter-spacing: 1px;
-  }
-	
-  a::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 1px;
-		background-color: ${colors.link.text};
-		transform: scaleX(0);
-		transform-origin: left;
-		transition: transform 0.2s linear;;
+    color: ${colors.link.text};
 	}
 
-	a:hover::after {
-  	transform: scaleX(1);
-	}
-	
 	:not(html):not(head):not(script):not(style):not(b):not(span):not(i):not(a):not(em):not(strong):not(del):not(li):not(table):not(thead):not(tr):not(td):not(th):not(tbody) { 
     display: block; 
   }
