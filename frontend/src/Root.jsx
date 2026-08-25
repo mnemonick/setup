@@ -111,7 +111,7 @@ export default function () {
 		paddingBottom: 100,
 	};
 
-	styles.seading = {
+	styles.topper = {
 		height: 60,
 		fontSize: fonts.header,
 		color: colors.text.strong,
@@ -133,6 +133,10 @@ export default function () {
 		lineHeight: "21px",
 		background: colors.section,
 	};
+
+  styles.section.content = {
+    padding: desktop ? 20 : 10
+  };
 
 	styles.viewport = {
 		overflow: "auto",
@@ -222,9 +226,19 @@ export default function () {
 		paddingTop: desktop ? 40 : 20,
 	};
 
+  styles.clickable = {
+    display: 'inline',
+    borderBottom: `1px dotted ${colors.text.weak}`,
+    position: 'relative',
+    textDecoration: 'none',
+    paddingBottom: 1
+  };
+
 	let grid_height = contentHeight || height - styles.heading.height;
 
-	return (
+  let content = {padding: desktop ? 20 : 10 };
+
+  return (
 		<root style={styles.root}>
 			<border-top
 				style={{
@@ -265,9 +279,9 @@ export default function () {
 
 					<content style={styles.content}>
 						<section style={{ ...styles.section, marginTop: 0 }}>
-							<seading style={styles.seading}>Введение</seading>
+							<topper style={styles.topper}>Введение</topper>
 
-							<content style={{ padding: desktop ? 20 : 10 }}>
+							<content style={styles.section.content}>
 								<p>
                   В детстве я как и все играл в компьютерные игры, и за собой заметил, что мне даже больше нравилось не сам процесс игры, а настройка настраивать чем собственно играть.
 								</p>
@@ -295,9 +309,9 @@ export default function () {
 						</section>
 
             <section style={styles.section}>
-							<seading style={styles.seading}>Стол</seading>
+							<topper style={styles.topper}>Стол</topper>
 
-							<content style={{ padding: desktop ? 20 : 10 }}>
+							<content style={styles.section.content}>
 								<p>
                   Самое главное - это <b>угловой</b> рабочий стол.
                   И у этого есть два главных преимущества:
@@ -319,105 +333,107 @@ export default function () {
                   Нормальных угловых столов по приемлимой цене я не нашел, поэтому купил два стола из IKEA (запрещенная в РФ органзиация) и соединил их снизу пластинами.
 								</p>
                 <p>
-                  Недостатком такого подхода я бы назвал то постоянно мешает ножка стола, но я к ней уже привык.
+                  Снизу что бы столы были строго на одном уровне и не разъезжались я скрепил их <clickable style={styles.clickable}>пластинами</clickable>.
+                </p>
+                <p>
+                  Самый главный недостаток в том что снизу постоянно мешает <clickable style={styles.clickable}>ножка стола</clickable>, но я к ней уже привык.
                 </p>
 							</content>
 						</section>
 
             <section style={styles.section}>
-              <seading style={styles.seading}>Мониторы</seading>
+              <topper style={styles.topper}>Мониторы</topper>
 
-              <content style={{ padding: desktop ? 20 : 10 }}>
+              <content style={styles.section.content}>
                 <p>
-                  При этом нету вообще необходимости в том, что бы запускать несколько приложений рядом друг с другом.
-                  Это всегда один монитор - одно приложение.
-                </p>
-                <p>
-                  Не менее важно 5 мониторов.
-                  Все мониторы соединены липкой лентой, что бы не было зазоров.
-                  Все мониторы на кроштейнах.
-                  Все фокусируются на процессоре, памяти видеокарте, но по факту мощное железо нужно для игр, рендеринга и других специфичных задач.
-                  Один монитор основной, и 4 дополнительных, все четыре монитора вертикальные. Диоганаль - 28 дюймов.
+                  Для меня важно что бы у меня было много пространства для приложений.
+                  Поэтому я использую 5 мониторов, один основной (горизонтальный, 222 дюйма) и 4 дополнительных (вертикальных, 222 дюйма).
+                  Сейчас найти маленькие мониторы проблематично, все гонятся за большими.
+                  Но по факту даже на вертикальных мониторах ширина составляет 1368 пикселей, а это самое популярная ширина на ноутбуках.
+                  Так что ширины более чем хватает для большинства приложений (игры и специфичный софт не учитываем).
                 </p>
 
                 <p>
-                  По факту сейчас вертикальное пространство важнее горизонтального.
-                  Сами посудите, все социальные сети вертикальные, разработка в браузере сверху приложение, снизу дебаггер, терминалу так же вертикальное пространство нужнее.
-                  Горизонтальное пространство нужно для кода, просмотр фильмов фото и игр.
+                  Мониторы скреплены <clickable style={styles.clickable}>супер-клеем с дверными петялми</clickable>, что бы не было зазоров.
+                  Все мониторы на кронштейнах.
                 </p>
 
                 <p>
-                  Рекомендую зафиксировать определенную позицию за каждым приложением, так удобнее сразу знать куда смотреть.
+                  Каждое приложение у меня закрепляется за своим собственным монитором.
+
                   <ul>
-                    <li>Слева-слева терминал.</li>
-                    <li>Слева браузер и Chrome Dev Tools.</li>
-                    <li>Обычно у меня на основном открыта IDE .</li>
-                    <li>Справа ИИ.</li>
-                    <li>Справа-справа все мессенджеры (почта, тг, вотсап...).</li>
+                    <li>Слева-слева: терминал.</li>
+                    <li>Слева: браузер (для разработки) с открытым Chrome Dev Tools.</li>
+                    <li>Центр: Основной монитор IDE (или любое другое временное приложение).</li>
+                    <li>Справа: ИИ.</li>
+                    <li>Справа-справа: все мессенджеры (почта, тг, вотсап...).</li>
                   </ul>
                 </p>
 
                 <p>
-                  Я по дурости сначала купил видеокарту на 8 мониторов, расположил их друг на другом, но в реальности смотреть вверх <b>крайне</b> не удобно.
-                  В идеале верхняя граница монитора должна находится на уровне глаз.
-                  Думал что чем больше, тем лучше, но все таки расклад с 5 мониторами - это самый максимум, которым удобно пользоваться.
+                  Больше 5 монторов это уже не практично.
+                  Если их ставить по бокам, то они будут слишком далеко а ставить мониторы в два ряда это крайне плохая затея (смотреть вверх крайне не удобно физиологически).
                 </p>
               </content>
             </section>
 
             <section onClick={() => setModal("test")} style={styles.section}>
-              <seading style={styles.seading}>Клавиатура</seading>
+              <topper style={styles.topper}>Клавиатура</topper>
 
-              <content style={{ padding: desktop ? 20 : 10 }}>
+              <content style={styles.section.content}>
                 <p>
-                  О клавиатуре я очень много могу сказать, поэтому я вынес ее в отдельный блок.
-                </p>
-
-                <p>
-                  Клавиатура - Advantage Kinesis 2.
+                  Клавиатура - <a>Advantage Kinesis 2</a>.
                   Именно этом модель, а не последняя, потому что функциональные клавиши нажимаются без модификатора).
-                </p>
-
-                <p>
                   То насколько я обожаю эту клавиатуру словами не описать, намного удобнее чем обычные клавиатуры. Логти раздвинуты и удобно нажимать горячие клавиши.
                 </p>
 
                 <p>
-                  Обычные клавиатуры вообще не ориентированы на удобство.
-                  Стрелочки, страница вверх вниз, модификаторы - вообще в жопа.
-                  Так большой палец используется только для нажатия на пробел.
+                  <b>Удобное расположение модификаторов.</b>
                   Большими пальцами я могу нажать 12 клавишь (по 6 на каждый большой палец).
-                  И что самое важное это самые часто используемые клавиши - модификаторы, бэкспейс, делете и так далее.
-                  Так же стрелочки находятся нажимаются указательными пальцами и нет необходимости переноса руки во время навигации.
-                  Благодаря этой клавиатуре никакой Vim не нужен.
+                  И что самое важное это самые часто используемые клавиши: <code>PAGE_UP</code> <code>PAGE_DOWN</code> <code>BACKSPACE</code> <code>DELETE</code> <code>HOME</code> <code>END</code> <code>SPACE</code> <code>ENTER</code> <code>ALT</code> <code>CTRL</code> <code>ALT+SHIFT</code> <code>ALT+CTRL</code> <code>ALT+SHIFT+CTRL</code>.
+                  Последние три я через AHK скрипт сделал так, что нужно нажимать только одну клавишу.
+                  На обычных клавиатурах большим пальцем можно нажимать только на пробел, модификаторы нажимаются мизицем
                 </p>
 
                 <p>
-                  На обычных клавиатурах на суперудобной позиции расположен капслок. Просто без комментариев.
-                </p>
-                <p>
-                  Раскладка Dvorak -
-                </p>
-
-                <p>
-                  Безусловно клавиатура стоит дорого, но уровню важности она у меня на втором месте после мониторов.
+                  <b>Удобное расположение стрелочек.</b>
+                  Так же стрелочки нажимаются указательным и средним пальцем без переноса руки.
+                  Для навигации на обычных клавиатурах нужно двигать кисть.
                 </p>
 
                 <p>
-                  На этой клавиатуре настроены определенные макросы.
-                  Во первых это фиксинги.
-                  Так же виндовая клавиша унесена куда подальше.
-                  Раскладка - дворак (на привыкание нужен примерно месяц).
-                  Первый месяц будет очень неудобно, я раньше даже не.
-                  представлял насколько глубоко в мышцах находится печать.
+                  <b>Удобная позиция для логтей.</b>
+                  Логти разведены дальше, в совокупности с угловым столом это очень удобная позиция.
+                </p>
+
+                <p>
+                  <b>Vim не нужен.</b>
+                  Стрелочки нажимаются без смещения, модификаторы нажимаются большим пальцем, переносить при печати кисть вообще никуда не нужно.
+                </p>
+
+                <p>
+                  <b>Стоимость.</b>
+                  Безусловно клавиатура стоит дорого (455), но уровню важности она у меня на втором месте после мониторов.
+                  Я пользуюсь этой клавиатурой уже 10 лет, и ни разу она у меня не ломалась.
+                </p>
+
+                <p>
+                  Почему-то эта клавиатура позиционируется в основном как защита от тунельного синдрома.
+                  Как по мне она должна позиционироваться как клавиатура для гиков.
+                </p>
+
+                <p>
+                  К этой клавиатуре необходимо привыкнуть, у меня это заняло примерно пару месяцев.
+                  Первое время было очень не удобно, но оно того стоило.
+                  Для игр необходимо переопределять WASD на ESDF.
                 </p>
               </content>
             </section>
 
             <section style={styles.section}>
-              <seading style={styles.seading}>Мышка</seading>
+              <topper style={styles.topper}>Мышка</topper>
 
-              <content style={{padding: desktop ? 20 : 10}}>
+              <content style={styles.section.content}>
                 <p>
                   Мышка обязательно симметричная и с хватом. Я вообще не понимаю как можно пользоваться мышкой, на которой ладонь лежит полностью.
                   В этом случае точность наведения страдает очень сильно, суть в том что можно ладонью упереться и пальцами, довести до нужно элемента, а когда вся ладонь на мышке, то доводить нужно кистью, которая намного менее точная.
@@ -428,35 +444,33 @@ export default function () {
             </section>
 
             <section style={styles.section}>
-              <seading style={styles.seading}>Стул</seading>
+              <topper style={styles.topper}>Стул</topper>
 
-              <content style={{padding: desktop ? 20 : 10}}>
+              <content style={styles.section.content}>
                 <p>
-                  Пробовал распиаренный Heller Miller который стоит как самолет, но у него минимальная высота 50см, а мне нужно именно 40 см.
+                  Пробовал распиаренный <a href="google.ru">Heller Miller</a> который стоит как самолет, но у него минимальная высота 50см, а мне нужно именно 40 см.
                   При этом если убрать ножки то можно сидеть в позе наездника, что на Heller Miller очень неудобно.
                 </p>
               </content>
             </section>
 
             <section style={styles.section}>
-              <seading style={styles.seading}>Очки</seading>
+              <topper style={styles.topper}>Очки</topper>
 
-              <content style={{padding: desktop ? 20 : 10}}>
+              <content style={styles.section.content}>
                 <p>
-                  У меня со зрением все хорошо, читаю вывески нормально,  но в очках <b>намного удобнее</b>.
-                  Я конечно не врач, но если вы хотите прокачать свое рабочее место, но уделите внимание очкам <b>даже если</b> на зрение не жалуетесь.
+                  У меня со зрением все хорошо, читаю вывески на улице нормально, но в очках <b>заметно удобнее</b>.
+                  Я конечно не врач, но если вы хотите прокачать свое рабочее место, то уделите внимание очкам <b>даже если</b> на зрение не жалуетесь.
                   Я то же на зрение не жалуюсь совсем, но не смотря на это очки добавляют четкости.
-                </p>
-                <p>
                   Даже если вы думаете что у вас зрение хорошее, просто пойдите и провертесь.
                 </p>
               </content>
             </section>
 
             <section style={styles.section}>
-              <seading style={styles.seading}>Железо</seading>
+              <topper style={styles.topper}>Железо</topper>
 
-              <content style={{padding: desktop ? 20 : 10}}>
+              <content style={styles.section.content}>
                 <p>
                   Я намеренно указываю железо в самом конце секции, потому что очень редко железо это бутылочное горлышко.
                 </p>
@@ -474,37 +488,109 @@ export default function () {
             </separator>
 
 						<section style={styles.section}>
-							<seading style={styles.seading}>Операционная система</seading>
+							<topper style={styles.topper}>Операционная система</topper>
 
-							<content style={{ padding: desktop ? 20 : 10 }}>
-								<p>Тут у нас на выбор есть Windows, MacOS, Ubuntu и FreeBSD.</p>
+							<content style={styles.section.content}>
+								<p>Тут у нас на выбор есть <code>Windows</code>, <code>MacOS</code>, <code>Ubuntu</code> и <code>FreeBSD</code>.</p>
 
 								<p>
-									Вы бы могли подумать, что раз я такой техно-гик, то у меня стоит Ubuntu.
-                  Но не тут то было, я абсолютный фанат винды на десктопе и считаю что ни макось ни убунта даже близко не сравняться с виндой по удобству.
+									Вы бы могли подумать, что раз я такой техно-гик, то у меня какой-нибудь линукс, но это совершенно не так.
+                  Я абсолютный фанат винды на десктопе и считаю что ни MacOS ни Ubunu даже близко не сравняться с виндой по удобству.
 								</p>
 								<p>
 									На маке во неудобная система управления окнами, неудобные горячие клавиши.
 								</p>
-								<p>
-									Я конечно считаю, что FreeBSD лучше линукса, но я не настолько мазохист что бы ставить его себе на десктоп.
+                <p>
+									Я очень активно на винде использую AutoHotkey, его аналогов нету ни на MacOS ни на Ubuntu.
+                  Одного этого для меня уже достаточно, что бы не смотреть в их сторону.
 								</p>
 								<p>
-									Самое главное преимущество винды в системе управлениями окнами.
+									FreeBSD по моему мнению намного круче линукса, но я не настолько мазохист что бы ставить его себе на десктоп.
 								</p>
 								<p>
-									На винде так же я могу использовать рабочие пространства отдельные что бы открыть много браузеров.
-                  Сейчас разрабатываю приложение, где много юзеров взаимодействуют друг с другом.
-									Удобно весь этот сетап держать на отдельном рабочем пространстве.
+									Я считаю что самое в операционной это система управлениями окнами.
+                  В винде это реализоно лучше всего.
 								</p>
+
+                <p>
+                  Настройка винды у меня происходит в три этапа.
+                  <ul>
+                    <li>
+                      <clickable style={styles.clickable}>Удаление бойлерплейта</clickable>
+                      {/*<ul>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.Teams</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.WindowsFeedbackHub</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.Copilot</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.MicrosoftEdge.Stable</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.XboxSpeechToTextOverlay</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.WebMediaExtensions</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.BingNews</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.BingSearch</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.MicrosoftSolitaireCollection</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.MicrosoftStickyNotes</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.OutlookForWindows</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.StartExperiencesApp</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.Windows.Photos</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.Xbox.TCUI</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.XboxGamingOverlay</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.GamingApp</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.XboxIdentityProvider</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.GetHelp</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.Todos</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.PowerAutomateDesktop</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.Windows.DevHome</li>*/}
+                      {/*  <li>winget uninstall -e --id MicrosoftCorporationII.MicrosoftFamily</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.YourPhone</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.ZuneMusic</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.BingWeather</li>*/}
+                      {/*  <li>winget uninstall -e --id Clipchamp.Clipchamp</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.WindowsAlarms</li>*/}
+                      {/*  <li>winget uninstall -e --id Microsoft.WidgetsPlatformRuntime</li>*/}
+                      {/*  <li>winget uninstall -e --id MicrosoftWindows.Client.WebExperience</li>*/}
+                      {/*  <li>winget uninstall -e --id MicrosoftWindows.CrossDevice</li>*/}
+                      {/*</ul>*/}
+                    </li>
+
+                    <li>
+                      <clickable style={styles.clickable}>Отключение компонентов</clickable>
+                      {/*<ul>*/}
+                      {/*  <li>'Disable-WindowsOptionalFeature -Online -FeatureName WorkFolders-Client -NoRestart': 'отключить синхронизацию файлов',</li>*/}
+                      {/*  <li>'Disable-WindowsOptionalFeature -Online -FeatureName WCF-Services45 -NoRestart': 'отключить старый .NET',</li>*/}
+                      {/*  <li>'Disable-WindowsOptionalFeature -Online -FeatureName WCF-TCP-PortSharing45 -NoRestart': 'отключить функционал для порт-шейринга',</li>*/}
+                      {/*  <li>'Disable-WindowsOptionalFeature -Online -FeatureName MediaPlayback -NoRestart': 'отключить медиа компоненты',</li>*/}
+                      {/*  <li>'Disable-WindowsOptionalFeature -Online -FeatureName WindowsMediaPlayer -NoRestart': 'отключить старый медиа-плеер',</li>*/}
+                      {/*  <li>'Disable-WindowsOptionalFeature -Online -FeatureName Printing-Foundation-InternetPrinting-Client -NoRestart': 'отключить функционал удаленные принтеров'</li>*/}
+                      {/*</ul>*/}
+                    </li>
+
+                    <li>
+                      <clickable style={styles.clickable}>Обычные настройки</clickable>
+                      {/*<ul>*/}
+                      {/*  <li>powercfg /change monitor-timeout-ac 0',</li>*/}
+                      {/*  <li>powercfg /change monitor-timeout-dc 0',</li>*/}
+                      {/*  <li>powercfg /change standby-timeout-ac 0',</li>*/}
+                      {/*  <li>powercfg /change standby-timeout-dc 0'</li>*/}
+                      {/*</ul>*/}
+                    </li>
+                  </ul>
+                </p>
+
+                <p>
+                  На винде (как собственно и на всех операционных системах) абсолютный кавардак с установкой приложений.
+
+                  У меня алгоритм по выбору приложения следующий.
+                  Все приложения я стараюсь ставить либо через winget, либо (если это часто используемое браузерное приложение) - создаю PWA (либо ярлык, если вебсайт не поддерживает PWA).
+                  WindowsStore стараюсь не использовать вообще.
+                  Редко используемые вебсайт открываю через браузер.
+                </p>
 							</content>
 						</section>
 
 						<section style={styles.section}>
-							<seading style={styles.seading}>Autohotkey</seading>
-							<content style={{ padding: desktop ? 20 : 10 }}>
+							<topper style={styles.topper}>Autohotkey</topper>
+							<content style={styles.section.content}>
 								<p>
-                  Вообще AutoHotkey - супер клевый инструмент, для того что "пропатчить" ось.
+                  Вообще <a href="https://autohotkey.com">AutoHotkey</a> - супер клевый инструмент, для того что "пропатчить" ось.
                   Как по мне весь функционал, который выполняет AutoHotkey должен быть встроен в ось, но по какой-то причине эту работу нужно делать самому.
 									Тут я перечисляю тот функционал который по факту должен быть встроен в ось, но его всякими обходными путям и хаками нужно встраивать.
 								</p>
@@ -514,15 +600,12 @@ export default function () {
 
                   Клавиши сначала клавиатурой ремаплю на F13, F14, F15.
                   И того у меня есть шесть модификаторов:
-
-                  <ul>
-                    <li>Alt</li>
-                    <li>Ctrl</li>
-                    <li>Alt-Shift</li>
-                    <li>Ctrl-Shift</li>
-                    <li>Alt-Ctrl</li>
-                    <li>Alt-Shift-Ctrl</li>
-                  </ul>
+                  <code>Alt</code>
+                  <code>Ctrl</code>
+                  <code>Alt-Shift</code>
+                  <code>Ctrl-Shift</code>
+                  <code>Alt-Ctrl</code>
+                  <code>Alt-Shift-Ctrl</code>.
                 </p>
 
                 <p>
@@ -542,7 +625,7 @@ export default function () {
 
                 <p>
                   <b style={{marginRight: 5}}>Колесико.</b>
-                  Действия колесико влево, колесико вправо - это копирование и вставка.
+                  Действия колесико влево - копирование, колесико вправо - вставка, нажатие на колисико - Enter.
                 </p>
 
                 <p>
@@ -574,24 +657,23 @@ export default function () {
                     <li>Метаданные - скришот со скроллингом</li>
                   </ul>
                 </p>
-
 							</content>
 						</section>
 
             <section style={styles.section}>
-              <seading style={styles.seading}>Браузер</seading>
+              <topper style={styles.topper}>Браузер</topper>
 
-              <content style={{ padding: desktop ? 20 : 10 }}>
+              <content style={styles.section.content}>
                 <p>
-                  Тут я рассматривал Chrome, Firefox, Microsoft Edge.</p>
-
-                <p>
-                  По большому счету я стараюсь пользоваться только десктопными приложениями.
+                  Тут был выбор между Chrome / Firefox
+                  Тут я по большому счету аналогов Chrome я не вижу.
+                  У Firefox - мне не нравится дизайн.
+                  Opera - все те функции, которые у них есть добавлены, я ими не пользуюсь.
+                  Я бы на их месте концентрировался на том что бы дать сделать удобные жесты и горячие клавиши.
                 </p>
 
                 <p>
-                  Алгоритм такой: winget, PWA, ярлык, Store.
-                  Я запускаю браузер, только для вебсайтов, которые нужно побыстрому запустить и закрыть, если я часто пользуюсь веб-сайтом, я делаю из него десктопное приложение.
+                  По большому счету я стараюсь пользоваться только десктопными приложениями.
                 </p>
 
                 <p>
@@ -613,63 +695,44 @@ export default function () {
                 <p>Хром - для браузинга.</p>
                 <p>Вот куча плагинов для работы в хроме.</p>
                 <p>Хромиум - для разработки. В нем нет плагинов.</p>
+
+                <p>
+                  Мне не нравится сама концепция браузера, то что это в каком-то смысле вложенная платформа.
+                  Ось это уже платформа для приложений, а браузер это вложенная платформа.
+                  Ну исторически так сложилось.
+                  Поэтому я из вебсайтов, которыми часто пользуюсь создаю десктопные приложения.
+                  В этом случае не отображается урл бар и вкладки, и так же любой вебсайт может запускаться через селектор.
+                </p>
+
+                <p>
+                  Вот список сайтов, из которых созданы десктопные приложения (некоторым из них назначены клавиатурные жесты):
+                  <ul>
+                    <li>ip.ru</li>
+                  </ul>
+                </p>
               </content>
             </section>
 
             <section style={styles.section}>
-              <seading style={styles.seading}>Редактор</seading>
-
-              <content style={{ padding: desktop ? 20 : 10 }}>
-                <p>Тут есть Zed, WebStrom, Cursor</p>
-
-                <p>
-                  В итогде я использую вебштом для ежедневной работы, а курсор
-                  только как ИИ.
-                </p>
-
-                <p>Стандартные плагины не работают совершенно.</p>
-
-                <p>
-                  Тут я настроил абсолютно все действия под себя.
-                  Полностью отключил те горячие клавиши которые не использую.
-                </p>
-
-                <p>
-                  Можно было бы подумать, что я бы включил Vim плагин, но нет.
-                  На практике переключение режимов имеет смысл когда нужно единожды режим переключить и потом 200-300 символов ты работаешь в одном режиме (как при печати текста).
-                  Но в процессе написания кода необходимо переключаться между режимами каждые 20-30 символов, в итогде это больше раздражает чем помогает.
-                  Плюс к этому у меня клавиатура на которой стрелочки и модификаторы очень удобно нажимать, так что от вима я отказался.
-                </p>
-
-                <p>
-                  <b>Шрифт.</b>
-                  Hack - вне конкуренции для программирования, при этом размер линий 1.
-                  Благодаря этому на экране помещается на 30% больше линий кода.
-                </p>
-
-                <p>
-                  Все горячие клавиши убраны и заменены на свои собственные.
-                  Vim режим - не ставился.
-                  Ненавижу вим.
-                  При этом добавляется еще один режим.
-                  Вот список в JSON формате.
-                </p>
-              </content>
-            </section>
-
-            <section>
-              <seading>ИИ модель</seading>
-              <content style={{ padding: desktop ? 20 : 10 }}>
+              <topper style={styles.topper}>ИИ</topper>
+              <content style={styles.section.content}>
                 <p>Я смотрел на то насколько близко модель реализует это демо-приложение.</p>
                 <p>Лучшей опцией оказался Сlaude, так же у Claude есть особый фокус на программирование.</p>
                 <p>Cursor - это надмозг, по сути он выбирает модель за тебя, мне такой подход не нравится.</p>
+                <p>
+                  Так же я время от времени запускаю локально модели через LM Studio и Ollama.
+                  Но все же основная модель это Claude.
+                </p>
+                <p>
+                  Вот список MCP серверов, которые я подключаю.
+                </p>
               </content>
             </section>
 
             <section style={styles.section}>
-              <seading style={styles.seading}>Файловый менеджер</seading>
+              <topper style={styles.topper}>Файловый менеджер</topper>
 
-              <content style={{ padding: desktop ? 20 : 10 }}>
+              <content style={styles.section.content}>
                 <p>Тут есть Far, Files, Yazi, TotalCommande.</p>
 
                 <p>
@@ -684,60 +747,82 @@ export default function () {
 
                 <p>
                   Кстати это идея для ребят из JetBrains - запилите файловый менеджер как IDE.
+                  Рынок для этой софтины шире как по мне, потому что продукт нацелен не только на разработчиков, но и на обычных юзеров.
                   Сейчас явно в этой нише можно сделать продукт, который на голову лучше чем TotalCommander.
                 </p>
               </content>
             </section>
 
 						<section style={styles.section}>
-							<seading>Менеджер паролей</seading>
+							<topper style={styles.topper}>Менеджер паролей</topper>
 
-							<content style={{ padding: desktop ? 20 : 10 }}>
+							<content style={styles.section.content}>
+								<p>
+                  Входить везде через google.
+                </p>
 								<p>Тут ван пассворд вне конкуренции</p>
+								<p>Можно хранить коды для двухфакторной аутентификации (чего нету в google).</p>
+								<p>Можно хранить коды для двухфакторной аутентификации (чего нету в google).</p>
+							</content>
+						</section>
+
+            <section style={styles.section}>
+							<topper style={styles.topper}>Скриншоты</topper>
+
+							<content style={styles.section.content}>
+								<p>
+                  Тут безоговорочный лидер это ShareX.
+                </p>
+								<p>
+                  Дополнительно в ahk добавлены горячие клавиши.
+                </p>
 							</content>
 						</section>
 
 						<section style={styles.section}>
-							<seading>Терминал</seading>
+							<topper style={styles.topper}>Терминал</topper>
 
-							<p>Либо стандартный виндовый, warp, WezTerm</p>
+              <content style={styles.section.content}>
+                <p>Либо стандартный виндовый, warp, WezTerm, kitty</p>
 
-							<p>
-                По большому счету мое взаимодействие на 80% состоит из двух действий:
+                <p>
+                  По большому счету мое взаимодействие на 80% состоит из двух действий:
 
-                <ul>
-                  <li>Поиск по истории</li>
-                  <li>Копирование аутпута</li>
-                </ul>
+                  <ul>
+                    <li>Поиск по истории</li>
+                    <li>Копирование аутпута</li>
+                  </ul>
 
-                Оба этих действия в Warp работают значительно удобнее.
-                Вот сравните как выглядит типичный аутпут
-							</p>
+                  Оба этих действия в Warp работают значительно удобнее.
+                  Вот сравните как выглядит типичный аутпут в обычном терминале и в варпе.
+                </p>
 
-              <p>
-                При этом на кой-то черт в него запили ИИ (сейчас его пилят куда не поподя), дерево проектов.
-                Если бы весь этот функционал убрать, и сделать варп более минималистичным, было бы лучше.
-                Я вообще фанат минималистичность, но все же функциональность важнее.
-              </p>
+                <p>
+                  При этом на кой-то черт в него запили ИИ (сейчас его пилят куда не поподя), дерево проектов.
+                  Если бы весь этот функционал убрать, и сделать варп более минималистичным, было бы лучше.
+                  Я вообще фанат минималистичность, но все же функциональность важнее.
+                </p>
+              </content>
 						</section>
 
 						<section style={styles.section}>
-							<seading>Поиск файлов</seading>
+							<topper style={styles.topper}>Локальный поисковик</topper>
+              <content style={styles.section.content}>
+                <p>Тут либо <a href="voidtools.com">Everything</a>, либо <a href="omnisearch.ai">Omnisearch</a></p>
 
-							<p>Тут либо Everything, либо omnisearch</p>
-
-							<p>
-								Omni хоть и выглядит посовременнее, обычно тот софт который появился позже тот лучше.
-                Но после ввода в поиск не работают стрелочки (стрелочки карл!) это же настолько очевидный функционал.
-                Сразу после установки удалил это гавно.
-							</p>
+                <p>
+                  Omni хоть и выглядит посовременнее, обычно тот софт который появился позже тот лучше.
+                  Но после ввода в поиск не работают стрелочки (стрелочки карл!) это же настолько очевидный функционал.
+                  Сразу после установки удалил это гавно.
+                </p>
+              </content>
 						</section>
 
 						<section style={styles.section}>
-							<seading style={styles.seading}>Текстовый редактор</seading>
+							<topper style={styles.topper}>Текстовый редактор</topper>
 
-							<content style={{ padding: desktop ? 20 : 10 }}>
-								Тут я выбирал между Cursor, WebStorm, Zed - тут явный фаворит это WebStorm.
+							<content style={styles.section.content}>
+								Тут я выбирал между <a href="">Cursor</a>, <a href="">WebStorm</a>, <a href="">Zed</a> - тут явный фаворит это WebStorm.
 
                 <p>
                   В вебшторме <b>очень</b> много того функционала которым я пользуюсь на ежедневной основе:
@@ -748,6 +833,7 @@ export default function () {
                     <li>Предпросмотр файла в дереве</li>
                     <li>Скоупы (я помечаю разными цветами Frontend и Backend файлы)</li>
                     <li>Вкладки при поиске</li>
+                    <li>Quicklists: LocalHistory, Git, Github</li>
                     <li>И еще  <b>очень много</b> других мелочей.</li>
                   </ul>
                 </p>
@@ -777,77 +863,69 @@ export default function () {
 								</ul>
 
                 <p>
-                  При этом мне в вебшторме очень не хватает функционала
+                  При этом мне в вебшторме очень не хватает функционала.
                 </p>
-							</content>
-						</section>
 
-						<section style={styles.section}>
-							<seading style={styles.seading}>ИИ модель</seading>
-
-							<content style={{ padding: desktop ? 20 : 10 }}>
                 <p>
-
+                  Вот мой конфиг, можете заимпортировать
                 </p>
-								Я проанализировал все ИИ модели следующим образом - я сначала написал небольшой тестовый проект полностью сам.
-                И потом попросил все возможные ИИ в максимальной конфигурации написать точно такой же проект.
-                После этого я выбрал ту, код которой мне понравился больше всех.
-								При использовании ИИ модели ее можно использовать либо через официальный гуи либо через курсор либо через WebStorm плагин.
+
+                <p>
+                  Вот мои настройки <clickable>WebStorm</clickable>.
+                </p>
+
+                <p>
+                  Список плагинов: Kursor для подсветки.
+                </p>
 							</content>
 						</section>
 
 						<section style={styles.section}>
-							<seading style={styles.seading}>Железо</seading>
+							<topper style={styles.topper}>ИИ модель</topper>
 
-							<content style={{ padding: desktop ? 20 : 10 }}>
-								Я в деньгах не особо стеснен, поэтому железо просто топовое.
-                Не то что бы я особо был игроманом, иногда конечно играю, но не ради этого я покупаю топовое железо.
+							<content style={styles.section.content}>
+                <p>
+                  Можно запускать ИИ модели локально через LM Studio, или Ollama.
+                  Необходима мощная видеокарта с большим количеством памяти, а у меня видеокарта заточена под большое количество мониторов.
+                </p>
+                <p>
+                  Я проанализировал все ИИ модели следующим образом - я сначала написал небольшой тестовый проект полностью сам.
+                  И потом попросил все возможные ИИ в максимальной конфигурации написать точно такой же проект.
+                  После этого я выбрал ту, код которой мне понравился больше всех.
+                  При использовании ИИ модели ее можно использовать либо через официальный гуи либо через курсор либо через WebStorm плагин.
+                </p>
 							</content>
 						</section>
 
             <section style={styles.section}>
-              <seading style={styles.seading}>Скриншоты</seading>
+              <topper style={styles.topper}>Скриншоты</topper>
 
-              <content style={{ padding: desktop ? 20 : 10 }}>
+              <content style={styles.section.content}>
                 <p>
                   Это не просто утилитка для скриншотов я ее так же использую как пипетку, линейку, запись видео.
                 </p>
               </content>
             </section>
 
-						<section>
-							<seading style={styles.seading}>Лэйаут</seading>
-
-							<p>
-								Рекомендую зафиксировать определенную позицию за каждым
-								приложением, так удобнее сразу знать куда смотреть.
-								<ul>
-									<li>Слева-слева: терминал.</li>
-									<li>Слева: браузер (для разработки) и Chrome Dev Tools.</li>
-									<li>
-										Центр: Основной монитор IDE или любое другое временное
-										приложение.
-									</li>
-									<li>Справа: ИИ или любая другая документация.</li>
-									<li>
-										Справа-справа: все мессенджеры (почта, тг, вотсап...).
-									</li>
-								</ul>
-							</p>
-						</section>
-
 						<section style={styles.section}>
-							<seading style={styles.seading}>Менеджер паролей</seading>
+							<topper style={styles.topper}>Менеджер паролей</topper>
 
-							<content style={{ padding: desktop ? 20 : 10 }}>
-								1Password - сто процентный фаворит
+							<content style={styles.section.content}>
+                <p>
+								  Аутентификация это опять же тот функционал который должен быть встроен в само ядро операционной системы.
+                  Но по историческим причинам этого не произошло, и сейчас можно войти через email, google, менеджер паролей.
+                  Необходимо определится с одним единственным методом входа, и дальше использовать только его. 
+                </p>
+                <p>
+								  1Password - сто процентный фаворит.
+                </p>
 							</content>
 						</section>
 
 						<section style={styles.section}>
-							<seading style={styles.seading}>Почта</seading>
+							<topper style={styles.topper}>Почта</topper>
 
-							<content style={{ padding: desktop ? 20 : 10 }}>
+							<content style={styles.section.content}>
 								Тут только Thunderbird является возможным выбором. Киллер фичей
 								почты является для меня наличие функционала вкладок. Ни один
 								другой клиент не раполагает вкладками.
@@ -863,30 +941,188 @@ export default function () {
 						</section>
 
             <section style={styles.section}>
-							<seading style={styles.seading}>Что сюда не попало</seading>
+              <topper style={styles.topper}>Остальные приложнения</topper>
 
-							<content style={{ padding: desktop ? 20 : 10 }}>
+              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+                <p>
+                  Железо:
+                  <ul>
+                    <li>
+                      <a href="google.ru">cpu-z</a>
+                      - простая и поэтому лучшая утилита для просмотра характеристик железа
+                    </li>
+                    <li>
+                      <a href="google.ru">Ookla</a>
+                      - замер скорости интернета
+                    </li>
+                    <li>
+                      <a href="google.ru">MsRedirect</a>
+                      -  что бы винда открывала Chrome вместо Edge
+                    </li>
+                    <li>
+                      <a href="google.ru">VLC</a>
+                      - старый, но но лучший видеоплеер.
+                    </li>
+                  </ul>
+                </p>
+              </content>
+
+              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+                <p>
+                  Компиляторы, ставим все, авось пригодятся.
+                  <ul>
+                    <li>PowerShell 7 - последняя версия повершел (по умолчанию ставится старая)</li>
+                    <li>Node</li>
+                    <li>Deno - более продвинутый форк ноды</li>
+                    <li>Rust - самый лучший язык на текущий момент на рынке (на мой взгляд)</li>
+                    <li>Go - лучший язык для вайбкодинга сервера</li>
+                    <li>OpenJDK - ставить прозапас не рекомендую если не используете (заебет обновлениями)</li>
+                    <li>Python</li>
+                    <li>Cpp - для некоторых утилит требуется</li>
+                  </ul>
+                </p>
+              </content>
+
+              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+                <p>
+                  Банковские приложения
+                  <ul>
+                    <li>sberbank.ru - пользуюсь сбером, самый крупный банк, учитывая текущую экономическую ситуацию, кто знает что может произойти с другими банками. Про Lehmon Brothers так же говорили что он не потопляем, а сейчас ситуация в РФ намного тяжелее чем в США в 2008.</li>
+                    <li>alphabank.ru</li>
+                    <li>tbank.ru</li>
+                  </ul>
+                </p>
+              </content>
+
+              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+                <p>
+                  Магазины
+                  <ul>
+                    <li>aliexpress.com - чаще всего пользуюсь им</li>
+                    <li>wildberries.ru - время от времени</li>
+                    <li>ozon.ru - для заказа продуктов</li>
+                    <li>amazon.com - если требуется что-то очень специфичное</li>
+                  </ul>
+                </p>
+              </content>
+
+              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+                <p>
+                  Тут комментировать нечего, все и так понятно.
+                  <ul>
+                    <li>Telegram - основной</li>
+                    <li>WhatsApp - для родственников</li>
+                    <li>Discord - игровой</li>
+                    <li>Zoom - видео связь</li>
+                    <li>Slack - рабочий</li>
+                  </ul>
+                </p>
+              </content>
+
+              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+                <p>
+                  Развлечения:
+                  <ul>
+                    <li>Youtube - больше всего сижу тут</li>
+                    <li>Reddit - основной развлекательный</li>
+                    <li>Instagram - иногда захожу</li>
+                    <li>Facebook - не захожу но пусть будет</li>
+                    <li>Tiktok - не захожу но пусть будет</li>
+                    <li>Threads - как по мне круче твиттера</li>
+                    <li>Twitter - в сша это главная платформа, в рф не прижился почему-то.</li>
+                    <li>Bash - цитатник</li>
+                    <li>Habr - техно статьи</li>
+                  </ul>
+                </p>
+              </content>
+
+              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+                <p>
+                  Форумы, по сути их сейчас заменили нейросети, но иногда все же приходится заходить.
+                  <ul>
+                    <li>stackoverflow.com - вопросы по программированию</li>
+                    <li>superuser.com - вопросы продвинутых пользователей</li>
+                    <li>serverfault.com - вопросы по администрированию</li>
+                    <li>security.stackexchange.com - вопросы по безопасности</li>
+                    <li>math.stackexchange.com - вопросы по математике</li>
+                  </ul>
+                </p>
+              </content>
+
+              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+                <p>
+                  Инструмент для программирования
+                  <ul>
+                    <li>Git</li>
+                    <li>Github</li>
+                    <li>VirtualBox</li>
+                    <li>Claudflare</li>
+                    <li>Docker</li>
+                    <li>mkcert - утилита для управления сертификатами</li>
+                    <li>caddy - более современный аналог nginx</li>
+                    <li>PostgreSQL - топовая SQL БД</li>
+                    <li>MongoDB - топовая NoSQL БД</li>
+                    <li>Wireshark - мониторинг сетевых пакетов</li>
+                  </ul>
+                </p>
+              </content>
+
+              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+                <p>
+                  Шрифты
+                  <ul>
+                    <li>Hack - лучший шрифт для программирования</li>
+                    <li>Nerds - иконки для терминала</li>
+                  </ul>
+                </p>
+              </content>
+
+              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+                Куча
+                <ul>
+                  <li>MediaCreationTool - создание установочных флешек</li>
+                  <li>VeraCrypt - лучшее решение для шифрование диска</li>
+                  <li>qBittorrent - скачивание торрентов</li>
+                  <li>GPG - шифрование</li>
+                  <li>2GIS - лучшие карты</li>
+                  <li>gosuslugi.ru - приложение от хайпового стартапа</li>
+                  <li>TradingView - мониторинг акций</li>
+                </ul>
+              </content>
+            </section>
+
+            <section style={styles.section}>
+							<topper style={styles.topper}>Что сюда не попало</topper>
+
+							<content style={styles.section.content}>
+                Список популярных инструментов, но которым я не нашел практического применения.
+                Возможно кому-то они могут оказаться полезными.
                 <p>
                   PowerToys - вроде расхайпленный проект 100 000 звезд на гитхабе, но по сути ни одну утилитку из него я не придумал как заинтегрировать.
                 </p>
                 <p>
                   SideBar - сомнительная необходимость, показывает нагрузку на железо, но по сути .
                 </p>
+                <p>
+                  Pake - позволяет создавать бинарники из вебсайтов, непонятно зачем это нужно, если можно создавать ярлыки.
+                </p>
               </content>
 						</section>
 
             <section style={styles.section}>
-              <seading style={styles.seading}>Заключение</seading>
+              <topper style={styles.topper}>Заключение</topper>
 
-              <p>
-                Многие концентрируются на процессоре, видеокарте, но в действительности на них можно легко сэкономить.
-                Честно говоря обновляя процессор это даже близко не добавляет мне столько же удобства, стол, стул, мышка или очки, не говоря уже о мониторах.
-              </p>
+              <content style={styles.section.content}>
+                <p>
+                  Многие концентрируются на процессоре, видеокарте, но в действительности на них можно легко сэкономить.
+                  Честно говоря обновляя процессор это даже близко не добавляет мне столько же удобства, стол, стул, мышка или очки, не говоря уже о мониторах.
+                </p>
 
-              <p>
-                Особо не злитесь, если я вдруг выбрал не ту технологию, которая нравится вам, это мой вкус, я его ни кому не навязываю.
-                Даже более того, если я где-то несправедливо засрал какую-то технологию, которая вам нравится, то я открыт к переубеждению.
-              </p>
+                <p>
+                  Особо не злитесь, если я вдруг выбрал не ту технологию, которая нравится вам, это мой вкус, я его ни кому не навязываю.
+                  Даже более того, если я где-то несправедливо засрал какую-то технологию, которая вам нравится, то я открыт к переубеждению.
+                </p>
+              </content>
             </section>
 					</content>
 				</wrapper>
@@ -972,3 +1208,6 @@ function lexems() {
 		test: ["test", "second"],
 	};
 }
+
+
+// chrome://settings/content/federatedIdentityApi

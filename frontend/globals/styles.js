@@ -34,8 +34,12 @@ style.textContent = `
     border-bottom: 1px solid ${colors.link.underscore}; 
     text-decoration: none;
 		position: relative;
-		text-decoration: none;
 		padding-bottom: 1px;
+	}
+	
+	clickable:hover {
+    border-bottom: 1px solid ${colors.text.strong} !important;
+    cursor: pointer;
 	}
 	
 	code {
