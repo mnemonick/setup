@@ -76,20 +76,20 @@ style.textContent = `
     height: 100%;
   }
 
-  section {
+  category {
     opacity: 0;
     transform: translateY(60px) scale(0.96);
     transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1), transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
     will-change: opacity, transform;
   }
 
-  section.visible {
+  category.visible {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
 
   @media (prefers-reduced-motion: reduce) {
-    section {
+    category {
       opacity: 1;
       transform: none;
       transition: none;

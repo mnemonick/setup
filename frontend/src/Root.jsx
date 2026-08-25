@@ -27,7 +27,7 @@ export default function () {
 
 		if (typeof IntersectionObserver === "undefined") {
 			viewport
-				.querySelectorAll("section")
+				.querySelectorAll("category")
 				.forEach((s) => s.classList.add("visible"));
 			return;
 		}
@@ -47,9 +47,9 @@ export default function () {
 			},
 		);
 
-		viewport.querySelectorAll("section").forEach((section) => {
-			if (!section.classList.contains("visible")) {
-				observer.observe(section);
+		viewport.querySelectorAll("category").forEach((category) => {
+			if (!category.classList.contains("visible")) {
+				observer.observe(category);
 			}
 		});
 
@@ -122,7 +122,7 @@ export default function () {
 		borderBottom: `1px solid ${colors.border.weak}`,
 	};
 
-	styles.section = {
+	styles.category = {
 		borderTop: `1px solid ${colors.border.strong}`,
 		borderRight: `1px solid ${colors.border.strong}`,
 		borderBottom: `1px solid ${colors.border.strong}`,
@@ -131,10 +131,10 @@ export default function () {
 		marginTop: desktop ? 40 : 20,
 		marginBottom: desktop ? 40 : 20,
 		lineHeight: "21px",
-		background: colors.section,
+		background: colors.category,
 	};
 
-  styles.section.content = {
+  styles.category.content = {
     padding: desktop ? 20 : 10
   };
 
@@ -282,10 +282,10 @@ export default function () {
 					) : null}
 
 					<content style={styles.content}>
-						<section style={{ ...styles.section, marginTop: 0 }}>
+						<category style={{ ...styles.category, marginTop: 0 }}>
 							<topper style={styles.topper}>Введение</topper>
 
-							<content style={styles.section.content}>
+							<content style={styles.category.content}>
 								<p>
                   В детстве я, как и все, играл в компьютерные игры и заметил: мне больше нравилось не сам процесс игры, а её настраивать.
 								</p>
@@ -309,12 +309,12 @@ export default function () {
                   Хотите, чтобы я переписал это в более дружелюбном стиле, или оставить как есть?
 								</p>
 							</content>
-						</section>
+						</category>
 
-            <section style={styles.section}>
+            <category style={styles.category}>
 							<topper style={styles.topper}>Рабочий стол</topper>
 
-							<content style={styles.section.content}>
+							<content style={styles.category.content}>
 								<p>
                   Стол у меня не обычный, а <clickable style={styles.clickable}>угловой</clickable>.
                   У этого два главных преимущества:
@@ -338,12 +338,12 @@ export default function () {
                   Главный недостаток: снизу постоянно мешает <clickable style={styles.clickable}>ножка стола</clickable>, но я к ней уже привык.
                 </p>
 							</content>
-						</section>
+						</category>
 
-            <section style={styles.section}>
+            <category style={styles.category}>
               <topper style={styles.topper}>Мониторы</topper>
 
-              <content style={styles.section.content}>
+              <content style={styles.category.content}>
                 <p>
                   Для меня важно, чтобы было много пространства для приложений.
                   Я использую <clickable style={styles.clickable}>5 мониторов</clickable>: один основной (горизонтальный, 222 дюйма) и 4 дополнительных (вертикальных, 222 дюйма).
@@ -376,12 +376,12 @@ export default function () {
                   Если ставить по бокам — они будут слишком далеко, а два ряда — плохая идея: смотреть неудобно физиологически.
                 </p>
               </content>
-            </section>
+            </category>
 
-            <section onClick={() => setModal("test")} style={styles.section}>
+            <category onClick={() => setModal("test")} style={styles.category}>
               <topper style={styles.topper}>Клавиатура</topper>
 
-              <content style={styles.section.content}>
+              <content style={styles.category.content}>
                 <p>
                   Клавиатура у меня не обычная, а <a href="https://kinesis-ergo.com/shop/advantage2">Kinesis Advantage2</a>.
                   Словами не описать, насколько я её обожаю.
@@ -412,12 +412,12 @@ export default function () {
                   Для игр приходится переопределять WASD на ESDF.
                 </p>
               </content>
-            </section>
+            </category>
 
-            <section style={styles.section}>
+            <category style={styles.category}>
               <topper style={styles.topper}>Мышка</topper>
 
-              <content style={styles.section.content}>
+              <content style={styles.category.content}>
                 <p>
                   Есть три типа хвата:
                   <ul>
@@ -465,12 +465,12 @@ export default function () {
                   </p>
                 </p>
               </content>
-            </section>
+            </category>
 
-            <section style={styles.section}>
+            <category style={styles.category}>
               <topper style={styles.topper}>Стул</topper>
 
-              <content style={styles.section.content}>
+              <content style={styles.category.content}>
                 <p>
                   Пробовал распиаренный <a href="google.ru">Herman Miller</a>, который стоит как самолёт, но у него минимальная высота 50 см, а мне нужно именно 40 см.
                   Если убрать ножки, можно сидеть в позе наездника — на Herman Miller это очень неудобно.
@@ -481,24 +481,24 @@ export default function () {
                   Если открутить подлокотники (они не нужны: локтями упираемся в стол), он идеально помещается под мои столы.
                 </p>
               </content>
-            </section>
+            </category>
 
-            <section style={styles.section}>
+            <category style={styles.category}>
               <topper style={styles.topper}>Очки</topper>
 
-              <content style={styles.section.content}>
+              <content style={styles.category.content}>
                 <p>
                   Я, конечно, не врач, но если хотите прокачать рабочее место — уделите внимание очкам <b>даже если</b> на зрение не жалуетесь.
                   Я вот на зрение не жалуюсь совсем, вывески на улице читаю нормально, но в очках <b>заметно удобнее</b> читать текст на экране.
                   Возможно, у вас будет так же.
                 </p>
               </content>
-            </section>
+            </category>
 
-            <section style={styles.section}>
+            <category style={styles.category}>
               <topper style={styles.topper}>Железо</topper>
 
-              <content style={styles.section.content}>
+              <content style={styles.category.content}>
                 <p>
                   Железо я намеренно оставляю в самом конце: очень редко именно оно — бутылочное горлышко.
                 </p>
@@ -520,16 +520,16 @@ export default function () {
                   Если локально гоняете игры, нейросети или видеомонтаж — железо важно. Для программирования более чем достаточно предпоследнего поколения, и то с огромным запасом.
                 </p>
               </content>
-            </section>
+            </category>
 
             <separator>
               ------------------------------------------------------------------------------------------------
             </separator>
 
-						<section style={styles.section}>
+						<category style={styles.category}>
 							<topper style={styles.topper}>Операционная система</topper>
 
-							<content style={styles.section.content}>
+							<content style={styles.category.content}>
 								<p>На выбор: <code>Windows</code>, <code>macOS</code>, <code>Ubuntu</code> и <code>FreeBSD</code>.</p>
 
 								<p>
@@ -622,11 +622,11 @@ export default function () {
                   Редко используемые сайты открываю в браузере.
                 </p>
 							</content>
-						</section>
+						</category>
 
-						<section style={styles.section}>
+						<category style={styles.category}>
 							<topper style={styles.topper}>AutoHotkey</topper>
-							<content style={styles.section.content}>
+							<content style={styles.category.content}>
 								<p>
                   <a href="https://autohotkey.com">AutoHotkey</a> — суперклевый инструмент, чтобы «пропатчить» ОС.
                   По‑моему, весь этот функционал должен быть встроен в систему, но по какой‑то причине работу приходится делать самому.
@@ -696,12 +696,12 @@ export default function () {
                   </ul>
                 </p>
 							</content>
-						</section>
+						</category>
 
-            <section style={styles.section}>
+            <category style={styles.category}>
               <topper style={styles.topper}>Браузер</topper>
 
-              <content style={styles.section.content}>
+              <content style={styles.category.content}>
                 <p>
                   Выбор был между Chrome и Firefox.
                   По большому счёту аналогов Chrome я не вижу.
@@ -742,11 +742,11 @@ export default function () {
                   Тогда не видны URL‑бар и вкладки, и любой такой сайт можно запускать через селектор.
                 </p>
               </content>
-            </section>
+            </category>
 
-            <section style={styles.section}>
+            <category style={styles.category}>
               <topper style={styles.topper}>ИИ</topper>
-              <content style={styles.section.content}>
+              <content style={styles.category.content}>
                 <p>
                   Смотрел, насколько близко модель реализует демо‑приложение.
                   Все модели сравнивал так: сначала сам написал небольшой тестовый проект,
@@ -767,12 +767,12 @@ export default function () {
                   Вот список MCP‑серверов, которые подключаю.
                 </p>
               </content>
-            </section>
+            </category>
 
-            <section style={styles.section}>
+            <category style={styles.category}>
               <topper style={styles.topper}>Файловый менеджер</topper>
 
-              <content style={styles.section.content}>
+              <content style={styles.category.content}>
                 <p>Главные игроки: <a href="https://www.farmanager.com">Far Manager</a> (2 000), <a href="https://files.community/">Files</a>, <a href="https://yazi-rs.github.io/">Yazi</a> (32 000), <a href="https://www.ghisler.com/">Total Commander</a>.</p>
 
                 <p>
@@ -793,12 +793,12 @@ export default function () {
                   Вот ссылка на <a href="google.ru">конфиг</a>.
                 </p>
               </content>
-            </section>
+            </category>
 
-						<section style={styles.section}>
+						<category style={styles.category}>
 							<topper style={styles.topper}>Скриншоты</topper>
 
-							<content style={styles.section.content}>
+							<content style={styles.category.content}>
 								<p>
                   Безоговорочный лидер — ShareX.
                   Это не просто утилита для скриншотов: использую её ещё как пипетку, линейку и для записи видео.
@@ -807,12 +807,12 @@ export default function () {
                   Дополнительно в AutoHotkey добавлены горячие клавиши.
                 </p>
 							</content>
-						</section>
+						</category>
 
-						<section style={styles.section}>
+						<category style={styles.category}>
 							<topper style={styles.topper}>Терминал</topper>
 
-              <content style={styles.section.content}>
+              <content style={styles.category.content}>
                 <p>Варианты: стандартный виндовый, Warp, WezTerm, kitty.</p>
 
                 <p>
@@ -833,11 +833,11 @@ export default function () {
                   Я фанат минимализма, но функциональность всё же важнее.
                 </p>
               </content>
-						</section>
+						</category>
 
-						<section style={styles.section}>
+						<category style={styles.category}>
 							<topper style={styles.topper}>Локальный поисковик</topper>
-              <content style={styles.section.content}>
+              <content style={styles.category.content}>
                 <p>Либо <a href="voidtools.com">Everything</a>, либо <a href="omnisearch.ai">Omnisearch</a>.</p>
 
                 <p>
@@ -846,12 +846,12 @@ export default function () {
                   Сразу после установки удалил это говно.
                 </p>
               </content>
-						</section>
+						</category>
 
-						<section style={styles.section}>
+						<category style={styles.category}>
 							<topper style={styles.topper}>Текстовый редактор</topper>
 
-							<content style={styles.section.content}>
+							<content style={styles.category.content}>
 								Выбирал между <a href="">Cursor</a>, <a href="">WebStorm</a>, <a href="">Zed</a> — явный фаворит WebStorm.
 
                 <p>
@@ -908,12 +908,12 @@ export default function () {
                   Список плагинов: Kursor для подсветки.
                 </p>
 							</content>
-						</section>
+						</category>
 
-						<section style={styles.section}>
+						<category style={styles.category}>
 							<topper style={styles.topper}>Менеджер паролей</topper>
 
-							<content style={styles.section.content}>
+							<content style={styles.category.content}>
                 <p>
 								  Аутентификация — снова тот функционал, который должен быть в ядре ОС.
                   По историческим причинам этого нет, и сейчас можно войти через email, Google или менеджер паролей.
@@ -924,12 +924,12 @@ export default function () {
                   Можно хранить коды двухфакторной аутентификации (чего нет в Google).
                 </p>
 							</content>
-						</section>
+						</category>
 
-						<section style={styles.section}>
+						<category style={styles.category}>
 							<topper style={styles.topper}>Почта</topper>
 
-							<content style={styles.section.content}>
+							<content style={styles.category.content}>
                 <p>
                   Для меня самое важное в почтовом клиенте — вкладки.
                   Письма читать умеют все.
@@ -950,12 +950,12 @@ export default function () {
                   При этом все телефонные SMS и пуш‑уведомления у меня идут через почту.
                 </p>
 							</content>
-						</section>
+						</category>
 
-            <section style={styles.section}>
+            <category style={styles.category}>
               <topper style={styles.topper}>Остальные приложения</topper>
 
-              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+              <content style={{...styles.category.content, borderBottom: styles.topper.borderBottom}}>
                 <p>
                   Железо:
                   <ul>
@@ -979,7 +979,7 @@ export default function () {
                 </p>
               </content>
 
-              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+              <content style={{...styles.category.content, borderBottom: styles.topper.borderBottom}}>
                 Компиляторы и рантаймы — ставлю всё, авось пригодится.
                 <ul>
                   <li>PowerShell 7 — последняя версия (по умолчанию ставится старая)</li>
@@ -991,7 +991,7 @@ export default function () {
                 </ul>
               </content>
 
-              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+              <content style={{...styles.category.content, borderBottom: styles.topper.borderBottom}}>
                 Банковские приложения
                 <ul>
                   <li>sberbank.ru — пользуюсь Сбером, самый крупный банк; учитывая текущую экономическую ситуацию, кто знает, что будет с другими. Про Lehman Brothers тоже говорили, что он непотопляем, а ситуация в РФ сейчас тяжелее, чем в США в 2008.</li>
@@ -1000,7 +1000,7 @@ export default function () {
                 </ul>
               </content>
 
-              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+              <content style={{...styles.category.content, borderBottom: styles.topper.borderBottom}}>
                 Магазины
                 <ul>
                   <li>aliexpress.com — чаще всего</li>
@@ -1010,7 +1010,7 @@ export default function () {
                 </ul>
               </content>
 
-              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+              <content style={{...styles.category.content, borderBottom: styles.topper.borderBottom}}>
                 Мессенджеры
                 <ul>
                   <li>Telegram — основной</li>
@@ -1021,7 +1021,7 @@ export default function () {
                 </ul>
               </content>
 
-              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+              <content style={{...styles.category.content, borderBottom: styles.topper.borderBottom}}>
                 Развлечения:
                 <ul>
                   <li>YouTube — больше всего сижу тут</li>
@@ -1036,7 +1036,7 @@ export default function () {
                 </ul>
               </content>
 
-              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+              <content style={{...styles.category.content, borderBottom: styles.topper.borderBottom}}>
                 Форумы: по сути их сейчас заменили нейросети, но иногда всё же приходится заходить.
                 <ul>
                   <li>stackoverflow.com — вопросы по программированию</li>
@@ -1047,7 +1047,7 @@ export default function () {
                 </ul>
               </content>
 
-              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+              <content style={{...styles.category.content, borderBottom: styles.topper.borderBottom}}>
                 Инструменты для программирования
                 <ul>
                   <li>Git</li>
@@ -1063,7 +1063,7 @@ export default function () {
                 </ul>
               </content>
 
-              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+              <content style={{...styles.category.content, borderBottom: styles.topper.borderBottom}}>
                 В вебе шрифты скачиваются автоматически, но для некоторых десктопных приложений их нужно ставить явно.
                 <ul>
                   <li>Hack — лучший шрифт для программирования (терминал и редактор)</li>
@@ -1073,7 +1073,7 @@ export default function () {
                 </ul>
               </content>
 
-              <content style={{...styles.section.content, borderBottom: styles.topper.borderBottom}}>
+              <content style={{...styles.category.content, borderBottom: styles.topper.borderBottom}}>
                 Разное
                 <ul>
                   <li>MediaCreationTool — создание установочных флешек</li>
@@ -1085,12 +1085,12 @@ export default function () {
                   <li>TradingView — мониторинг акций</li>
                 </ul>
               </content>
-            </section>
+            </category>
 
-            <section style={styles.section}>
+            <category style={styles.category}>
 							<topper style={styles.topper}>Что сюда не попало</topper>
 
-							<content style={styles.section.content}>
+							<content style={styles.category.content}>
                 Популярные инструменты, которым я не нашёл практического применения.
                 Возможно, кому‑то они будут полезны.
                 <p>
@@ -1103,12 +1103,12 @@ export default function () {
                   Pake — позволяет собирать бинарники из сайтов; непонятно зачем, если можно создать ярлык.
                 </p>
               </content>
-						</section>
+						</category>
 
-            <section style={styles.section}>
+            <category style={styles.category}>
               <topper style={styles.topper}>Заключение</topper>
 
-              <content style={styles.section.content}>
+              <content style={styles.category.content}>
                 <p>
                   Многие концентрируются на процессоре и видеокарте, но на них легко сэкономить.
                   Честно говоря, обновление процессора даже близко не даёт столько же удобства, сколько стол, стул, мышка или очки — не говоря уже о мониторах.
@@ -1119,7 +1119,7 @@ export default function () {
                   Более того, если где‑то несправедливо засрал технологию, которая вам близка — открыт к переубеждению.
                 </p>
               </content>
-            </section>
+            </category>
 					</content>
 				</wrapper>
 			</viewport>
