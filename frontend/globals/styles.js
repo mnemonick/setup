@@ -49,6 +49,10 @@ style.textContent = `
     letter-spacing: 1px;
     color: ${colors.link.text};
 	}
+	
+	a:hover {
+    background: ${colors.hover};
+	}
 
 	:not(html):not(head):not(script):not(style):not(b):not(span):not(i):not(a):not(em):not(strong):not(del):not(li):not(table):not(thead):not(tr):not(td):not(th):not(tbody) { 
     display: block; 

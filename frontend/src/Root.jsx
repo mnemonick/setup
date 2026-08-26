@@ -76,6 +76,8 @@ export default function () {
 	if (desktop) fonts = { text: 17, secondary: 15, header: 22 };
 	if (mobile) fonts = { text: 15, secondary: 15, header: 18 };
 
+  let [modal, setModal] = React.useState(null);
+
 	styles.root = {
 		position: "relative",
 		height: "100%",
@@ -303,7 +305,7 @@ export default function () {
 							<topper style={styles.topper}>Введение</topper>
 
               <p style={styles.p}>
-                В детстве я, как и все, играл в компьютерные игры и заметил: мне больше нравилось не сам процесс игры, а её настраивать.
+                В детстве я, как и все, играл в компьютерные игры и заметил: мне больше нравилось не сам процесс игры, а ковырять в ее настройках.
               </p>
 
               <p style={styles.p}>
@@ -311,12 +313,12 @@ export default function () {
               </p>
 
               <p style={styles.p}>
-                Этот сетап заточен под <b style={styles.b}>программирование</b>.
-                Скорее всего он не подойдёт, если ваша цель это игры, видеомонтаж или дизайн.
+                Этот сетап заточен именно под <b style={styles.b}>программирование</b>.
+                Скорее всего он не подойдет, если ваша цель это игры, видеомонтаж или дизайн.
               </p>
 
               <p style={styles.p}>
-                Полностью этот сетап с нуля вряд ли кто-то будет повторять: скорее всего каждый возьмёт только отдельные куски.
+                Полностью этот сетап с нуля вряд ли кто-то будет повторять: скорее всего каждый возьмет только отдельные куски.
               </p>
 
               <p style={styles.p}>
@@ -330,7 +332,7 @@ export default function () {
 							<topper style={styles.topper}>Рабочий стол</topper>
 
               <p style={styles.p}>
-                Стол у меня не обычный, а <clickable style={styles.clickable}>угловой</clickable>.
+                Стол у меня не обычный, а <clickable onClick={() => alert('TODO')} style={styles.clickable}>угловой</clickable>.
                 У этого два главных преимущества:
 
                 <ul style={styles.ul}>
@@ -346,10 +348,10 @@ export default function () {
               </p>
 
               <p style={styles.p}>
-                Нормальных угловых столов на рынке я не нашёл, поэтому купил два стола из <term style={styles.term}>IKEA</term> (запрещённая в РФ организация) и соединил их снизу <clickable style={styles.clickable}>пластинами</clickable>.
+                Нормальных угловых столов на рынке я не нашел, поэтому купил два стола из <term style={styles.term}>IKEA</term> (запрещенная в РФ организация) и соединил их снизу <clickable onClick={() => alert('TODO')} style={styles.clickable}>пластинами</clickable>.
               </p>
               <p style={styles.p}>
-                Главный недостаток: снизу постоянно мешает <clickable style={styles.clickable}>ножка стола</clickable>, но я к ней уже привык.
+                Главный недостаток: снизу постоянно мешает <clickable onClick={() => alert('TODO')} style={styles.clickable}>ножка стола</clickable>, но я к ней уже привык.
               </p>
 						</category>
 
@@ -358,7 +360,7 @@ export default function () {
 
               <p style={styles.p}>
                 Для меня важно, чтобы было много пространства для приложений.
-                Я использую <clickable style={styles.clickable}>5 мониторов</clickable>: один основной (горизонтальный, 222 дюйма) и 4 дополнительных (вертикальных, 222 дюйма).
+                Я использую <clickable onClick={() => alert('TODO')} style={styles.clickable}>5 мониторов</clickable>: один основной (горизонтальный, 222 дюйма) и 4 дополнительных (вертикальных, 222 дюйма).
               </p>
 
               <p style={styles.p}>
@@ -368,7 +370,7 @@ export default function () {
               </p>
 
               <p style={styles.p}>
-                Все мониторы на кронштейнах и скреплены <clickable style={styles.clickable}>суперклеем с дверными петлями</clickable>, чтобы не было зазоров.
+                Все мониторы на кронштейнах и скреплены <clickable onClick={() => alert('TODO')} style={styles.clickable}>суперклеем с дверными петлями</clickable>, чтобы не было зазоров.
               </p>
 
               <p style={styles.p}>
@@ -376,10 +378,10 @@ export default function () {
 
                 <ul style={styles.ul}>
                   <li>Слева-слева: <a href="https://www.warp.dev">Warp</a>.</li>
-                  <li>Слева: браузер для разработки с открытым дебаггером.</li>
-                  <li>Центр: основной монитор - <a href="TODO">WebStorm</a> | <a href="TODO">Chrome</a> | любое другое временное приложение.</li>
-                  <li>Справа: <a href="claude">Claude</a>.</li>
-                  <li>Справа-справа: мессенджеры - <a href="TODO">Thunderbird</a>, <a href="TODO">Telegram</a>, <a href="TODO">Slack</a>.</li>
+                  <li>Слева: <a href="https://www.chromium.org">Chromium</a> для разработки с открытым дебаггером.</li>
+                  <li>Центр: основной монитор - <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> | <a href="https://www.google.com/chrome/">Chrome</a> | любое другое временное приложение.</li>
+                  <li>Справа: <a href="https://claude.ai">Claude</a>.</li>
+                  <li>Справа-справа: мессенджеры - <a href="https://www.thunderbird.net">Thunderbird</a>, <a href="https://telegram.org">Telegram</a>, <a href="https://slack.com">Slack</a>.</li>
                 </ul>
               </p>
 
@@ -394,13 +396,13 @@ export default function () {
 
               <p style={styles.p}>
                 Клавиатура у меня не обычная, а <a href="https://kinesis-ergo.com/shop/advantage2">Kinesis Advantage 2</a>.
-                Словами не описать, насколько я её обожаю.
+                Словами не описать, насколько я ее обожаю.
                 Она <b style={styles.b}>намного</b> удобнее обычных клавиатур.
               </p>
 
               <p style={styles.p}>
                 <b style={styles.b}>Удобное расположение модификаторов.</b>
-                На обычных клавиатурах большим пальцем жмёшь только пробел, а модификаторы - мизинцем.
+                На обычных клавиатурах большим пальцем жмешь только пробел, а модификаторы - мизинцем.
                 На моей клавиатуре пальцами я могу нажать 12 клавиш, по 6 на каждый большой палец:
                 <ul style={styles.ul}>
                   <li><term style={styles.term}>PAGE_UP</term></li>
@@ -454,7 +456,7 @@ export default function () {
 
               </p>
               <p style={styles.p}>
-                Для меня <b>очень</b> важно, чтобы хват был именно <term style={styles.term}>Claw</term>, при нём можно доводить курсор пальцами, упираясь основанием ладони в коврик.
+                Для меня <b>очень</b> важно, чтобы хват был именно <term style={styles.term}>Claw</term>, при нем можно доводить курсор пальцами, упираясь основанием ладони в коврик.
                 При <term style={styles.term}>Palm</term> - хвате вся ладонь лежит на мышке, упереться в коврик не получается - из‑за этого заметно падает точность.
               </p>
 
@@ -492,13 +494,13 @@ export default function () {
               <topper style={styles.topper}>Стул</topper>
 
               <p style={styles.p}>
-                Пробовал распиаренный <a href="https://www.hermanmiller.com">Herman Miller</a>, который стоит как самолёт, но у него минимальная высота 50 см, а мне нужно именно 40 см.
-                Если убрать подлокотники, можно сидеть в позе <clickable style={styles.clickable}>наездника</clickable>.
+                Пробовал распиаренный <a href="https://www.hermanmiller.com">Herman Miller</a>, который стоит как самолет, но у него минимальная высота 50 см, а мне нужно именно 40 см.
+                Если убрать подлокотники, можно сидеть в позе <clickable onClick={() => alert('TODO')} style={styles.clickable}>наездника</clickable>.
                 На <a href="https://www.hermanmiller.com">Herman Miller</a> это очень неудобно.
               </p>
 
               <p style={styles.p}>
-                В итоге остановился на обычном <clickable style={styles.clickable}>стуле</clickable> из <term style={styles.term}>IKEA</term> за 100 руб.
+                В итоге остановился на обычном <clickable onClick={() => alert('TODO')} style={styles.clickable}>стуле</clickable> из <term style={styles.term}>IKEA</term> за 100 руб.
                 Если открутить подлокотники (они не нужны: локтями упираемся в стол), он идеально помещается под мои столы.
               </p>
             </category>
@@ -533,7 +535,7 @@ export default function () {
               </p>
 
               <p style={styles.p}>
-                Но честно: любой из пунктов выше даёт мне больше реального удобства, чем топовая видеокарта или процессор.
+                Но честно: любой из пунктов выше дает мне больше реального удобства, чем топовая видеокарта или процессор.
                 Если локально гоняете игры, нейросети или видеомонтаж - железо важно.
                 Для программирования более чем достаточно предпоследнего поколения.
               </p>
@@ -555,7 +557,7 @@ export default function () {
               </p>
 
               <p style={styles.p}>
-                Вы можете подумать, что раз я такой техногик, то у меня какой‑нибудь <a href="TODO">Ubuntu</a> - но нет.
+                Вы можете подумать, что раз я такой техногик, то у меня какой‑нибудь <a href="https://ubuntu.com">Ubuntu</a> - но нет.
                 Я абсолютный фанат <a href="https://www.microsoft.com/windows">Windows</a> на десктопе и считаю, что ни <a href="https://www.apple.com/macos">MacOS</a>, ни <a href="https://ubuntu.com">Ubuntu</a> даже близко не сравнятся с ней по удобству.
               </p>
               <p style={styles.p}>
@@ -576,7 +578,7 @@ export default function () {
                 Настройка <a href="https://www.microsoft.com/windows">Windows</a> у меня в три этапа:
                 <ul style={styles.ul}>
                   <li>
-                    <clickable style={styles.clickable}>Удаление бойлерплейта</clickable>
+                    <clickable onClick={() => alert('TODO')} style={styles.clickable}>Удаление бойлерплейта</clickable>
                     {/*<ul>*/}
                     {/*  <li>winget uninstall -e --id Microsoft.Teams</li>*/}
                     {/*  <li>winget uninstall -e --id Microsoft.WindowsFeedbackHub</li>*/}
@@ -612,7 +614,7 @@ export default function () {
                   </li>
 
                   <li>
-                    <clickable style={styles.clickable}>Отключение компонентов</clickable>
+                    <clickable onClick={() => alert('TODO')} style={styles.clickable}>Отключение компонентов</clickable>
                     {/*<ul>*/}
                     {/*  <li>'Disable-WindowsOptionalFeature -Online -FeatureName WorkFolders-Client -NoRestart': 'отключить синхронизацию файлов',</li>*/}
                     {/*  <li>'Disable-WindowsOptionalFeature -Online -FeatureName WCF-Services45 -NoRestart': 'отключить старый .NET',</li>*/}
@@ -624,7 +626,7 @@ export default function () {
                   </li>
 
                   <li>
-                    <clickable style={styles.clickable}>Обычные настройки</clickable>
+                    <clickable onClick={() => alert('TODO')} style={styles.clickable}>Обычные настройки</clickable>
                     {/*<ul>*/}
                     {/*  <li>powercfg /change monitor-timeout-ac 0',</li>*/}
                     {/*  <li>powercfg /change monitor-timeout-dc 0',</li>*/}
@@ -639,7 +641,7 @@ export default function () {
                 На <a href="https://www.microsoft.com/windows">Windows</a> (как и на всех ОС) полный кавардак с установкой приложений.
 
                 Алгоритм выбора у меня такой.
-                Всё стараюсь ставить через <a href="https://learn.microsoft.com/windows/package-manager/winget/">winget</a>, либо - если это часто используемое браузерное приложение - на десктопе создаю <term style={styles.term}>ярлык</term>.
+                Все стараюсь ставить через <a href="https://learn.microsoft.com/windows/package-manager/winget/">winget</a>, либо - если это часто используемое браузерное приложение - на десктопе создаю <term style={styles.term}>ярлык</term>.
                 Редко используемые сайты открываю в браузере.
                 <a href="https://apps.microsoft.com">Microsoft Store</a> стараюсь не использовать вообще.
               </p>
@@ -658,7 +660,7 @@ export default function () {
                 Смену фокуса я полностью переделал.
                 В стандартном альтабе мне не нравится то, что нельзя напечатать название приложение что бы его сфокусировать.
                 Плюс так же я добавил проверку, если приложение не запущено, то оно запускается, если запущено, то фокусируется.
-                <clickable style={styles.clickable}>Вот как это работает</clickable>
+                <clickable onClick={() => alert('TODO')} style={styles.clickable}>Вот как это работает</clickable>
               </p>
 
               <p style={styles.p}>
@@ -672,7 +674,7 @@ export default function () {
                 Ни <a href="https://yandex.ru/soft/punto/">Punto Switcher</a>, ни <a href="https://caramba-switcher.com">Caramba Switcher</a> мне не зашли.
                 Что сделал я: при смене фокуса язык приложения сбрасывается на значение по умолчанию.
                 Смена языка - правым <term style={styles.term}>Shift</term>.
-                Автоматические свитчеры не дают развить мышечную память: работают в 90% случаев, а эти 10% всё портят.
+                Автоматические свитчеры не дают развить мышечную память: работают в 90% случаев, а эти 10% все портят.
               </p>
 
               <p style={styles.p}>
@@ -690,7 +692,7 @@ export default function () {
               <topper style={styles.topper}>Браузер</topper>
 
               <p style={styles.p}>
-                Браузеры с фокусом на приватность сразу идут лесом (<a href="">Duckduckgo</a>, <a href="">Brave</a>, <a href="">Mullvad</a>).
+                Браузеры с фокусом на приватность сразу идут лесом (<a href="https://duckduckgo.com/app">Duckduckgo</a>, <a href="https://brave.com">Brave</a>, <a href="https://mullvad.net/en/browser">Mullvad</a>).
                 Как показывает практика, браузеры в своих попытках обеспечить приватность ломают функционал веб приложения.
                 Честное слово, мне абсолютно пофиг на то что они мониторят мою активность и собирают аналитику.
                 Пускай собирают - благодаря этому разработчики фиксят баги и делают продукт круче.
@@ -698,33 +700,33 @@ export default function () {
 
               <p style={styles.p}>
                 От <a href="https://www.mozilla.org/firefox/">Firefox</a> я отказался потому что мне не нравится его интерфейс.
-                В <a href="https://www.opera.com">Opera</a> много разного встроенного функционала, но который можно в <a href="TODO">Chrome</a> реализовать через плагины.
-                Поэтому я остановился на <a href="https://www.google.com/chrome/">Chrome</a> и отдельно <a href="TODO">Chromium</a> для разработки.
+                В <a href="https://www.opera.com">Opera</a> много разного встроенного функционала, но который можно в <a href="https://www.google.com/chrome/">Chrome</a> реализовать через плагины.
+                Поэтому я остановился на <a href="https://www.google.com/chrome/">Chrome</a> и отдельно <a href="https://www.chromium.org">Chromium</a> для разработки.
               </p>
 
               <p style={styles.p}>
                 Список плагинов:
                 <ul style={styles.ul}>
                   <li><a href="https://1password.com">1Password</a> - в браузере работает идеально.</li>
-                  <li><a href="TODO">uBlock Origin</a> - заметно лучше <a href="TODO">AdBlock Plus</a> и <a href="TODO">AdBlock</a>.</li>
-                  <li><a href="TODO">Claude</a> - с его помощью можно задавать вопросы по контенту на странице.</li>
-                  <li><a href="TODO">CxMouse</a> - плагин для жестов.</li>
-                  <li><a href="TODO">Dont Close The Window with Last Tab</a> - блокирует закрытие окна при закрытии последней вкладки.</li>
-                  <li><a href="TODO">I dont care about cookies</a> - автоматически принимает все куки.</li>
-                  <li><a href="TODO">Phantom</a> - крипто-кошелек.</li>
-                  <li><a href="TODO">Return Youtube Dislike</a> - возвращает количество дизлайков.</li>
-                  <li><a href="TODO">Tamper Monkey</a> - позволяет добавлять свой JS на страницу.</li>
+                  <li><a href="https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">uBlock Origin</a> - заметно лучше <a href="https://adblockplus.org">AdBlock Plus</a> и <a href="https://getadblock.com">AdBlock</a>.</li>
+                  <li><a href="https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn">Claude</a> - с его помощью можно задавать вопросы по контенту на странице.</li>
+                  <li><a href="https://chromewebstore.google.com/detail/crxmouse-mouse-gestures/jlgkpaicikihijadgifklkbpdajbkhjo">CxMouse</a> - плагин для жестов.</li>
+                  <li><a href="https://chromewebstore.google.com/detail/dont-close-window-with-la/dlnpfhfhmkiebpnlllpehlmklgdggbhn">Dont Close The Window with Last Tab</a> - блокирует закрытие окна при закрытии последней вкладки.</li>
+                  <li><a href="https://chromewebstore.google.com/detail/i-still-dont-care-about-c/edibdbjcniadpccecjdfdjjppcpchdlm">I dont care about cookies</a> - автоматически принимает все куки.</li>
+                  <li><a href="https://chromewebstore.google.com/detail/phantom/bfnaelmomeimhlpmgjnjophhpkkoljpa">Phantom</a> - крипто-кошелек.</li>
+                  <li><a href="https://returnyoutubedislike.com">Return Youtube Dislike</a> - возвращает количество дизлайков.</li>
+                  <li><a href="https://www.tampermonkey.net">Tamper Monkey</a> - позволяет добавлять свой JS на страницу.</li>
                 </ul>
               </p>
 
               <p style={styles.p}>
                 Мне не нравится сама концепция браузера: это вложенная платформа.
-                ОС уже платформа для приложений, а браузер - ещё одна внутри.
+                ОС уже платформа для приложений, а браузер - еще одна внутри.
                 Поэтому из сайтов, которыми часто пользуюсь я создаю десктопные ярлыки, которые запускают определенное веб-приложение, но без URL-бара и вкладок.
               </p>
 
               <p style={styles.p}>
-                Мой <a href="">AutoHotkey</a> скрипт настроен так, что показывает позволяет запускать такие вебсайты так же как и обычные приложения.
+                Мой <a href="https://www.autohotkey.com">AutoHotkey</a> скрипт настроен так, что показывает позволяет запускать такие вебсайты так же как и обычные приложения.
                 По этому я впринципе не пользуюсь функционалом закладок в браузере.
               </p>
             </category>
@@ -738,12 +740,12 @@ export default function () {
                 потом попросил каждую ИИ в максимальной конфигурации написать такой же.
                 Выбрал ту, чей код понравился больше всех.
               </p>
-              <p style={styles.p}>Лучшей опцией оказался <a href="https://claude.ai">Claude</a> - у него ещё и особый фокус на программирование.</p>
+              <p style={styles.p}>Лучшей опцией оказался <a href="https://claude.ai">Claude</a> - у него еще и особый фокус на программирование.</p>
               <p style={styles.p}><a href="https://cursor.com">Cursor</a> - это надмозг: по сути выбирает модель за тебя. Мне такой подход не нравится.</p>
               <p style={styles.p}>
                 Время от времени запускаю модели локально через <a href="https://lmstudio.ai">LM Studio</a> и <a href="https://ollama.com">Ollama</a>.
-                Нужна мощная видеокарта с большим объёмом памяти, а моя заточена под много мониторов.
-                Но основная всё равно <a href="https://claude.ai">Claude</a>.
+                Нужна мощная видеокарта с большим объемом памяти, а моя заточена под много мониторов.
+                Но основная все равно <a href="https://claude.ai">Claude</a>.
               </p>
               <p style={styles.p}>
                 Модель можно использовать через официальный GUI, через <a href="https://cursor.com">Cursor</a> или через плагин <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
@@ -771,7 +773,7 @@ export default function () {
                 У <a href="https://www.ghisler.com">Total Commander</a> есть недостатки (UI мог бы быть минималистичнее и красивее), но он двух-панельный и позволяет гибко настраивать горячие клавиши.
               </p>
               <p style={styles.p}>
-                В <a href="https://www.ghisler.com">Total Commander</a> включил тёмную тему, убрал лишний UI, поставил шрифт <a href="https://sourcefoundry.org/hack/">Hack</a>.
+                В <a href="https://www.ghisler.com">Total Commander</a> включил темную тему, убрал лишний UI, поставил шрифт <a href="https://sourcefoundry.org/hack/">Hack</a>.
                 Горячие клавиши заточены под мою клавиатуру и симметричны с теми, что в <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
                 Вот ссылка на <a href="google.ru">конфиг</a>.
               </p>
@@ -782,7 +784,7 @@ export default function () {
 
               <p style={styles.p}>
                 Безоговорочный лидер - <a href="https://getsharex.com">ShareX</a>.
-                Это не просто утилита для скриншотов: использую её ещё как пипетку, линейку и для записи видео.
+                Это не просто утилита для скриншотов: использую ее еще как пипетку, линейку и для записи видео.
               </p>
 
               <p style={styles.p}>
@@ -807,7 +809,7 @@ export default function () {
               <p style={styles.p}>Варианты: стандартный виндовый, <a href="https://www.warp.dev">Warp</a>, <a href="https://wezfurlong.org/wezterm/">WezTerm</a>, <a href="https://sw.kovidgoyal.net/kitty/">kitty</a>.</p>
 
               <p style={styles.p}>
-                По большому счёту 80% взаимодействия - два действия:
+                По большому счету 80% взаимодействия - два действия:
 
                 <ul style={styles.ul}>
                   <li>Поиск по истории</li>
@@ -819,9 +821,9 @@ export default function () {
               </p>
 
               <p style={styles.p}>
-                При этом на кой чёрт в него запилили ИИ (сейчас его пилят куда ни попадя) и дерево проектов.
+                При этом на кой черт в него запилили ИИ (сейчас его пилят куда ни попадя) и дерево проектов.
                 Убрать бы весь этот функционал и сделать <a href="https://www.warp.dev">Warp</a> минималистичнее - было бы лучше.
-                Я фанат минимализма, но функциональность всё же важнее.
+                Я фанат минимализма, но функциональность все же важнее.
               </p>
 						</category>
 
@@ -854,17 +856,17 @@ export default function () {
                   <li>Скоупы (Frontend и Backend помечаю разными цветами)</li>
                   <li>Вкладки при поиске</li>
                   <li>Quicklists: LocalHistory, <a href="https://git-scm.com">Git</a>, <a href="https://github.com">GitHub</a></li>
-                  <li>И ещё <b style={styles.b}>очень много</b> других мелочей.</li>
+                  <li>И еще <b style={styles.b}>очень много</b> других мелочей.</li>
                 </ul>
               </p>
 
               <p style={styles.p}>
                 В <a href="https://cursor.com">Cursor</a> не нравится, что он построен на веб‑технологиях.
-                Понимаю: лёгкий сайт писать в браузере - ок. Но полноценную IDE на JavaScript?
+                Понимаю: легкий сайт писать в браузере - ок. Но полноценную IDE на JavaScript?
               </p>
 
               <p style={styles.p}>
-                Пытался перейти на <a href="https://zed.dev">Zed</a> - очень понравилось, насколько мало памяти он жрёт (в 20 раз меньше).
+                Пытался перейти на <a href="https://zed.dev">Zed</a> - очень понравилось, насколько мало памяти он жрет (в 20 раз меньше).
                 Но функциональность важнее минимализма, вернулся на <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
               </p>
 
@@ -875,7 +877,7 @@ export default function () {
 
               <ul style={styles.ul}>
                 <li>
-                  Самый большой минус: <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> жрёт гигантское количество оперативки по сравнению с <a href="https://zed.dev">Zed</a>.
+                  Самый большой минус: <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> жрет гигантское количество оперативки по сравнению с <a href="https://zed.dev">Zed</a>.
                   Разница в 20 раз.
                   Но оперативка и скорость запуска - не бутылочное горлышко: приятно, когда IDE стартует за секунду, а не за 10, но не критично.
                   При этом поддержка нейросетей ничуть не хуже, чем в хайповом <a href="https://cursor.com">Cursor</a>.
@@ -883,7 +885,7 @@ export default function () {
               </ul>
 
               <p style={styles.p}>
-                При этом в <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> мне всё равно очень не хватает функционала.
+                При этом в <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> мне все равно очень не хватает функционала.
               </p>
 
               <p style={styles.p}>
@@ -891,11 +893,11 @@ export default function () {
               </p>
 
               <p style={styles.p}>
-                Вот мои настройки <clickable style={styles.clickable}>WebStorm</clickable>.
+                Вот мои настройки <clickable onClick={() => alert('TODO')} style={styles.clickable}>WebStorm</clickable>.
               </p>
 
               <p style={styles.p}>
-                Список плагинов: <a href="TODO">Kursor</a> для подсветки.
+                Список плагинов: <a href="https://plugins.jetbrains.com/plugin/22072-kursor">Kursor</a> для подсветки.
               </p>
 						</category>
 
@@ -920,12 +922,12 @@ export default function () {
                 Для меня самое важное в почтовом клиенте - вкладки.
                 Письма читать умеют все.
                 Хочу, чтобы вкладки были внутри приложения, а не через несколько вкладок браузера.
-                Поэтому смотрел на <a href="TODO">Thunderbird</a>.
+                Поэтому смотрел на <a href="https://www.thunderbird.net">Thunderbird</a>.
               </p>
 
               <p style={styles.p}>
                 Публичный домен как‑то несолидно, нужен сервер с кастомными доменами.
-                Выбор пал на <a href="TODO">PurelyMail</a> - самый дешёвый почтовый сервер (10$ в год).
+                Выбор пал на <a href="https://purelymail.com">PurelyMail</a> - самый дешевый почтовый сервер (10$ в год).
               </p>
 
               <p style={styles.p}>
@@ -963,7 +965,7 @@ export default function () {
               </section>
 
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
-                Компиляторы и рантаймы - ставлю всё, авось пригодится.
+                Компиляторы и рантаймы - ставлю все, авось пригодится.
                 <ul style={styles.ul}>
                   <li><a href="https://github.com/PowerShell/PowerShell">PowerShell 7</a> - последняя версия (по умолчанию ставится старая)</li>
                   <li><a href="https://nodejs.org">Node</a> - далеко не самый лучший язык, но его главное преимущество в том, что позволяет писать <term style={styles.term}>Frontend</term> и <term style={styles.term}>Backend</term> на одном и том же языке.</li>
@@ -1019,7 +1021,7 @@ export default function () {
               </section>
 
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
-                Форумы: по сути их сейчас заменили нейросети, но иногда всё же приходится заходить.
+                Форумы: по сути их сейчас заменили нейросети, но иногда все же приходится заходить.
                 <ul style={styles.ul}>
                   <li><a href="https://stackoverflow.com">stackoverflow.com</a> - вопросы по программированию.</li>
                   <li><a href="https://superuser.com">superuser.com</a> - вопросы продвинутых пользователей.</li>
@@ -1071,15 +1073,15 @@ export default function () {
 							<topper style={styles.topper}>Что сюда не попало</topper>
 
               <p style={styles.p}>
-                Популярные инструменты, которым я не нашёл практического применения.
+                Популярные инструменты, которым я не нашел практического применения.
                 Возможно, кому‑то они будут полезны.
               </p>
 
               <p style={styles.p}>
-                <a href="https://github.com/microsoft/PowerToys">PowerToys</a> - расхайпленный проект на 100 000 звёзд на <a href="https://github.com">GitHub</a>, но ни одну утилиту из него я так и не встроил в свой сетап.
+                <a href="https://github.com/microsoft/PowerToys">PowerToys</a> - расхайпленный проект на 100 000 звезд на <a href="https://github.com">GitHub</a>, но ни одну утилиту из него я так и не встроил в свой сетап.
               </p>
               <p style={styles.p}>
-                <a href="TODO">SideBar</a> - сомнительная необходимость: показывает нагрузку на железо, но по сути это редко нужно.
+                <a href="https://github.com/ArcadeRenegade/SidebarDiagnostics">SideBar</a> - сомнительная необходимость: показывает нагрузку на железо, но по сути это редко нужно.
               </p>
               <p style={styles.p}>
                 <a href="https://github.com/tw93/Pake">Pake</a> - позволяет собирать бинарники из сайтов; непонятно зачем, если можно создать ярлык.
@@ -1091,7 +1093,7 @@ export default function () {
 
               <p style={styles.p}>
                 Многие концентрируются на процессоре и видеокарте, но на них легко сэкономить.
-                Честно говоря, обновление процессора даже близко не даёт столько же удобства, сколько стол, стул, мышка или очки - не говоря уже о мониторах.
+                Честно говоря, обновление процессора даже близко не дает столько же удобства, сколько стол, стул, мышка или очки - не говоря уже о мониторах.
               </p>
 
               <p style={styles.p}>
@@ -1103,9 +1105,7 @@ export default function () {
 				</wrapper>
 			</viewport>
 
-			{typeof modal == "string" ? (
-				<Modal onClose={() => setModal(null)}>{images.photo}</Modal>
-			) : null}
+			{modal == "test" ? <Modal onClose={() => setModal(null)} /> : null}
 		</root>
 	);
 }

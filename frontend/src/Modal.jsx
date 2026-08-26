@@ -1,11 +1,7 @@
-import {ReactNode, useEffect} from "react";
-import colors from "@/utils/colors";
-import useLayoutSize from "@/hooks/useLayoutSize";
-
+import {useEffect} from "react";
 
 export default function (props) {
   const styles = {};
-  const content = useLayoutSize();
 
   styles.backdrop = {
     position: 'fixed',
@@ -13,20 +9,23 @@ export default function (props) {
     left: 0,
     width: '100%',
     height: '100%',
-    background: colors.modal.backdrop,
+    background: 'rgba(0, 0, 0, 0.1)',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: content.desktop ? 'center' : 'end',
+    // alignItems: content.desktop ? 'center' : 'end',
+    alignItems:  'center',
     backdropFilter: 'blur(2px)'
   };
 
   styles.content = {
-    background: colors.modal.content,
-    width: content.desktop ? 'auto' : 'calc(100% - 40px)',
+    background: 'black',
+    // width: content.desktop ? 'auto' : 'calc(100% - 40px)',
+    width: true ? 'auto' : 'calc(100% - 40px)',
     borderRadius: 20,
     border: `1px solid ${colors.border.strong}`,
     boxShadow: '0 24px 80px rgba(0, 0, 0, 0.35)',
-    marginBottom: content.desktop ? null : 20
+    marginBottom: null
+    // marginBottom: content.desktop ? null : 20
   };
 
   useEffect(() => {
