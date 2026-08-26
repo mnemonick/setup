@@ -645,12 +645,12 @@ export default function () {
                   Вот вам <clickable style={styles.clickable}>картинка</clickable> для наглядности где какие клавиши расположены.
 
                   <ul>
-                    <li>Caps Lock = CTRL</li>
-                    <li>Win = CTRL-SHIFT</li>
-                    <li>Right Ctrl = ALT-SHIFT</li>
-                    <li>Left ctrl = ALT-CTRL-SHIFT</li>
-                    <li>/ = свитчинг (о нем дальше)</li>
-                    <li>Insert = Shift-Tab</li>
+                    <li><term style={styles.term}>Caps Lock</term> = <term style={styles.term}>CTRL</term> - это нужно же было додуматься на одну из самых удобных клавиш назначить насктолько бесполезную функцию.</li>
+                    <li><term style={styles.term}>Win</term> = <term style={styles.term}>CTRL-SHIFT</term> - функционал Win перенесена на <term style={styles.term}>ESC</term>.</li>
+                    <li><term style={styles.term}>Right Ctrl</term> = <term style={styles.term}>ALT-SHIFT</term></li>
+                    <li><term style={styles.term}>Left-Ctrl</term> = <term style={styles.term}>ALT-CTRL-SHIFT</term></li>
+                    <li><term style={styles.term}>/</term> = свитчинг (о нем дальше)</li>
+                    <li><term style={styles.term}>Insert</term> = <term style={styles.term}>Shift-Tab</term> - обычный таб это фокус вперед, <term style={styles.term}>Shift-Tab</term> - фокус назад</li>
                   </ul>
                 </p>
               </section>
@@ -712,7 +712,7 @@ export default function () {
                   <b style={styles.b}>Смена раскладки.</b>
                   Раскладку нужно менять по 100 раз на дню.
                   Ни <a href="https://yandex.ru/soft/punto/">Punto Switcher</a>, ни <a href="https://caramba-switcher.com">Caramba Switcher</a> мне не зашли (работают в 90% случаев, но отавшиеся 10% все портят).
-                </p>oo
+                </p>
 
                 <p style={styles.p}>
                   Я заметил, что проблемы с раскладкой возникают только в момент начала печати.
@@ -764,7 +764,8 @@ export default function () {
                     <li><a href="https://chromewebstore.google.com/detail/dont-close-window-with-la/dlnpfhfhmkiebpnlllpehlmklgdggbhn">Dont Close The Window with Last Tab</a> - блокирует закрытие окна при закрытии последней вкладки.</li>
                     <li><a href="https://www.i-dont-care-about-cookies.eu/">I dont care about cookies</a> - автоматически принимает все куки.</li>
                     <li><a href="https://phantom.com/">Phantom</a> - крипто-кошелек (использую только для стейблкойнов).</li>
-                    <li><a href="https://returnyoutubedislike.com">Return Youtube Dislike</a> - возвращает количество дизлайков.</li>
+                    <li><a href="https://returnyoutubedislike.com">Return Youtube Dislike</a> - возвращает количество дизлайков на youtube.</li>
+                    <li><a href="https://chromewebstore.google.com/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle">Enhancer For Youtube</a> - полезные утилитки для youtube.</li>
                     <li><a href="https://chromewebstore.google.com/detail/no-new-tabs/gneobebnilffgkejpfhlgkmpkipgbcno?hl=en">No New Tabs</a> - запрещает браузеру создавать новые вкладки. Бесит когда веб-приложение сам создает новые вкладки, если я захочу открыть новую вкладку я сам это сделаю.</li>
                     <li><a href="https://tampermonkey.net">Tamper Monkey</a> - позволяет добавлять свой JS на страницу (добавляю фиксированные заголовки веб-сайтам, что бы фокусировать их через <a href="">AutoHotkey</a>).</li>
                   </ul>
@@ -776,6 +777,7 @@ export default function () {
                   Вообще, мне не особо нравится сама концепция браузера - это платформа для запуска приложений.
                   Но операционная система это уже платформа для запуска приложений, а браузер еще одна внутри платформа внутри платформы.
                   Поэтому из сайтов, которыми часто пользуюсь я создаю десктопные ярлыки, которые запускают определенное веб-приложение, но без URL-бара и вкладок.
+                  Редко используемые веб-приложения открываю в браузере без создания ярлыков.
                 </p>
 
                 <p style={styles.p}>
@@ -784,6 +786,71 @@ export default function () {
                 </p>
               </section>
             </category>
+
+            <category style={styles.category}>
+              <topper style={styles.topper}>Редактор кода</topper>
+
+              <p style={styles.p}>
+                Выбирал между <a href="https://cursor.com">Cursor</a>, <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>, <a href="https://zed.dev">Zed</a> - явный фаворит <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
+              </p>
+
+              <p style={styles.p}>
+                В <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> <b style={styles.b}>очень</b> много функционала, которым пользуюсь каждый день:
+                <ul style={styles.ul}>
+                  <li>Очень хорошая поддержка <a href="https://git-scm.com">Git</a></li>
+                  <li>Последние открытые файлы (вкладки даже отключил)</li>
+                  <li>Локальная история</li>
+                  <li>Отдельные окна</li>
+                  <li>Интенты</li>
+                  <li>Предпросмотр файла в дереве</li>
+                  <li>Скоупы (Frontend и Backend помечаю разными цветами)</li>
+                  <li>Вкладки при поиске</li>
+                  <li>Quicklists: LocalHistory, <a href="https://git-scm.com">Git</a>, <a href="https://github.com">GitHub</a></li>
+                  <li>И еще <b style={styles.b}>очень много</b> других мелочей.</li>
+                </ul>
+              </p>
+
+              <p style={styles.p}>
+                В <a href="https://cursor.com">Cursor</a> не нравится, что он построен на веб‑технологиях.
+                Понимаю: легкий сайт писать в браузере - ок. Но полноценную IDE на JavaScript?
+              </p>
+
+              <p style={styles.p}>
+                Пытался перейти на <a href="https://zed.dev">Zed</a> - очень понравилось, насколько мало памяти он жрет (в 20 раз меньше).
+                Но функциональность важнее минимализма, вернулся на <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
+              </p>
+
+              <p style={styles.p}>
+                Вы будете смеяться, но вкладки я отключил.
+                Вместо них - Recent Files.
+              </p>
+
+              <ul style={styles.ul}>
+                <li>
+                  Самый большой минус: <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> жрет гигантское количество оперативки по сравнению с <a href="https://zed.dev">Zed</a>.
+                  Разница в 20 раз.
+                  Но оперативка и скорость запуска - не бутылочное горлышко: приятно, когда IDE стартует за секунду, а не за 10, но не критично.
+                  При этом поддержка нейросетей ничуть не хуже, чем в хайповом <a href="https://cursor.com">Cursor</a>.
+                </li>
+              </ul>
+
+              <p style={styles.p}>
+                При этом в <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> мне все равно очень не хватает функционала.
+              </p>
+
+              <p style={styles.p}>
+                Вот мой конфиг - можете импортировать.
+              </p>
+
+              <p style={styles.p}>
+                Вот мои настройки <clickable onClick={() => alert('TODO')} style={styles.clickable}>WebStorm</clickable>.
+              </p>
+
+              <p style={styles.p}>
+                Список плагинов: <a href="https://plugins.jetbrains.com/plugin/22072-kursor">Kursor</a> для подсветки.
+              </p>
+            </category>
+
 
             <category style={styles.category}>
               <topper style={styles.topper}>Нейросеть</topper>
@@ -799,8 +866,8 @@ export default function () {
               <section style={styles.category.section}>
                 <p style={styles.p}>
                   Первое что нужно, это выбрать правильную нейросить.
-                  Я написал простенькое приложение, менеджер контактов, полностью своими руками без ИИ.
-                  И потом я просил написать ИИ точно такое же приложение по бизнесс-логику, по тому описанию, которое я ей давал.
+                  Я написал простенькое приложение, менеджер контактов, полностью своими руками без нейросетей.
+                  И потом я просил разные ИИ написать точно такое же приложение по функционал, но только по тому описанию, которое я ей давал.
                   Для меня это намного более релевантный показатель, чем различные бенчмарки.
                 </p>
 
@@ -868,13 +935,13 @@ export default function () {
                 Глобальные функциональные клавиши назначены на стандартные инструменты.
 
                 <ul style={styles.ul}>
-                  <li><term style={styles.term}>F9</term> - скриншот</li>
-                  <li><term style={styles.term}>F10</term> - скриншот и распознать текст</li>
-                  <li><term style={styles.term}>F11</term> - записать гифку</li>
-                  <li><term style={styles.term}>F12</term> - пипетка</li>
-                  <li><term style={styles.term}>Print Screen</term> - линейка</li>
-                  <li><term style={styles.term}>Scroll Lock</term> - скриншот со скроллом</li>
-                  <li><term style={styles.term}>Pause Break</term> - мета-данные о файле</li>
+                  <li><term style={styles.term}>F9</term> - сделать скриншот.</li>
+                  <li><term style={styles.term}>F10</term> - распознать текст (полезно что бы отправить его нейросети, обычные картинки жрут очень много токенов).</li>
+                  <li><term style={styles.term}>F11</term> - записать гифку.</li>
+                  <li><term style={styles.term}>F12</term> - запустить пипетка.</li>
+                  <li><term style={styles.term}>Print Screen</term> - экранная линейка.</li>
+                  <li><term style={styles.term}>Scroll Lock</term> - скриншот со скроллом.</li>
+                  <li><term style={styles.term}>Pause Break</term> - просмотреть мета-данные о файле.</li>
                 </ul>
               </p>
 						</category>
@@ -912,70 +979,6 @@ export default function () {
                 <a href="https://omnisearch.ai">Omni</a> выглядит посовременнее - обычно софт, который появился позже, лучше.
                 Но после ввода в поиск не работают стрелки (стрелки, Карл!) - настолько очевидный функционал.
                 Сразу после установки удалил это говно.
-              </p>
-						</category>
-
-						<category style={styles.category}>
-							<topper style={styles.topper}>Текстовый редактор</topper>
-
-              <p style={styles.p}>
-                Выбирал между <a href="https://cursor.com">Cursor</a>, <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>, <a href="https://zed.dev">Zed</a> - явный фаворит <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
-              </p>
-
-              <p style={styles.p}>
-                В <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> <b style={styles.b}>очень</b> много функционала, которым пользуюсь каждый день:
-                <ul style={styles.ul}>
-                  <li>Очень хорошая поддержка <a href="https://git-scm.com">Git</a></li>
-                  <li>Последние открытые файлы (вкладки даже отключил)</li>
-                  <li>Локальная история</li>
-                  <li>Отдельные окна</li>
-                  <li>Интенты</li>
-                  <li>Предпросмотр файла в дереве</li>
-                  <li>Скоупы (Frontend и Backend помечаю разными цветами)</li>
-                  <li>Вкладки при поиске</li>
-                  <li>Quicklists: LocalHistory, <a href="https://git-scm.com">Git</a>, <a href="https://github.com">GitHub</a></li>
-                  <li>И еще <b style={styles.b}>очень много</b> других мелочей.</li>
-                </ul>
-              </p>
-
-              <p style={styles.p}>
-                В <a href="https://cursor.com">Cursor</a> не нравится, что он построен на веб‑технологиях.
-                Понимаю: легкий сайт писать в браузере - ок. Но полноценную IDE на JavaScript?
-              </p>
-
-              <p style={styles.p}>
-                Пытался перейти на <a href="https://zed.dev">Zed</a> - очень понравилось, насколько мало памяти он жрет (в 20 раз меньше).
-                Но функциональность важнее минимализма, вернулся на <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
-              </p>
-
-              <p style={styles.p}>
-                Вы будете смеяться, но вкладки я отключил.
-                Вместо них - Recent Files.
-              </p>
-
-              <ul style={styles.ul}>
-                <li>
-                  Самый большой минус: <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> жрет гигантское количество оперативки по сравнению с <a href="https://zed.dev">Zed</a>.
-                  Разница в 20 раз.
-                  Но оперативка и скорость запуска - не бутылочное горлышко: приятно, когда IDE стартует за секунду, а не за 10, но не критично.
-                  При этом поддержка нейросетей ничуть не хуже, чем в хайповом <a href="https://cursor.com">Cursor</a>.
-                </li>
-              </ul>
-
-              <p style={styles.p}>
-                При этом в <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> мне все равно очень не хватает функционала.
-              </p>
-
-              <p style={styles.p}>
-                Вот мой конфиг - можете импортировать.
-              </p>
-
-              <p style={styles.p}>
-                Вот мои настройки <clickable onClick={() => alert('TODO')} style={styles.clickable}>WebStorm</clickable>.
-              </p>
-
-              <p style={styles.p}>
-                Список плагинов: <a href="https://plugins.jetbrains.com/plugin/22072-kursor">Kursor</a> для подсветки.
               </p>
 						</category>
 
@@ -1021,132 +1024,153 @@ export default function () {
               <topper style={styles.topper}>Остальные приложения</topper>
 
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
-                Железо:
-                <ul style={styles.ul}>
-                  <li>
-                    <a href="https://www.cpuid.com/softwares/cpu-z.html">CPU-Z</a>
-                    - простая и поэтому лучшая утилита для просмотра характеристик железа
-                  </li>
-                  <li>
-                    <a href="https://www.speedtest.net">Ookla</a>
-                    - замер скорости интернета
-                  </li>
-                  <li>
-                    <a href="https://www.speedtest.net">e-katalog.ua</a>
-                    - замер скорости интернета
-                  </li>
-                  <li>
-                    <a href="https://github.com/rcmaehl/MSEdgeRedirect">MSEdgeRedirect</a>
-                    - чтобы <a href="https://www.microsoft.com/windows">Windows</a> открывала <a href="https://www.google.com/chrome/">Chrome</a> вместо <a href="https://www.microsoft.com/edge">Edge</a>
-                  </li>
+                <p style={styles.p}>
+                  Железо:
+                  <ul style={styles.ul}>
+                    <li>
+                      <a href="https://www.cpuid.com/softwares/cpu-z.html">CPU-Z</a>
+                      - простая и поэтому лучшая утилита для просмотра характеристик железа
+                    </li>
+                    <li>
+                      <a href="https://www.speedtest.net">Ookla</a>
+                      - замер скорости интернета
+                    </li>
+                    <li>
+                      <a href="https://www.speedtest.net">e-katalog.ua</a>
+                      - замер скорости интернета
+                    </li>
+                    <li>
+                      <a href="https://github.com/rcmaehl/MSEdgeRedirect">MSEdgeRedirect</a>
+                      - чтобы <a href="https://www.microsoft.com/windows">Windows</a> открывала <a href="https://www.google.com/chrome/">Chrome</a> вместо <a href="https://www.microsoft.com/edge">Edge</a>
+                    </li>
 
-                  <li>
-                    <a href="https://github.com/rcmaehl/MSEdgeRedirect">e-katalog.us</a>
-                    - лучший вебсайт по выбору железу, намного лучше <a href="TODO">dns-shop.ru</a> / <a href="pcpartpicker.com">PCPartPicker</a> / <a href="newegg.com">newegg.com</a>.
-                  </li>
-                </ul>
+                    <li>
+                      <a href="https://github.com/rcmaehl/MSEdgeRedirect">e-katalog.us</a>
+                      - лучший вебсайт по выбору железу, намного лучше <a href="TODO">dns-shop.ru</a> / <a href="pcpartpicker.com">PCPartPicker</a> / <a href="newegg.com">newegg.com</a>.
+                    </li>
+                  </ul>
+                </p>
               </section>
 
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
-                Компиляторы и рантаймы - ставлю все, авось пригодится.
-                <ul style={styles.ul}>
-                  <li><a href="https://github.com/PowerShell/PowerShell">PowerShell 7</a> - последняя версия (по умолчанию ставится старая)</li>
-                  <li><a href="https://nodejs.org">Node</a> - далеко не самый лучший язык, но его главное преимущество в том, что позволяет писать <term style={styles.term}>Frontend</term> и <term style={styles.term}>Backend</term> на одном и том же языке.</li>
-                  <li><a href="https://deno.com">Deno</a> - более продвинутый форк <a href="https://nodejs.org">Node</a>.</li>
-                  <li><a href="https://www.rust-lang.org">Rust</a> - лучший язык программирования на текущий момент по моему мнению.</li>
-                  <li><a href="https://go.dev">Go</a> - из-за своей простоты лучше всего подходит для вайбкодинга.</li>
-                  <li><a href="https://www.python.org">Python</a> - не особо часто использую, но требуется для некоторых инструментов..</li>
-                </ul>
+                <p style={styles.p}>
+                  Компиляторы и рантаймы - ставлю все, авось пригодится.
+                  <ul style={styles.ul}>
+                    <li><a href="https://github.com/PowerShell/PowerShell">PowerShell 7</a> - последняя версия (по умолчанию ставится старая)</li>
+                    <li><a href="https://nodejs.org">Node</a> - далеко не самый лучший язык, но его главное преимущество в том, что позволяет писать <term style={styles.term}>Frontend</term> и <term style={styles.term}>Backend</term> на одном и том же языке.</li>
+                    <li><a href="https://deno.com">Deno</a> - более продвинутый форк <a href="https://nodejs.org">Node</a>.</li>
+                    <li><a href="https://www.rust-lang.org">Rust</a> - лучший язык программирования на текущий момент по моему мнению.</li>
+                    <li><a href="https://go.dev">Go</a> - из-за своей простоты лучше всего подходит для вайбкодинга.</li>
+                    <li><a href="https://www.python.org">Python</a> - не особо часто использую, но требуется для некоторых инструментов.</li>
+                  </ul>
+                </p>
               </section>
 
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
-                Банковские приложения
-                <ul style={styles.ul}>
-                  <li><a href="https://alfabank.ru">alfabank.ru</a> - так же крупный банк и маловероятно что с ним что-то случится, но кто знает.</li>
-                  <li><a href="https://www.sberbank.ru">sberbank.ru</a> - пользуюсь Сбером, самый крупный банк; учитывая текущую экономическую ситуацию, кто знает, что будет с другими. Про Lehman Brothers тоже говорили, что он непотопляем, а ситуация в РФ сейчас тяжелее, чем в США в 2008.</li>
-                </ul>
+                <p style={styles.p}>
+                  Банковские приложения
+                  <ul style={styles.ul}>
+                    <li><a href="https://alfabank.ru">alfabank.ru</a> - так же крупный банк и маловероятно что с ним что-то случится, но кто знает.</li>
+                    <li><a href="https://www.sberbank.ru">sberbank.ru</a> - пользуюсь Сбером, самый крупный банк; учитывая текущую экономическую ситуацию, кто знает, что будет с другими. Про Lehman Brothers тоже говорили, что он непотопляем, а ситуация в РФ сейчас тяжелее, чем в США в 2008.</li>
+                  </ul>
+                </p>
               </section>
 
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
-                Магазины
-                <ul style={styles.ul}>
-                  <li><a href="https://aliexpress.com">aliexpress.com</a> - совершенно ужасный интерфейс, но там можно купить вообще все и дешевле чем на других маркетпелйсах, долгая доставка.</li>
-                  <li><a href="https://wildberries.ru">wildberries.ru</a> - использую как замену aliexpress, если нужно что-то купить и нет времени ждать доставку из китая.</li>
-                  <li><a href="https://ozon.ru">ozon.ru</a> - использую для доставки продуктов.</li>
-                  <li><a href="https://ebay.com">ebay.com</a> / <a href="https://avito.com">avito.com</a>  - использую если нужно купить что‑то с рук.</li>
-                </ul>
+                <p style={styles.p}>
+                  Магазины
+                  <ul style={styles.ul}>
+                    <li><a href="https://aliexpress.com">aliexpress.com</a> - совершенно ужасный интерфейс, но там можно купить вообще все и дешевле чем на других маркетпелйсах, долгая доставка.</li>
+                    <li><a href="https://wildberries.ru">wildberries.ru</a> - использую как замену aliexpress, если нужно что-то купить и нет времени ждать доставку из китая.</li>
+                    <li><a href="https://ozon.ru">ozon.ru</a> - использую для доставки продуктов.</li>
+                    <li><a href="https://ebay.com">ebay.com</a>  - если нужно купить что‑то с рук в РФ.</li>
+                    <li><a href="https://avito.com">avito.com</a>  - если нужно купить что‑то с рук за пределами РФ.</li>
+                  </ul>
+                </p>
               </section>
 
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
-                Мессенджеры
-                <ul style={styles.ul}>
-                  <li><a href="https://telegram.org">Telegram</a> - основной мессенджер.</li>
-                  <li><a href="https://whatsapp.com">WhatsApp</a> - для общения с родственниками.</li>
-                  <li><a href="https://discord.com">Discord</a> - игровой мессенджер.</li>
-                  <li><a href="https://slack.com">Slack</a> - рабочий мессенджер.</li>
-                  <li><a href="https://zoom.us">Zoom</a> - видеосвязь.</li>
-                </ul>
+                <p style={styles.p}>
+                  Мессенджеры
+                  <ul style={styles.ul}>
+                    <li><a href="https://telegram.org">Telegram</a> - основной мессенджер.</li>
+                    <li><a href="https://whatsapp.com">WhatsApp</a> - для общения с родственниками.</li>
+                    <li><a href="https://discord.com">Discord</a> - игровой мессенджер.</li>
+                    <li><a href="https://slack.com">Slack</a> - рабочий мессенджер.</li>
+                    <li><a href="https://zoom.us">Zoom</a> - видеосвязь.</li>
+                  </ul>
+                </p>
               </section>
 
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
-                Развлечения:
-                <ul style={styles.ul}>
-                  <li><a href="https://youtube.com">YouTube</a> - больше всего сижу тут.</li>
-                  <li><a href="https://reddit.com">Reddit</a> - основной развлекательный форум.</li>
-                  <li><a href="https://x.com">Twitter</a> - самая главная новостная соц сеть для новостей (нужно только подписаться на правильных людей).</li>
-                  <li><a href="https://threads.net">Threads</a> - на мой взгляд круче чем <a href="https://x.com">Twitter</a> по интерфейсу.</li>
-                  <li><a href="https://bash.im">Bash</a> - старый добрый цитатник.</li>
-                  <li><a href="https://habr.com">Habr</a> - техностатьи.</li>
-                </ul>
+                <p style={styles.p}>
+                  Развлечения:
+                  <ul style={styles.ul}>
+                    <li><a href="https://youtube.com">YouTube</a> - основное развлекательное приложение.</li>
+                    <li><a href="https://reddit.com">Reddit</a> - самый лучший форум в мире.</li>
+                    <li><a href="https://x.com">Twitter</a> - основная соц сеть для чтение мировых новостей (нужно только подписаться на правильных людей).</li>
+                    <li><a href="https://threads.net">Threads</a> - на мой взгляд круче чем <a href="https://x.com">Twitter</a> по интерфейсу, но к сожалению появился намного позже и поэтому менее популярен.</li>
+                    <li><a href="https://bash.im">Bash</a> - старый добрый цитатник.</li>
+                    <li><a href="https://habr.com">Habr</a> - техностатьи, раз в неделю захожу и читаю лучшее за неделю.</li>
+                  </ul>
+                </p>
               </section>
 
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
-                Форумы: по сути их сейчас заменили нейросети, но иногда все же приходится заходить.
-                <ul style={styles.ul}>
-                  <li><a href="https://stackoverflow.com">stackoverflow.com</a> - вопросы по программированию.</li>
-                  <li><a href="https://superuser.com">superuser.com</a> - вопросы продвинутых пользователей.</li>
-                  <li><a href="https://serverfault.com">serverfault.com</a> - вопросы по администрированию.</li>
-                  <li><a href="https://security.stackexchange.com">security.stackexchange.com</a> - вопросы по безопасности.</li>
-                  <li><a href="https://math.stackexchange.com">math.stackexchange.com</a> - вопросы по математике.</li>
-                </ul>
+                <p style={styles.p}>
+                  Форумы: по сути их сейчас заменили нейросети, но иногда все же приходится заходить.
+                  <ul style={styles.ul}>
+                    <li><a href="https://stackoverflow.com">stackoverflow.com</a> - вопросы по программированию.</li>
+                    <li><a href="https://superuser.com">superuser.com</a> - вопросы продвинутых пользователей.</li>
+                    <li><a href="https://serverfault.com">serverfault.com</a> - вопросы по администрированию.</li>
+                    <li><a href="https://security.stackexchange.com">security.stackexchange.com</a> - вопросы по безопасности.</li>
+                    <li><a href="https://math.stackexchange.com">math.stackexchange.com</a> - вопросы по математике.</li>
+                  </ul>
+                </p>
               </section>
 
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
-                Инструменты для программирования
-                <ul style={styles.ul}>
-                  <li><a href="https://git-scm.com">Git</a> - как по мне <a style={styles.term}>Mercurial</a> лучше, но гит это стандарт де-факто.</li>
-                  <li><a href="https://github.com">GitHub</a> - использую что бы мониторить самые последние и свежие инструменты.</li>
-                  <li><a href="https://www.virtualbox.org">VirtualBox</a> - в основном использую что бы запускать софт которому не доверяю.</li>
-                  <li><a href="https://www.cloudflare.com">Cloudflare</a> - DNS-хостинг, анти-DDoS и публичный кэш.</li>
-                  <li><a href="https://github.com/FiloSottile/mkcert">mkcert</a> - утилита для управления сертификатами.</li>
-                  <li><a href="https://caddyserver.com">Caddy</a> - более современный аналог <a href="https://nginx.org">nginx</a>.</li>
-                  <li><a href="https://www.postgresql.org">PostgreSQL</a> - топовая SQL-БД.</li>
-                  <li><a href="https://www.mongodb.com">MongoDB</a> - топовая NoSQL-БД.</li>
-                  <li><a href="https://www.wireshark.org">Wireshark</a> - мониторинг сетевых пакетов, редко требуется, но пусть будет.</li>
-                </ul>
+                <p style={styles.p}>
+                  Инструменты для программирования
+                  <ul style={styles.ul}>
+                    <li><a href="https://git-scm.com">Git</a> - как по мне <a style={styles.term}>Mercurial</a> лучше, но гит это стандарт де-факто.</li>
+                    <li><a href="https://github.com">GitHub</a> - использую что бы мониторить самые последние и свежие инструменты.</li>
+                    <li><a href="https://www.virtualbox.org">VirtualBox</a> - в основном использую что бы запускать софт которому не доверяю.</li>
+                    <li><a href="https://www.cloudflare.com">Cloudflare</a> - DNS-хостинг, анти-DDoS и публичный кэш.</li>
+                    <li><a href="https://github.com/FiloSottile/mkcert">mkcert</a> - утилита для управления сертификатами.</li>
+                    <li><a href="https://caddyserver.com">Caddy</a> - более современный аналог <a href="https://nginx.org">nginx</a>.</li>
+                    <li><a href="https://www.postgresql.org">PostgreSQL</a> - топовая SQL-БД.</li>
+                    <li><a href="https://www.mongodb.com">MongoDB</a> - топовая NoSQL-БД.</li>
+                    <li><a href="https://www.wireshark.org">Wireshark</a> - мониторинг сетевых пакетов, редко требуется, но пусть будет.</li>
+                  </ul>
+                </p>
               </section>
 
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
-                В вебе шрифты скачиваются автоматически, но для некоторых десктопных приложений их нужно ставить явно.
-                <ul style={styles.ul}>
-                  <li><a href="https://sourcefoundry.org/hack/">Hack</a> - лучший шрифт для программирования (терминал и редактор).</li>
-                  <li><a href="https://fonts.google.com/specimen/Montserrat">Montserrat</a> - самый нейтральный шрифт.</li>
-                  <li><a href="https://fonts.google.com/specimen/Play">Play</a> - красивые цифры.</li>
-                  <li><a href="https://www.nerdfonts.com">Nerd Fonts</a> - иконки для терминала.</li>
-                </ul>
+                <p style={styles.p}>
+                  В вебе шрифты скачиваются автоматически, но для некоторых десктопных приложений их нужно ставить явно.
+                  <ul style={styles.ul}>
+                    <li><a href="https://sourcefoundry.org/hack/">Hack</a> - лучший шрифт для программирования (терминал и редактор).</li>
+                    <li><a href="https://fonts.google.com/specimen/Montserrat">Montserrat</a> - самый нейтральный шрифт.</li>
+                    <li><a href="https://fonts.google.com/specimen/Play">Play</a> - красивые цифры.</li>
+                    <li><a href="https://www.nerdfonts.com">Nerd Fonts</a> - иконки для терминала.</li>
+                  </ul>
+                </p>
               </section>
 
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
-                Остальное
-                <ul style={styles.ul}>
-                  <li><a href="https://www.microsoft.com/software-download/windows11">MediaCreationTool</a> - создание установочных флешек.</li>
-                  <li><a href="https://veracrypt.fr">VeraCrypt</a> - лучшее решение для шифрования диска.</li>
-                  <li><a href="https://www.qbittorrent.org">qBittorrent</a> - торренты.</li>
-                  <li><a href="https://2gis.ru">2GIS</a> - лучшие карты.</li>
-                  <li><a href="https://www.gosuslugi.ru">gosuslugi.ru</a> - приложение от хайпового стартапа.</li>
-                  <li><a href="https://www.tradingview.com">TradingView</a> - мониторинг акций.</li>
-                  <li><a href="https://www.videolan.org">VLC</a> - старый, но лучший видеоплеер.</li>
-                </ul>
+                <p style={styles.p}>
+                  Остальное
+                  <ul style={styles.ul}>
+                    <li><a href="https://www.microsoft.com/software-download/windows11">MediaCreationTool</a> - создание установочных флешек.</li>
+                    <li><a href="https://veracrypt.fr">VeraCrypt</a> - лучшее решение для шифрования диска.</li>
+                    <li><a href="https://www.qbittorrent.org">qBittorrent</a> - торренты.</li>
+                    <li><a href="https://2gis.ru">2GIS</a> - лучшие карты.</li>
+                    <li><a href="https://www.gosuslugi.ru">gosuslugi.ru</a> - приложение от хайпового стартапа.</li>
+                    <li><a href="https://www.tradingview.com">TradingView</a> - мониторинг акций.</li>
+                    <li><a href="https://www.videolan.org">VLC</a> - старый, но лучший видеоплеер.</li>
+                  </ul>
+                </p>
               </section>
             </category>
 
