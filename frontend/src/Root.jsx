@@ -232,8 +232,7 @@ export default function () {
     display: 'inline',
     borderBottom: `1px dotted ${colors.text.medium}`,
     position: 'relative',
-    textDecoration: 'none',
-    paddingBottom: 1
+    textDecoration: 'none'
   };
 
   styles.border = {
@@ -265,6 +264,36 @@ export default function () {
   styles.ul = {
     marginBottom: 0,
     marginTop: 5
+  };
+
+  styles.separator = {
+    position: "relative",
+    left: -layout.left,
+    display: "flex",
+    alignItems: 'center',
+    gap: 16,
+    width: desktop ? window.innerWidth - 20 : window.innerWidth,
+    marginTop: desktop ? 20 : 10,
+    marginBottom: desktop ? 20 : 10,
+    color: colors.border.strong
+  };
+
+  styles.separator.line = {
+    flex: 1,
+    height: 1,
+    borderBottom: `2px dashed ${colors.border.strong}`,
+  };
+
+  styles.separator.caption = {
+    flexShrink: 0,
+    padding: "10px 20px",
+    border: `1px solid ${colors.border.strong}`,
+    background: colors.category,
+    borderRadius: 10,
+    color: colors.text.strong,
+    fontSize: fonts.header,
+    fontWeight: 500,
+    lineHeight: 1,
   };
 
 	let grid_height = contentHeight || height - styles.heading.height;
@@ -327,6 +356,12 @@ export default function () {
                 Хотите, чтобы я переписал это в более дружелюбном стиле, или оставить как есть?
               </p>
 						</category>
+
+            <separator style={styles.separator}>
+              <line style={styles.separator.line} />
+              <caption style={styles.separator.caption}>Железо</caption>
+              <line style={styles.separator.line} />
+            </separator>
 
             <category style={styles.category}>
 							<topper style={styles.topper}>Рабочий стол</topper>
@@ -543,8 +578,10 @@ export default function () {
 
             </category>
 
-            <separator>
-              ------------------------------------------------------------------------------------------------
+            <separator style={styles.separator}>
+              <line style={styles.separator.line} />
+              <caption style={styles.separator.caption}>Софт</caption>
+              <line style={styles.separator.line} />
             </separator>
 
 						<category style={styles.category}>
@@ -578,64 +615,10 @@ export default function () {
 
               <p style={styles.p}>
                 Настройка <a href="https://www.microsoft.com/windows">Windows</a> у меня в три этапа:
-                <ul style={styles.ul}>
-                  <li>
-                    <clickable onClick={() => alert('TODO')} style={styles.clickable}>Удаление бойлерплейта</clickable>
-                    {/*<ul>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.Teams</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.WindowsFeedbackHub</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.Copilot</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.MicrosoftEdge.Stable</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.XboxSpeechToTextOverlay</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.WebMediaExtensions</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.BingNews</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.BingSearch</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.MicrosoftSolitaireCollection</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.MicrosoftStickyNotes</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.OutlookForWindows</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.StartExperiencesApp</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.Windows.Photos</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.Xbox.TCUI</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.XboxGamingOverlay</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.GamingApp</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.XboxIdentityProvider</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.GetHelp</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.Todos</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.PowerAutomateDesktop</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.Windows.DevHome</li>*/}
-                    {/*  <li>winget uninstall -e --id MicrosoftCorporationII.MicrosoftFamily</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.YourPhone</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.ZuneMusic</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.BingWeather</li>*/}
-                    {/*  <li>winget uninstall -e --id Clipchamp.Clipchamp</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.WindowsAlarms</li>*/}
-                    {/*  <li>winget uninstall -e --id Microsoft.WidgetsPlatformRuntime</li>*/}
-                    {/*  <li>winget uninstall -e --id MicrosoftWindows.Client.WebExperience</li>*/}
-                    {/*  <li>winget uninstall -e --id MicrosoftWindows.CrossDevice</li>*/}
-                    {/*</ul>*/}
-                  </li>
-
-                  <li>
-                    <clickable onClick={() => alert('TODO')} style={styles.clickable}>Отключение компонентов</clickable>
-                    {/*<ul>*/}
-                    {/*  <li>'Disable-WindowsOptionalFeature -Online -FeatureName WorkFolders-Client -NoRestart': 'отключить синхронизацию файлов',</li>*/}
-                    {/*  <li>'Disable-WindowsOptionalFeature -Online -FeatureName WCF-Services45 -NoRestart': 'отключить старый .NET',</li>*/}
-                    {/*  <li>'Disable-WindowsOptionalFeature -Online -FeatureName WCF-TCP-PortSharing45 -NoRestart': 'отключить функционал для порт-шейринга',</li>*/}
-                    {/*  <li>'Disable-WindowsOptionalFeature -Online -FeatureName MediaPlayback -NoRestart': 'отключить медиа компоненты',</li>*/}
-                    {/*  <li>'Disable-WindowsOptionalFeature -Online -FeatureName WindowsMediaPlayer -NoRestart': 'отключить старый медиа-плеер',</li>*/}
-                    {/*  <li>'Disable-WindowsOptionalFeature -Online -FeatureName Printing-Foundation-InternetPrinting-Client -NoRestart': 'отключить функционал удаленные принтеров'</li>*/}
-                    {/*</ul>*/}
-                  </li>
-
-                  <li>
-                    <clickable onClick={() => alert('TODO')} style={styles.clickable}>Обычные настройки</clickable>
-                    {/*<ul>*/}
-                    {/*  <li>powercfg /change monitor-timeout-ac 0',</li>*/}
-                    {/*  <li>powercfg /change monitor-timeout-dc 0',</li>*/}
-                    {/*  <li>powercfg /change standby-timeout-ac 0',</li>*/}
-                    {/*  <li>powercfg /change standby-timeout-dc 0'</li>*/}
-                    {/*</ul>*/}
-                  </li>
+                <ul style={styles.ui}>
+                  <li><clickable onClick={() => setModal("boilerplate")} style={styles.clickable}>Удаление бойлерплейта</clickable></li>
+                  <li><clickable onClick={() => setModal("components")} style={styles.clickable}>Отключение компонентов</clickable></li>
+                  <li><clickable onClick={() => setModal("settings")} style={styles.clickable}>Обычные настройки</clickable></li>
                 </ul>
               </p>
 
@@ -695,7 +678,7 @@ export default function () {
 
               <p style={styles.p}>
                 Браузеры с фокусом на приватность сразу идут лесом (<a href="https://duckduckgo.com/app">Duckduckgo</a>, <a href="https://brave.com">Brave</a>, <a href="https://mullvad.net/en/browser">Mullvad</a>).
-                Как показывает практика, браузеры в своих попытках обеспечить приватность ломают функционал веб приложения.
+                Как показывает практика, браузеры в своих попытках обеспечить приватность зачастую ломают функционал веб приложения.
                 Честное слово, мне абсолютно пофиг на то что они мониторят мою активность и собирают аналитику.
                 Пускай собирают - благодаря этому разработчики фиксят баги и делают продукт круче.
               </p>
@@ -1076,6 +1059,12 @@ export default function () {
               </section>
             </category>
 
+            <separator style={styles.separator}>
+              <line style={styles.separator.line} />
+              <caption style={styles.separator.caption}>Заключение</caption>
+              <line style={styles.separator.line} />
+            </separator>
+
             <category style={styles.category}>
 							<topper style={styles.topper}>Что сюда не попало</topper>
 
@@ -1113,6 +1102,9 @@ export default function () {
 			</viewport>
 
 			{modal == "test" ? <Modal onClose={() => setModal(null)} /> : null}
+			{modal == "boilerplate" ? <BoilerplateModal onClose={() => setModal(null)} /> : null}
+			{modal == "components" ? <ComponentsModal onClose={() => setModal(null)} /> : null}
+			{modal == "settings" ? <SettingsModal onClose={() => setModal(null)} /> : null}
 		</root>
 	);
 }
