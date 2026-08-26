@@ -137,7 +137,7 @@ export default function () {
 	};
 
   styles.category.section = {
-    padding: desktop ? 20 : 10
+    borderBottom: `1px dashed ${colors.border.medium}`
   };
 
 	styles.viewport = {
@@ -230,7 +230,7 @@ export default function () {
 
   styles.clickable = {
     display: 'inline',
-    borderBottom: `1px dotted ${colors.text.medium}`,
+    borderBottom: `1px dashed ${colors.text.weak}`,
     position: 'relative',
     textDecoration: 'none'
   };
@@ -413,10 +413,10 @@ export default function () {
 
                 <ul style={styles.ul}>
                   <li>Слева-слева: <a href="https://www.warp.dev">Warp</a>.</li>
-                  <li>Слева: <a href="https://www.chromium.org">Chromium</a> для разработки с открытым дебаггером.</li>
+                  <li>Слева: <a href="https://www.chromium.org">Chromium</a> с открытым дебаггером.</li>
                   <li>Центр: <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> | <a href="https://www.google.com/chrome/">Chrome</a> | любое другое временное приложение.</li>
                   <li>Справа: <a href="https://claude.ai">Claude</a>.</li>
-                  <li>Справа-справа: мессенджеры - <a href="https://www.thunderbird.net">Thunderbird</a>, <a href="https://telegram.org">Telegram</a>, <a href="https://slack.com">Slack</a>.</li>
+                  <li>Справа-справа: <a href="https://www.thunderbird.net">Thunderbird</a> | <a href="https://telegram.org">Telegram</a> | <a href="https://slack.com">Slack</a>.</li>
                 </ul>
               </p>
 
@@ -426,7 +426,7 @@ export default function () {
               </p>
             </category>
 
-            <category onClick={() => setModal("test")} style={styles.category}>
+            <category style={styles.category}>
               <topper style={styles.topper}>Клавиатура</topper>
 
               <p style={styles.p}>
@@ -438,27 +438,13 @@ export default function () {
               <p style={styles.p}>
                 <b style={styles.b}>Удобное расположение модификаторов.</b>
                 На обычных клавиатурах большим пальцем жмешь только пробел, а модификаторы - мизинцем.
-                На моей клавиатуре пальцами я могу нажать 12 клавиш, по 6 на каждый большой палец:
-                <ul style={styles.ul}>
-                  <li><term style={styles.term}>PAGE_UP</term></li>
-                  <li><term style={styles.term}>PAGE_DOWN</term></li>
-                  <li><term style={styles.term}>BACKSPACE</term></li>
-                  <li><term style={styles.term}>DELETE</term></li>
-                  <li><term style={styles.term}>HOME</term></li>
-                  <li><term style={styles.term}>END</term></li>
-                  <li><term style={styles.term}>SPACE</term></li>
-                  <li><term style={styles.term}>ENTER</term></li>
-                  <li><term style={styles.term}>ALT</term></li>
-                  <li><term style={styles.term}>CTRL</term></li>
-                  <li><term style={styles.term}>ALT+SHIFT</term> (через макрос)</li>
-                  <li><term style={styles.term}>ALT+CTRL</term> (через макрос)</li>
-                  <li><term style={styles.term}>ALT+CTRL+SHIFT</term> (через макрос)</li>
-                </ul>
+                На моей клавиатуре пальцами я могу нажать 12 клавиш, по 6 на каждый большой палец: <term style={styles.term}>PageUp</term> <term style={styles.term}>PageDown</term> <term style={styles.term}>Backspace</term> <term style={styles.term}>Delete</term> <term style={styles.term}>Home</term> <term style={styles.term}>End</term> <term style={styles.term}>Space</term> <term style={styles.term}>Enter</term> <term style={styles.term}>Alt</term> <term style={styles.term}>Ctrl</term> <term style={styles.term}>Alt+Shift</term> <term style={styles.term}>Alt+Ctrl</term> <term style={styles.term}>Alt+Ctrl+Shift</term>.
+                Последние 3 настроены через макрос, зажимается одна клавиша и равносильно нажатию сразу нескольких модификаторов.
               </p>
 
               <p style={styles.p}>
                 <b style={styles.b}>Удобное расположение стрелок.</b>
-                Стрелки нажимаются указательным и средним пальцем без переноса руки.
+                Стрелки нажимаются указательным и средним пальцем <clickable style={styles.clickable}>без переноса руки</clickable>.
                 На обычных клавиатурах для навигации приходится двигать кисть.
               </p>
 
@@ -468,11 +454,11 @@ export default function () {
               </p>
 
               <p style={styles.p}>
-                Благодаря углублениям ладонь на клавиатуре лежит удобнее с физиологической точки зрения.
+                Благодаря углублениям на клавиатуре ладонь лежит удобнее с физиологической точки зрения.
               </p>
 
               <p style={styles.p}>
-                К этой клавиатуре нужно привыкнуть - у меня ушло примерно пару месяцев.
+                Но к этой клавиатуре нужно привыкнуть - у меня ушло примерно пару месяцев.
                 Первое время было очень неудобно, но оно того стоило.
                 Для игр приходится переопределять <term style={styles.term}>WASD</term> на <term style={styles.term}>ESDF</term>.
               </p>
@@ -482,46 +468,26 @@ export default function () {
               <topper style={styles.topper}>Мышка</topper>
 
               <p style={styles.p}>
-                Есть три типа хвата:
-                <ul style={styles.ul}>
-                  <li><term style={styles.term}>Palm</term> - ладонь полностью на мышке.</li>
-                  <li><term style={styles.term}>Fingertip</term> - мышку держат пальцами.</li>
-                  <li><term style={styles.term}>Claw</term> - часть ладони на мышке, часть на коврике (среднее между <term style={styles.term}>Palm</term> и <term style={styles.term}>Fingertip</term>).</li>
-                </ul>
-
-              </p>
-              <p style={styles.p}>
-                Для меня <b>очень</b> важно, чтобы хват был именно <term style={styles.term}>Claw</term>, при нем можно доводить курсор пальцами, упираясь основанием ладони в коврик.
-                При <term style={styles.term}>Palm</term> - хвате вся ладонь лежит на мышке, упереться в коврик не получается - из‑за этого заметно падает точность.
+                Первое требование к мышке это форма.
+                Форма должна быть симметричная (так удобнее перетаскивать ее).
+                Размер должен быть такой, что бы можно было упереться ладонью в ковер и доводить курсор до нужно точки пальцами.
               </p>
 
               <p style={styles.p}>
-                Я вообще не понимаю, как можно пользоваться мышкой с <term style={styles.term}>Palm</term> хватом, хотя, может, это дело привычки.
+                Категорически не подходят мышки, где вся ладонь должна лежать на мышке.
+                В этом случае доводить курсор доводить пальцами не получается и из‑за этого заметно падает точность.
               </p>
 
               <p style={styles.p}>
-                Для меня важно, чтобы были сразу два механизма скролла:
-                <ul style={styles.ul}>
-                  <li><term style={styles.term}>Тактильный скролл</term> - классика с четкими щелчками.</li>
-                  <li><term style={styles.term}>Свободный скролл</term> - колесико крутится без сопротивления и щелчков.</li>
-                </ul>
+                Второе требование - это что бы мышка беспроводной (вообще чем меньше проводов - тем лучше).
               </p>
 
               <p style={styles.p}>
-                Мышка обязательно должна быть беспроводной (чем меньше проводов - тем лучше).
+                Третье требование  - наличие боковых кнопок (я программирую их на копирование и вставку через <a href="https://www.autohotkey.com">AutoHotkey</a>).
               </p>
 
               <p style={styles.p}>
-                Нужны кнопки влево‑вправо на колесике (я программирую их на копирование и вставку через <a href="https://www.autohotkey.com">AutoHotkey</a>).
-              </p>
-
-              <p style={styles.p}>
-                Что еще пробовал:
-                <ul style={styles.ul}>
-                  <li>*** с 16 (!) - 16 кнопок, но по факту мне нужно только 3, копирование, вставка, Enter.</li>
-                  <li>Десктопный тачпад - значительно менее удобен чем мышка.</li>
-                  <li>Планшет для рисования - думал, что будет удобнее, так как ручка очень физиологична, но на практике мышка удобнее.</li>
-                </ul>
+                Под эти требования подходит много мышек, я выбрал <a href="https://www.logitechg.com/en-us/shop/p/pro-x2-superlight-wireless-mouse">Logitech G Pro X Superlight 2</a>.
               </p>
             </category>
 
@@ -529,16 +495,24 @@ export default function () {
               <topper style={styles.topper}>Стул</topper>
 
               <p style={styles.p}>
-                Пробовал распиаренный <a href="https://www.hermanmiller.com">Herman Miller</a>, который стоит как самолет, но у него минимальная высота 50 см, а мне нужно именно 40 см.
-
-                На <a href="https://www.hermanmiller.com">Herman Miller</a> это очень неудобно.
+                Казалось бы стул это мелочь, но я провожу сидя за компьютером в день по 8 часов.
+                И удобство стула для меня намного важнее, чем количество ядер у процессора.
               </p>
 
               <p style={styles.p}>
-                В итоге остановился на обычном <clickable onClick={() => alert('TODO')} style={styles.clickable}>стуле</clickable> из <term style={styles.term}>IKEA</term> за 100 руб.
-                Если открутить подлокотники (они не нужны: локтями упираемся в стол), он идеально помещается под мои столы.
-                Так же на нем можно сидеть в позе <clickable onClick={() => alert('TODO')} style={styles.clickable}>наездника</clickable>.
-                Врачи говорят что это полезно, но а просто удобно время от времени менять позу.
+                Первое требование к стулу - что бы не было подлокотников (или их можно было убрать).
+                Логти у меня всегда на столе.
+              </p>
+
+              <p style={styles.p}>
+                Второе это что бы можно было сидеть в позе <clickable onClick={() => alert('TODO')} style={styles.clickable}>наездника</clickable>.
+                Мне удобно время от времени менять позы.
+                По этой причине я отказался от хайпового <a href="https://www.hermanmiller.com">Herman Miller Aeron</a>.
+              </p>
+
+              <p style={styles.p}>
+                Остановился на одном из самых популярных оффисных стульев в мире - <a href="https://ikeamega.ru/officechairs/tproduct/951877794252-markus-markus-ofisnoe-kreslo-vissle-svet" style={styles.term}>IKEA Marcus</a>.
+                Подлокотники убираются, низкая посадка, можно сидеть в позе наездника.
               </p>
             </category>
 
@@ -546,9 +520,17 @@ export default function () {
               <topper style={styles.topper}>Очки</topper>
 
               <p style={styles.p}>
-                Я, конечно, не врач, но если хотите прокачать рабочее место - уделите внимание очкам <b style={styles.b}>даже если</b> на зрение не жалуетесь.
+                Весьма странно, упоминать этот пункт в разделе про железо, но мой сетап заточен под программирование.
+                Так что если вы хотите прокачать рабочее место - уделите внимание очкам <b style={styles.b}>даже если</b> на зрение не жалуетесь.
+              </p>
+
+              <p style={styles.p}>
                 Я вот на зрение не жалуюсь совсем, вывески на улице читаю нормально, но в очках читать текст на экране <b style={styles.b}>заметно удобнее</b>.
                 Возможно, у вас будет так же.
+              </p>
+
+              <p style={styles.p}>
+                Многие концентрируются на характеристиках видеокарты и мониторах, но забывают про то, что очки могут улучшить изображение намного сильнее.
               </p>
             </category>
 
@@ -556,22 +538,23 @@ export default function () {
               <topper style={styles.topper}>Железо</topper>
 
               <p style={styles.p}>
-                Железо я намеренно оставляю в самом конце: в программировании редко когда именно оно - бутылочное горлышко.
+                Железо я намеренно оставляю в самом конце: в программировании редко когда оно является бутылочным горлышком.
                 Любой из пунктов выше дает мне больше реального удобства, чем топовая видеокарта или процессор.
-                Тем не менее железо у меня топовое, иногда играю в игры, иногда локально запускаю нейросети.
+                Тем не менее железо у меня самое последнее, просто потому что хочется что бы все было идеально.
               </p>
 
               <p style={styles.p}>
                 Вот конкретные модели:
 
                 <ul style={styles.ul}>
-                  <li>Видеокарта: <a href="TODO">GeForce RTX 5090</a>. В плане видео-карт AMD даже близко не стоит с <term style={styles.term}>Nvidia</term>.</li>
-                  <li>Процессор: <a href="TODO">Core Ultra 9 285k</a>. А вот процессоры у AMD получше чем у <term style={styles.term}>Intel</term>.</li>
-                  <li>Жесткий диск: <a href="TODO">Samsung SSD 9100 Pro</a>. Самсунги безоговорочный лидер в плане жестких дисков.</li>
-                  <li>Оперативка: <a href="TODO">G.Skill Trident Z5 CK</a> x2.</li>
-                  <li>Материнка: TODO.</li>
-                  <li>Колонка: TODO.</li>
-                  <li>Корпус: TODO.</li>
+                  <li>Видеокарта: <a href="TODO">GeForce RTX 5090</a>. В плане видео-карт <term style={styles.term}>AMD</term> даже близко не стоит с <term style={styles.term}>Nvidia</term>. Использую для запуска локальных нейросетей.</li>
+                  <li>Процессор: <a href="TODO">Core Ultra 9 285k</a>. А вот процессоры у <term style={styles.term}>AMD</term> лучше чем у <term style={styles.term}>Intel</term>. Влияет на скорость работы приложений и локальных нейросетей (если в памяти видеокарты вся нейросеть не помещается).</li>
+                  <li>Жесткий диск: <a href="TODO">Samsung SSD 9100 Pro</a>. Samsung безоговорочный лидер в плане жестких дисков.</li>
+                  <li>Оперативка: <a href="TODO">G.Skill Trident Z5 CK</a> x2. </li>
+                  <li>Материнская плата: <a href="https://www.asus.com/motherboards-components/motherboards/prime/prime-b850m-k/">Asus Prime B850M-K</a>. Самое главное, что бы материнская плата поддерживала все выбранное железо. </li>
+                  <li>Наушники: <a href="https://us.sennheiser-hearing.com/products/momentum-5-wireless?variant=62714248495475">Sennhizer Momentum 4 Wireless</a>. Самый главный критерий - что бы были беспроводными и долго держали заряд.</li>
+                  <li>Колонка: <a href="https://www.harmankardon.com/HK+GO+PLAY.html">Harman Kardon</a>. Использую исключительно для белого шума во время работы. Для фильмов, музыки и созвонов я использую наушники.</li>
+                  <li>Корпус: <a href="https://www.asus.com/motherboards-components/cases/prime/asus-prime-ap303-mesh-panel">The ASUS Prime AP303</a>. Корпус, как корпус, тут нет комментариев.</li>
                 </ul>
               </p>
 
@@ -587,157 +570,265 @@ export default function () {
 						<category style={styles.category}>
 							<topper style={styles.topper}>Операционная система</topper>
 
-              <p style={styles.p}>
-                Тут есть 4 варианта:
-                <a href="https://www.microsoft.com/windows">Windows</a>,
-                <a style={{marginLeft: 5}} href="https://www.apple.com/macos">MacOS</a>,
-                <a style={{marginLeft: 5}} href="https://ubuntu.com">Ubuntu</a> и
-                <a style={{marginLeft: 5}} href="https://www.freebsd.org">FreeBSD</a>.
-              </p>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  Тут есть 4 варианта:
+                  <a href="https://www.microsoft.com/windows">Windows</a>,
+                  <a style={{marginLeft: 5}} href="https://www.apple.com/macos">MacOS</a>,
+                  <a style={{marginLeft: 5}} href="https://ubuntu.com">Ubuntu</a>.
+                </p>
 
-              <p style={styles.p}>
-                Вы можете подумать, что раз я такой техногик, то у меня какой‑нибудь <a href="https://ubuntu.com">Ubuntu</a> - но нет.
-                Я абсолютный фанат <a href="https://www.microsoft.com/windows">Windows</a> на десктопе и считаю, что ни <a href="https://www.apple.com/macos">MacOS</a>, ни <a href="https://ubuntu.com">Ubuntu</a> даже близко не сравнятся с ней по удобству.
-              </p>
-              <p style={styles.p}>
-                На <term style={styles.term}>MacOS</term> совершенно неудобная система управления окнами.
-                А это по сути главная функция операционной системы.
-                Создаются какие‑то воркспейсы, неудобные переключения.
-              </p>
-              <p style={styles.p}>
-                На <a href="https://www.microsoft.com/windows">Windows</a> я очень активно использую <a href="https://www.autohotkey.com">AutoHotkey</a> - аналогов нет ни на <a href="https://www.apple.com/macos">MacOS</a>, ни на <a href="https://ubuntu.com">Ubuntu</a>.
-                Одного этого мне достаточно, чтобы не смотреть в их сторону.
-              </p>
-              <p style={styles.p}>
-                <a href="https://www.freebsd.org">FreeBSD</a>, на мой взгляд, намного круче <a href="https://ubuntu.com">Ubuntu</a>, но только для сервера.
-                Я не настолько мазохист, чтобы ставить его на рабочий компьютер.
-              </p>
+                <p style={styles.p}>
+                  Вы можете подумать, что раз я такой техногик, то у меня какой-нибудь <term style={styles.term}>Linux</term> - но нет.
+                  Я абсолютный фанат <a href="https://www.microsoft.com/windows">Windows</a> на десктопе и считаю, что ни <a href="https://www.apple.com/macos">MacOS</a>, ни <a href="https://ubuntu.com">Ubuntu</a> даже близко не сравнятся с ней по удобству.
+                </p>
+                <p style={styles.p}>
+                  На <a href="https://www.microsoft.com/windows">Windows</a> я очень активно использую <a href="https://www.autohotkey.com">AutoHotkey</a> - аналогов нет ни на <a href="https://www.apple.com/macos">MacOS</a>, ни на <a href="https://ubuntu.com">Ubuntu</a>.
+                  Одного этого мне достаточно, чтобы не смотреть в их сторону.
+                </p>
+              </section>
 
-              <p style={styles.p}>
-                Настройка <a href="https://www.microsoft.com/windows">Windows</a> у меня в три этапа:
-                <ul style={styles.ui}>
-                  <li><clickable onClick={() => setModal("boilerplate")} style={styles.clickable}>Удаление бойлерплейта</clickable></li>
-                  <li><clickable onClick={() => setModal("components")} style={styles.clickable}>Отключение компонентов</clickable></li>
-                  <li><clickable onClick={() => setModal("settings")} style={styles.clickable}>Обычные настройки</clickable></li>
-                </ul>
-              </p>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  Настройка <a href="https://www.microsoft.com/windows">Windows</a> у меня в три этапа:
+                  <ul style={styles.ul}>
+                    <li><clickable onClick={() => setModal("boilerplate")} style={styles.clickable}>Удаление бойлерплейта</clickable></li>
+                    <li><clickable onClick={() => setModal("components")} style={styles.clickable}>Отключение компонентов</clickable></li>
+                    <li><clickable onClick={() => setModal("settings")} style={styles.clickable}>Обычные настройки</clickable></li>
+                  </ul>
+                </p>
+              </section>
 
               <p style={styles.p}>
                 На <a href="https://www.microsoft.com/windows">Windows</a> (как и на всех ОС) полный кавардак с установкой приложений.
 
-                Алгоритм выбора у меня такой.
-                Все стараюсь ставить через <a href="https://learn.microsoft.com/windows/package-manager/winget/">winget</a>, либо - если это часто используемое браузерное приложение - на десктопе создаю <term style={styles.term}>ярлык</term>.
-                Редко используемые сайты открываю в браузере.
-                <a href="https://apps.microsoft.com">Microsoft Store</a> стараюсь не использовать вообще.
+                <ul style={styles.ul}>
+                  <li>Winget</li>
+                  <li>Windows Store</li>
+                  <li>PWA приложения. Это браузерные приложения, которые можно устанавливать как десктопные.</li>
+                  <li>Предустановленны приложения.</li>
+                  <li>Приложения которые скачиваются с веб-сайтов.</li>
+                  <li>Браузер (что по сути то же платформа для приложений)</li>
+                </ul>
+              </p>
+
+              <p style={styles.p}>
+                Что бы все это как-то унифицировать, я придерживаюсь определенного алгоритма по установке приложений.
+
+                <ul style={styles.ul}>
+                  <li>Сначала пытаюсь поставить приложение через <a href="https://learn.microsoft.com/windows/package-manager/winget/">winget</a>.</li>
+                  <li>Если в <a href="https://learn.microsoft.com/windows/package-manager/winget/">winget</a> приложения нет и это вебсайт то создаю ярлык на рабочем столе через свой скрипт install-webapp.</li>
+                  <li>Если в <a href="https://learn.microsoft.com/windows/package-manager/winget/">winget</a> приложения нет и это не выбсайт то гружу приложения с официального сайта.</li>
+                </ul>
+              </p>
+
+              <p style={styles.p}>
+                Магазин приложений не использую вообще.
+                Не все веб-приложения можно установить как <term style={styles.term}>PWA</term> приложение, но создать ярлык можно для любого веб-приложения, поэтому я пользуюсь только функционалом создания ярлыков.
+                Ярлыки создаю только для часто используемых веб-приложений, если я использую веб-приложение раз в месяц, то я просто открываю его в браузере.
               </p>
 						</category>
 
 						<category style={styles.category}>
 							<topper style={styles.topper}>AutoHotkey</topper>
 
-              <p style={styles.p}>
-                <a href="https://www.autohotkey.com">AutoHotkey</a> - язык программирования специально заточенный под создание своих горячих клавиш.
-                Ниже - то, что по факту должно быть в ОС, но встраивается обходными путями и хаками.
-              </p>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <a href="https://www.autohotkey.com">AutoHotkey</a> - язык программирования специально заточенный под создание своих горячих клавиш на <a href="TODO">Windows</a>.
+                  Ниже - то, что по факту должно быть в ОС, но встраивается обходными путями и хаками.
+                </p>
+              </section>
 
-              <p style={styles.p}>
-                <b style={styles.b}>Смена фокуса.</b>
-                Смену фокуса я полностью переделал.
-                В стандартном альтабе мне не нравится то, что нельзя напечатать название приложение что бы его сфокусировать.
-                Плюс так же я добавил проверку, если приложение не запущено, то оно запускается, если запущено, то фокусируется.
-                <clickable onClick={() => alert('TODO')} style={{...styles.clickable, marginLeft: 5}}>Вот как это работает</clickable>
-              </p>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <b style={styles.b}>Макросы.</b>
+                  Вот вам <clickable style={styles.clickable}>картинка</clickable> для наглядности где какие клавиши расположены.
 
-              <p style={styles.p}>
-                <b style={styles.b}>Клавиатурные жесты.</b>
-                Сейчас при долгом зажатии клавиши печатается много раз одна и та же буква - это поведение совершенно бесполезно.
-                Я сделал так, что при долгом зажатии запускается ярлык определенное приложение.
-              </p>
+                  <ul>
+                    <li>Caps Lock = CTRL</li>
+                    <li>Win = CTRL-SHIFT</li>
+                    <li>Right Ctrl = ALT-SHIFT</li>
+                    <li>Left ctrl = ALT-CTRL-SHIFT</li>
+                    <li>/ = свитчинг (о нем дальше)</li>
+                    <li>Insert = Shift-Tab</li>
+                  </ul>
+                </p>
+              </section>
 
-              <p style={styles.p}>
-                <b style={styles.b}>Смена раскладки.</b>
-                Мне нужно менять огромное количество раз на дню.
-                Ни <a href="https://yandex.ru/soft/punto/">Punto Switcher</a>, ни <a href="https://caramba-switcher.com">Caramba Switcher</a> мне не зашли (работают в 80% случаев, но отавшиеся 20% все портят).
-                Что сделал я: при смене фокуса язык приложения сбрасывается на значение по умолчанию, значение по умолчанию указывается на ярлыке приложения.
-                Во время печати, языком я управляю вручную через правый <term style={styles.term}>Shift</term>.
-              </p>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <b style={styles.b}>Унификация.</b>
+                  Зафиксированы те символы которые печатаются по <term style={styles.term}>Shift-[0-9]</term>.
+                  Сделал так, что бы печатался один и тот же символ вне зависимости от раскладки.
+                  Так же часто используемые символы перенесены на <term style={styles.term}>Ctrl-[0-9]</term> (это слэши и все виды скобочек).
+                </p>
+              </section>
 
-              <p style={styles.p}>
-                <b style={styles.b}>Колесико.</b>
-                Влево - копирование, вправо - вставка, нажатие - Enter.
-              </p>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <b style={styles.b}>Клавиатурные жесты.</b>
+                  Сейчас по умолчанию долгом зажатии клавиши символ печатается много раз одна и та же буква - это поведение совершенно бесполезно.
+                  Я сделал так, что при долгом зажатии запускается определенное приложение.
+                  Это поведение раз в 100 полезнее, чем печать большого количества одного и того же символа.
+                </p>
+              </section>
 
-              <p style={styles.p}>
-                <b style={styles.b}>Унификация.</b>
-                Бесит, что на русской и английской раскладках спецсимволы печатаются по‑разному.
-              </p>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <b style={styles.b}>Свитчинг.</b>
+                  При нажатии на обратный слэш, происходит переключение фокуса между текущим и предыдущим приложением.
+                  Это супер-удобная клавиша для нажатия, но на которую печатается символ, который требуется один раз в неделю.
+                </p>
+              </section>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <b style={styles.b}>Селектор</b>
+                  Стандартный альтаб меня не устраивал.
+                  На нем можно переключаться только между запущенными приложениями, но нельзя запускать новые приложения.
+                  Так же в нем нельзя фокусировать приложение вводя его имя.
+                </p>
+
+                <p style={styles.p}>
+                  Для каждого установленного приложения (как веб так и нативного) я создаю ярлык на рабочем столе.
+                  При долгом нажатии на клавишу <term style={styles.term}>a</term> запускается селектор в котором все ярлыки сортируются с помощью <a href="">fzf</a>.
+                </p>
+
+                <p style={styles.p}>
+                  Так же добавлена проверка, если приложение не запущено, то оно запускается, если запущено, то фокусируется.
+                  То есть фокусировка и запуск приложения происходит через один и тот же интерфейс.
+
+                  <clickable onClick={() => alert('TODO')} style={{...styles.clickable, marginLeft: 5}}>Вот как это работает</clickable>.
+                </p>
+
+                <p style={styles.p}>
+                  В итоге если приложению назначен клавиатурный жест - я запускаю его через него.
+                  Если нет - то использую свой селектор.
+                </p>
+              </section>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <b style={styles.b}>Смена раскладки.</b>
+                  Раскладку нужно менять по 100 раз на дню.
+                  Ни <a href="https://yandex.ru/soft/punto/">Punto Switcher</a>, ни <a href="https://caramba-switcher.com">Caramba Switcher</a> мне не зашли (работают в 90% случаев, но отавшиеся 10% все портят).
+                </p>oo
+
+                <p style={styles.p}>
+                  Я заметил, что проблемы с раскладкой возникают только в момент начала печати.
+                  В моем скрипте написана логика, что при смене фокуса язык приложения сбрасывается на значение по умолчанию (у каждого приложения оно свое).
+                </p>
+
+                <p style={styles.p}>
+                  Таким образом легко нарабатывается навык при котором запоминается начальная раскладка каждого приложения.
+                  Когда текст уже печатается то раскладка удерживается в голове, и переключать ее не вызывает проблем.
+                  Во время печати, я управляю раскладкой вручную через одиночное нажатие на правый <term style={styles.term}>Shift</term> без модификаторов.
+                </p>
+              </section>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <b style={styles.b}>Мышинные кнопки.</b>
+                  Одна мышинная кнопка на копирование, вторая на вставку, нажатие на колесико - Enter.
+                </p>
+              </section>
 						</category>
 
             <category style={styles.category}>
               <topper style={styles.topper}>Браузер</topper>
 
-              <p style={styles.p}>
-                Браузеры с фокусом на приватность сразу идут лесом (<a href="https://duckduckgo.com/app">Duckduckgo</a>, <a href="https://brave.com">Brave</a>, <a href="https://mullvad.net/en/browser">Mullvad</a>).
-                Как показывает практика, браузеры в своих попытках обеспечить приватность зачастую ломают функционал веб приложения.
-                Честное слово, мне абсолютно пофиг на то что они мониторят мою активность и собирают аналитику.
-                Пускай собирают - благодаря этому разработчики фиксят баги и делают продукт круче.
-              </p>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  Браузеры с фокусом на приватность сразу идут лесом (<a href="https://duckduckgo.com/app">Duckduckgo</a>, <a href="https://brave.com">Brave</a>, <a href="https://mullvad.net/en/browser">Mullvad</a>).
+                  Как показывает практика, браузеры в своих попытках обеспечить приватность зачастую ломают функционал веб приложения.
+                  Честное слово, мне абсолютно пофиг на то что веб-приложения мониторят мою активность и собирают аналитику.
+                  Но мне не пофиг на то, когда веб-приложения ломаются.
+                  Пускай собирают свою телеметрию, благодаря этому разработчики фиксят баги и делают продукт лучше.
+                </p>
 
-              <p style={styles.p}>
-                От <a href="https://www.mozilla.org/firefox/">Firefox</a> я отказался потому что мне не нравится его интерфейс.
-                В <a href="https://www.opera.com">Opera</a> много разного встроенного функционала, но который можно в <a href="https://www.google.com/chrome/">Chrome</a> реализовать через плагины.
-                Поэтому я остановился на <a href="https://www.google.com/chrome/">Chrome</a> и отдельно <a href="https://www.chromium.org">Chromium</a> для разработки.
-              </p>
+                <p style={styles.p}>
+                  От <a href="https://www.mozilla.org/firefox/">Firefox</a> я отказался потому что мне не нравится его интерфейс.
+                  В <a href="https://www.opera.com">Opera</a> много разного встроенного функционала, но который можно в <a href="https://www.google.com/chrome/">Chrome</a> реализовать через плагины.
+                  Поэтому я остановился на <a href="https://www.google.com/chrome/">Chrome</a> для браузинга и <a href="https://www.chromium.org">Chromium</a> для разработки (им назначены разные горячие клавиши и они открываются на разных мониторах).
+                </p>
+              </section>
 
-              <p style={styles.p}>
-                Список плагинов:
-                <ul style={styles.ul}>
-                  <li><a href="https://1password.com">1Password</a> - в браузере работает идеально.</li>
-                  <li><a href="https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">uBlock Origin</a> - заметно лучше <a href="https://adblockplus.org">AdBlock Plus</a> и <a href="https://getadblock.com">AdBlock</a>.</li>
-                  <li><a href="https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn">Claude</a> - с его помощью можно задавать вопросы по контенту на странице.</li>
-                  <li><a href="https://chromewebstore.google.com/detail/crxmouse-mouse-gestures/jlgkpaicikihijadgifklkbpdajbkhjo">CxMouse</a> - плагин для жестов.</li>
-                  <li><a href="https://chromewebstore.google.com/detail/dont-close-window-with-la/dlnpfhfhmkiebpnlllpehlmklgdggbhn">Dont Close The Window with Last Tab</a> - блокирует закрытие окна при закрытии последней вкладки.</li>
-                  <li><a href="https://chromewebstore.google.com/detail/i-still-dont-care-about-c/edibdbjcniadpccecjdfdjjppcpchdlm">I dont care about cookies</a> - автоматически принимает все куки.</li>
-                  <li><a href="https://chromewebstore.google.com/detail/phantom/bfnaelmomeimhlpmgjnjophhpkkoljpa">Phantom</a> - крипто-кошелек.</li>
-                  <li><a href="https://returnyoutubedislike.com">Return Youtube Dislike</a> - возвращает количество дизлайков.</li>
-                  <li><a href="https://www.tampermonkey.net">Tamper Monkey</a> - позволяет добавлять свой JS на страницу.</li>
-                </ul>
-              </p>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  Список плагинов:
+                  <ul style={styles.ul}>
+                    <li><a href="https://1password.com">1Password</a> - в браузере работает идеально.</li>
+                    <li><a href="https://ublockorigin.com/">uBlock Origin</a> - заметно лучше <a href="https://adblockplus.org">AdBlock Plus</a> и <a href="https://getadblock.com">AdBlock</a>.</li>
+                    <li><a href="https://claude.ai/">Claude</a> - можно общаться с Claude о содержимом на странице (требуется подписка).</li>
+                    <li><a href="https://crxmouse.com/">CxMouse</a> - плагин для жестов. У меня настроено только четыре жеста. Влево / вправо - фокус левой / правой вкладки. Вниз - закрыть вкладку. Вверх - создать новую вкладку.</li>
+                    <li><a href="https://chromewebstore.google.com/detail/dont-close-window-with-la/dlnpfhfhmkiebpnlllpehlmklgdggbhn">Dont Close The Window with Last Tab</a> - блокирует закрытие окна при закрытии последней вкладки.</li>
+                    <li><a href="https://www.i-dont-care-about-cookies.eu/">I dont care about cookies</a> - автоматически принимает все куки.</li>
+                    <li><a href="https://phantom.com/">Phantom</a> - крипто-кошелек (использую только для стейблкойнов).</li>
+                    <li><a href="https://returnyoutubedislike.com">Return Youtube Dislike</a> - возвращает количество дизлайков.</li>
+                    <li><a href="https://chromewebstore.google.com/detail/no-new-tabs/gneobebnilffgkejpfhlgkmpkipgbcno?hl=en">No New Tabs</a> - запрещает браузеру создавать новые вкладки. Бесит когда веб-приложение сам создает новые вкладки, если я захочу открыть новую вкладку я сам это сделаю.</li>
+                    <li><a href="https://tampermonkey.net">Tamper Monkey</a> - позволяет добавлять свой JS на страницу (добавляю фиксированные заголовки веб-сайтам, что бы фокусировать их через <a href="">AutoHotkey</a>).</li>
+                  </ul>
+                </p>
+              </section>
 
-              <p style={styles.p}>
-                Мне не нравится сама концепция браузера: это вложенная платформа.
-                ОС уже платформа для приложений, а браузер - еще одна внутри.
-                Поэтому из сайтов, которыми часто пользуюсь я создаю десктопные ярлыки, которые запускают определенное веб-приложение, но без URL-бара и вкладок.
-              </p>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  Вообще, мне не особо нравится сама концепция браузера - это платформа для запуска приложений.
+                  Но операционная система это уже платформа для запуска приложений, а браузер еще одна внутри платформа внутри платформы.
+                  Поэтому из сайтов, которыми часто пользуюсь я создаю десктопные ярлыки, которые запускают определенное веб-приложение, но без URL-бара и вкладок.
+                </p>
 
-              <p style={styles.p}>
-                Мой <a href="https://www.autohotkey.com">AutoHotkey</a> скрипт настроен так, что показывает позволяет запускать такие вебсайты так же как и обычные приложения.
-                По этому я впринципе не пользуюсь функционалом закладок в браузере.
-              </p>
+                <p style={styles.p}>
+                  Мой <a href="https://www.autohotkey.com">AutoHotkey</a> скрипт настроен так, что показывает позволяет запускать такие вебсайты так же как и обычные приложения.
+                  По этому я впринципе не пользуюсь функционалом закладок в браузере.
+                </p>
+              </section>
             </category>
 
             <category style={styles.category}>
-              <topper style={styles.topper}>ИИ</topper>
+              <topper style={styles.topper}>Нейросеть</topper>
 
-              <p style={styles.p}>
-                Смотрел, насколько близко модель реализует демо‑приложение.
-                Все модели сравнивал так: сначала сам написал небольшой тестовый проект,
-                потом попросил каждую ИИ в максимальной конфигурации написать такой же.
-                Выбрал ту, чей код понравился больше всех.
-              </p>
-              <p style={styles.p}>Лучшей опцией оказался <a href="https://claude.ai">Claude</a> - у него еще и особый фокус на программирование.</p>
-              <p style={styles.p}><a href="https://cursor.com">Cursor</a> - это надмозг: по сути выбирает модель за тебя. Мне такой подход не нравится.</p>
-              <p style={styles.p}>
-                Время от времени запускаю модели локально через <a href="https://lmstudio.ai">LM Studio</a> и <a href="https://ollama.com">Ollama</a>.
-                Нужна мощная видеокарта с большим объемом памяти, а моя заточена под много мониторов.
-                Но основная все равно <a href="https://claude.ai">Claude</a>.
-              </p>
-              <p style={styles.p}>
-                Модель можно использовать через официальный GUI, через <a href="https://cursor.com">Cursor</a> или через плагин <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
-              </p>
-              <p style={styles.p}>
-                Вот список MCP‑серверов, которые подключаю.
-              </p>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  Нейросети - совершили революцию, это глупо отрицать.
+                  А в программировании он совершил революцию больше чем где-то бы то ни было еще.
+                  И очень важно грамтно заинтегрировать нейросети в свой ежедневный рабочий процесс.
+                </p>
+              </section>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  Первое что нужно, это выбрать правильную нейросить.
+                  Я написал простенькое приложение, менеджер контактов, полностью своими руками без ИИ.
+                  И потом я просил написать ИИ точно такое же приложение по бизнесс-логику, по тому описанию, которое я ей давал.
+                  Для меня это намного более релевантный показатель, чем различные бенчмарки.
+                </p>
+
+                <p style={styles.p}>
+                  Лучшей опцией оказался <a
+                  href="https://claude.ai"
+                >Claude</a> - у него особый фокус на программировании.
+                  Очень хорошая интеграция с WebStorm и качественные плагин под <a
+                  href=""
+                >Chrome</a>.
+                </p>
+              </section>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  Второе - это нужно настроить MCP-сервера.
+                  Для тех кто не в курсе, MCP это протокол по которому в нейросети можно добавлять дополнительные данные, которыми она может пользоваться.
+                  Вот список MCP‑серверов, которые подключаю.
+                </p>
+              </section>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  Время от времени запускаю модели локально через <a href="https://lmstudio.ai">LM Studio</a> и <a href="https://ollama.com">Ollama</a>.
+                  Как ни странно локальные модели показывают почти такие же результаты, как и облачные.
+                  Возможно когда-нибудь полностью перейду на локальную модель.
+                </p>
+              </section>
             </category>
 
             <category style={styles.category}>
@@ -827,7 +918,7 @@ export default function () {
 						<category style={styles.category}>
 							<topper style={styles.topper}>Текстовый редактор</topper>
 
-              <p>
+              <p style={styles.p}>
                 Выбирал между <a href="https://cursor.com">Cursor</a>, <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>, <a href="https://zed.dev">Zed</a> - явный фаворит <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
               </p>
 
