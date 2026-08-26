@@ -379,7 +379,7 @@ export default function () {
                 <ul style={styles.ul}>
                   <li>Слева-слева: <a href="https://www.warp.dev">Warp</a>.</li>
                   <li>Слева: <a href="https://www.chromium.org">Chromium</a> для разработки с открытым дебаггером.</li>
-                  <li>Центр: основной монитор - <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> | <a href="https://www.google.com/chrome/">Chrome</a> | любое другое временное приложение.</li>
+                  <li>Центр: <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> | <a href="https://www.google.com/chrome/">Chrome</a> | любое другое временное приложение.</li>
                   <li>Справа: <a href="https://claude.ai">Claude</a>.</li>
                   <li>Справа-справа: мессенджеры - <a href="https://www.thunderbird.net">Thunderbird</a>, <a href="https://telegram.org">Telegram</a>, <a href="https://slack.com">Slack</a>.</li>
                 </ul>
@@ -429,7 +429,7 @@ export default function () {
 
               <p style={styles.p}>
                 <b style={styles.b}>Удобная позиция для локтей.</b>
-                Локти разведены дальше; вместе с угловым столом это очень удобная позиция.
+                Локти разведены дальше, вместе с угловым столом это очень удобная позиция.
               </p>
 
               <p style={styles.p}>
@@ -495,13 +495,15 @@ export default function () {
 
               <p style={styles.p}>
                 Пробовал распиаренный <a href="https://www.hermanmiller.com">Herman Miller</a>, который стоит как самолет, но у него минимальная высота 50 см, а мне нужно именно 40 см.
-                Если убрать подлокотники, можно сидеть в позе <clickable onClick={() => alert('TODO')} style={styles.clickable}>наездника</clickable>.
+
                 На <a href="https://www.hermanmiller.com">Herman Miller</a> это очень неудобно.
               </p>
 
               <p style={styles.p}>
                 В итоге остановился на обычном <clickable onClick={() => alert('TODO')} style={styles.clickable}>стуле</clickable> из <term style={styles.term}>IKEA</term> за 100 руб.
                 Если открутить подлокотники (они не нужны: локтями упираемся в стол), он идеально помещается под мои столы.
+                Так же на нем можно сидеть в позе <clickable onClick={() => alert('TODO')} style={styles.clickable}>наездника</clickable>.
+                Врачи говорят что это полезно, но а просто удобно время от времени менять позу.
               </p>
             </category>
 
@@ -519,26 +521,26 @@ export default function () {
               <topper style={styles.topper}>Железо</topper>
 
               <p style={styles.p}>
-                Железо я намеренно оставляю в самом конце: очень редко именно оно - бутылочное горлышко.
+                Железо я намеренно оставляю в самом конце: в программировании редко когда именно оно - бутылочное горлышко.
+                Любой из пунктов выше дает мне больше реального удобства, чем топовая видеокарта или процессор.
+                Тем не менее железо у меня топовое, иногда играю в игры, иногда локально запускаю нейросети.
               </p>
 
               <p style={styles.p}>
-                Тем не менее железо у меня топовое.
                 Вот конкретные модели:
 
                 <ul style={styles.ul}>
-                  <li>Видеокарта 4422 - 1234 поинта.</li>
-                  <li>Процессор 4422 - 1234 поинта.</li>
-                  <li>Диск Samsung 4422 - 1234 поинта.</li>
-                  <li>64 гигабайта оперативки - 1234 поинта.</li>
+                  <li>Видеокарта: <a href="TODO">GeForce RTX 5090</a>. В плане видео-карт AMD даже близко не стоит с <term style={styles.term}>Nvidia</term>.</li>
+                  <li>Процессор: <a href="TODO">Core Ultra 9 285k</a>. А вот процессоры у AMD получше чем у <term style={styles.term}>Intel</term>.</li>
+                  <li>Жесткий диск: <a href="TODO">Samsung SSD 9100 Pro</a>. Самсунги безоговорочный лидер в плане жестких дисков.</li>
+                  <li>Оперативка: <a href="TODO">G.Skill Trident Z5 CK</a> x2.</li>
+                  <li>Материнка: TODO.</li>
+                  <li>Колонка: TODO.</li>
+                  <li>Корпус: TODO.</li>
                 </ul>
               </p>
 
-              <p style={styles.p}>
-                Но честно: любой из пунктов выше дает мне больше реального удобства, чем топовая видеокарта или процессор.
-                Если локально гоняете игры, нейросети или видеомонтаж - железо важно.
-                Для программирования более чем достаточно предпоследнего поколения.
-              </p>
+
             </category>
 
             <separator>
@@ -551,7 +553,7 @@ export default function () {
               <p style={styles.p}>
                 Тут есть 4 варианта:
                 <a href="https://www.microsoft.com/windows">Windows</a>,
-                <a style={{marginLeft: 5}} href="https://www.apple.com/macos">macOS</a>,
+                <a style={{marginLeft: 5}} href="https://www.apple.com/macos">MacOS</a>,
                 <a style={{marginLeft: 5}} href="https://ubuntu.com">Ubuntu</a> и
                 <a style={{marginLeft: 5}} href="https://www.freebsd.org">FreeBSD</a>.
               </p>
@@ -651,7 +653,7 @@ export default function () {
 							<topper style={styles.topper}>AutoHotkey</topper>
 
               <p style={styles.p}>
-                <a href="https://www.autohotkey.com">AutoHotkey</a> - суперклевый инструмент, чтобы "пропатчить" ОС.
+                <a href="https://www.autohotkey.com">AutoHotkey</a> - язык программирования специально заточенный под создание своих горячих клавиш.
                 Ниже - то, что по факту должно быть в ОС, но встраивается обходными путями и хаками.
               </p>
 
@@ -660,7 +662,7 @@ export default function () {
                 Смену фокуса я полностью переделал.
                 В стандартном альтабе мне не нравится то, что нельзя напечатать название приложение что бы его сфокусировать.
                 Плюс так же я добавил проверку, если приложение не запущено, то оно запускается, если запущено, то фокусируется.
-                <clickable onClick={() => alert('TODO')} style={styles.clickable}>Вот как это работает</clickable>
+                <clickable onClick={() => alert('TODO')} style={{...styles.clickable, marginLeft: 5}}>Вот как это работает</clickable>
               </p>
 
               <p style={styles.p}>
@@ -670,11 +672,11 @@ export default function () {
               </p>
 
               <p style={styles.p}>
-                <b style={styles.b}>Язык.</b>
-                Ни <a href="https://yandex.ru/soft/punto/">Punto Switcher</a>, ни <a href="https://caramba-switcher.com">Caramba Switcher</a> мне не зашли.
-                Что сделал я: при смене фокуса язык приложения сбрасывается на значение по умолчанию.
-                Смена языка - правым <term style={styles.term}>Shift</term>.
-                Автоматические свитчеры не дают развить мышечную память: работают в 90% случаев, а эти 10% все портят.
+                <b style={styles.b}>Смена раскладки.</b>
+                Мне нужно менять огромное количество раз на дню.
+                Ни <a href="https://yandex.ru/soft/punto/">Punto Switcher</a>, ни <a href="https://caramba-switcher.com">Caramba Switcher</a> мне не зашли (работают в 80% случаев, но отавшиеся 20% все портят).
+                Что сделал я: при смене фокуса язык приложения сбрасывается на значение по умолчанию, значение по умолчанию указывается на ярлыке приложения.
+                Во время печати, языком я управляю вручную через правый <term style={styles.term}>Shift</term>.
               </p>
 
               <p style={styles.p}>
@@ -761,21 +763,21 @@ export default function () {
               <p style={styles.p}>Главные игроки: <a href="https://www.farmanager.com">Far Manager</a> (2 000), <a href="https://files.community">Files</a>, <a href="https://yazi-rs.github.io">Yazi</a> (32 000), <a href="https://www.ghisler.com">Total Commander</a>.</p>
 
               <p style={styles.p}>
-                Раз 80% операций - скопировать файлы из одной папки в другую, <a href="https://yazi-rs.github.io">Yazi</a> отпадает сразу.
+                 Хайповый <a href="https://yazi-rs.github.io">Yazi</a> не двухпанельный, поэтому отпадает сразу.
               </p>
               <p style={styles.p}>
                 <a href="https://www.farmanager.com">Far Manager</a> - двухпанельный, но по функционалу явно проигрывает <a href="https://www.ghisler.com">Total Commander</a>.
               </p>
               <p style={styles.p}>
-                <a href="https://files.community">Files</a> - красивый UI, но слишком казуальный, далеко не такой функциональный, как <a href="https://www.ghisler.com">Total Commander</a>.
+                <a href="https://files.community">Files</a> - красивый интерфейс, но слишком казуальный и далеко не такой функциональный, как <a href="https://www.ghisler.com">Total Commander</a>.
               </p>
               <p style={styles.p}>
-                У <a href="https://www.ghisler.com">Total Commander</a> есть недостатки (UI мог бы быть минималистичнее и красивее), но он двух-панельный и позволяет гибко настраивать горячие клавиши.
+                У <a href="https://www.ghisler.com">Total Commander</a> интерфейс мог бы быть по лучше, но он двух-панельный, функциональный и позволяет гибко настраивать горячие клавиши.
               </p>
               <p style={styles.p}>
                 В <a href="https://www.ghisler.com">Total Commander</a> включил темную тему, убрал лишний UI, поставил шрифт <a href="https://sourcefoundry.org/hack/">Hack</a>.
                 Горячие клавиши заточены под мою клавиатуру и симметричны с теми, что в <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
-                Вот ссылка на <a href="google.ru">конфиг</a>.
+                Вот как выглядит <clickable style={styles.clickable}>внешний вид</clickable> и вот мой <clickable style={styles.clickable}>конфиг</clickable>.
               </p>
             </category>
 
@@ -842,7 +844,9 @@ export default function () {
 						<category style={styles.category}>
 							<topper style={styles.topper}>Текстовый редактор</topper>
 
-              Выбирал между <a href="https://cursor.com">Cursor</a>, <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>, <a href="https://zed.dev">Zed</a> - явный фаворит <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
+              <p>
+                Выбирал между <a href="https://cursor.com">Cursor</a>, <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>, <a href="https://zed.dev">Zed</a> - явный фаворит <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
+              </p>
 
               <p style={styles.p}>
                 В <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> <b style={styles.b}>очень</b> много функционала, которым пользуюсь каждый день:
@@ -954,8 +958,17 @@ export default function () {
                     - замер скорости интернета
                   </li>
                   <li>
+                    <a href="https://www.speedtest.net">e-katalog.ua</a>
+                    - замер скорости интернета
+                  </li>
+                  <li>
                     <a href="https://github.com/rcmaehl/MSEdgeRedirect">MSEdgeRedirect</a>
                     - чтобы <a href="https://www.microsoft.com/windows">Windows</a> открывала <a href="https://www.google.com/chrome/">Chrome</a> вместо <a href="https://www.microsoft.com/edge">Edge</a>
+                  </li>
+
+                  <li>
+                    <a href="https://github.com/rcmaehl/MSEdgeRedirect">e-katalog.us</a>
+                    - лучший вебсайт по выбору железу, намного лучше <a href="TODO">dns-shop.ru</a> / <a href="pcpartpicker.com">PCPartPicker</a> / <a href="newegg.com">newegg.com</a>.
                   </li>
                 </ul>
               </section>
@@ -975,7 +988,7 @@ export default function () {
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
                 Банковские приложения
                 <ul style={styles.ul}>
-                  <li><a href="https://alfabank.ru">alfabank.ru</a> - так же супер-крупный банк и маловероятно что с ним что-то случится, но кто знает.</li>
+                  <li><a href="https://alfabank.ru">alfabank.ru</a> - так же крупный банк и маловероятно что с ним что-то случится, но кто знает.</li>
                   <li><a href="https://www.sberbank.ru">sberbank.ru</a> - пользуюсь Сбером, самый крупный банк; учитывая текущую экономическую ситуацию, кто знает, что будет с другими. Про Lehman Brothers тоже говорили, что он непотопляем, а ситуация в РФ сейчас тяжелее, чем в США в 2008.</li>
                 </ul>
               </section>
@@ -1004,14 +1017,11 @@ export default function () {
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
                 Развлечения:
                 <ul style={styles.ul}>
-                  <li><a href="https://www.youtube.com">YouTube</a> - больше всего сижу тут.</li>
-                  <li><a href="https://www.reddit.com">Reddit</a> - основной развлекательный.</li>
-                  <li><a href="https://www.instagram.com">Instagram</a> - иногда захожу.</li>
-                  <li><a href="https://www.facebook.com">Facebook</a> - не захожу, но пусть будет.</li>
-                  <li><a href="https://www.tiktok.com">TikTok</a> - не захожу, но пусть будет.</li>
-                  <li><a href="https://www.threads.net">Threads</a> - на мой взгляд круче <a href="https://x.com">Twitter</a>.</li>
-                  <li><a href="https://x.com">Twitter</a> - в США главная платформа, в РФ почему‑то не прижился.</li>
-                  <li><a href="https://bash.im">Bash</a> - цитатник.</li>
+                  <li><a href="https://youtube.com">YouTube</a> - больше всего сижу тут.</li>
+                  <li><a href="https://reddit.com">Reddit</a> - основной развлекательный форум.</li>
+                  <li><a href="https://x.com">Twitter</a> - самая главная новостная соц сеть для новостей (нужно только подписаться на правильных людей).</li>
+                  <li><a href="https://threads.net">Threads</a> - на мой взгляд круче чем <a href="https://x.com">Twitter</a> по интерфейсу.</li>
+                  <li><a href="https://bash.im">Bash</a> - старый добрый цитатник.</li>
                   <li><a href="https://habr.com">Habr</a> - техностатьи.</li>
                 </ul>
               </section>
@@ -1045,23 +1055,23 @@ export default function () {
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
                 В вебе шрифты скачиваются автоматически, но для некоторых десктопных приложений их нужно ставить явно.
                 <ul style={styles.ul}>
-                  <li><a href="https://sourcefoundry.org/hack/">Hack</a> - лучший шрифт для программирования (терминал и редактор)</li>
-                  <li><a href="https://fonts.google.com/specimen/Montserrat">Montserrat</a> - самый нейтральный шрифт</li>
-                  <li><a href="https://fonts.google.com/specimen/Play">Play</a> - красивые цифры</li>
-                  <li><a href="https://www.nerdfonts.com">Nerd Fonts</a> - иконки для терминала</li>
+                  <li><a href="https://sourcefoundry.org/hack/">Hack</a> - лучший шрифт для программирования (терминал и редактор).</li>
+                  <li><a href="https://fonts.google.com/specimen/Montserrat">Montserrat</a> - самый нейтральный шрифт.</li>
+                  <li><a href="https://fonts.google.com/specimen/Play">Play</a> - красивые цифры.</li>
+                  <li><a href="https://www.nerdfonts.com">Nerd Fonts</a> - иконки для терминала.</li>
                 </ul>
               </section>
 
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
                 Остальное
                 <ul style={styles.ul}>
-                  <li><a href="https://www.microsoft.com/software-download/windows11">MediaCreationTool</a> - создание установочных флешек</li>
-                  <li><a href="https://veracrypt.fr">VeraCrypt</a> - лучшее решение для шифрования диска</li>
-                  <li><a href="https://www.qbittorrent.org">qBittorrent</a> - торренты</li>
-                  <li><a href="https://2gis.ru">2GIS</a> - лучшие карты</li>
-                  <li><a href="https://www.gosuslugi.ru">gosuslugi.ru</a> - приложение от хайпового стартапа</li>
-                  <li><a href="https://www.tradingview.com">TradingView</a> - мониторинг акций</li>
-                  <li><a href="https://www.videolan.org">VLC</a> - старый, но лучший видеоплеер</li>
+                  <li><a href="https://www.microsoft.com/software-download/windows11">MediaCreationTool</a> - создание установочных флешек.</li>
+                  <li><a href="https://veracrypt.fr">VeraCrypt</a> - лучшее решение для шифрования диска.</li>
+                  <li><a href="https://www.qbittorrent.org">qBittorrent</a> - торренты.</li>
+                  <li><a href="https://2gis.ru">2GIS</a> - лучшие карты.</li>
+                  <li><a href="https://www.gosuslugi.ru">gosuslugi.ru</a> - приложение от хайпового стартапа.</li>
+                  <li><a href="https://www.tradingview.com">TradingView</a> - мониторинг акций.</li>
+                  <li><a href="https://www.videolan.org">VLC</a> - старый, но лучший видеоплеер.</li>
                 </ul>
               </section>
             </category>
