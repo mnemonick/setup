@@ -957,10 +957,6 @@ export default function () {
                     <a href="https://github.com/rcmaehl/MSEdgeRedirect">MSEdgeRedirect</a>
                     - чтобы <a href="https://www.microsoft.com/windows">Windows</a> открывала <a href="https://www.google.com/chrome/">Chrome</a> вместо <a href="https://www.microsoft.com/edge">Edge</a>
                   </li>
-                  <li>
-                    <a href="https://www.videolan.org">VLC</a>
-                    - старый, но лучший видеоплеер
-                  </li>
                 </ul>
               </section>
 
@@ -987,10 +983,10 @@ export default function () {
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
                 Магазины
                 <ul style={styles.ul}>
-                  <li><a href="https://www.aliexpress.com">aliexpress.com</a> - совершенно ужасный интерфейс, но там можно купить вообще все и дешевле чем на других маркетпелйсах, долгая доставка.</li>
-                  <li><a href="https://www.wildberries.ru">wildberries.ru</a> - использую как замену aliexpress, если нужно что-то купить и нет времени ждать доставку из китая.</li>
-                  <li><a href="https://www.ozon.ru">ozon.ru</a> - использую для доставки продуктов.</li>
-                  <li><a href="https://www.ebay.com">ebay.com</a> - использую если нужно что‑то очень специфичное.</li>
+                  <li><a href="https://aliexpress.com">aliexpress.com</a> - совершенно ужасный интерфейс, но там можно купить вообще все и дешевле чем на других маркетпелйсах, долгая доставка.</li>
+                  <li><a href="https://wildberries.ru">wildberries.ru</a> - использую как замену aliexpress, если нужно что-то купить и нет времени ждать доставку из китая.</li>
+                  <li><a href="https://ozon.ru">ozon.ru</a> - использую для доставки продуктов.</li>
+                  <li><a href="https://ebay.com">ebay.com</a> / <a href="https://avito.com">avito.com</a>  - использую если нужно купить что‑то с рук.</li>
                 </ul>
               </section>
 
@@ -1034,10 +1030,10 @@ export default function () {
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
                 Инструменты для программирования
                 <ul style={styles.ul}>
-                  <li><a href="https://git-scm.com">Git</a> - как по мне <a style={styles.term}>Mercurial</a> лучше, но <term>Git</term> это стандарт де-факто.</li>
+                  <li><a href="https://git-scm.com">Git</a> - как по мне <a style={styles.term}>Mercurial</a> лучше, но гит это стандарт де-факто.</li>
                   <li><a href="https://github.com">GitHub</a> - использую что бы мониторить самые последние и свежие инструменты.</li>
                   <li><a href="https://www.virtualbox.org">VirtualBox</a> - в основном использую что бы запускать софт которому не доверяю.</li>
-                  <li><a href="https://www.cloudflare.com">Cloudflare</a> - DNS-хостинг, анти-ддос инструмент и публичный кэш.</li>
+                  <li><a href="https://www.cloudflare.com">Cloudflare</a> - DNS-хостинг, анти-DDoS и публичный кэш.</li>
                   <li><a href="https://github.com/FiloSottile/mkcert">mkcert</a> - утилита для управления сертификатами.</li>
                   <li><a href="https://caddyserver.com">Caddy</a> - более современный аналог <a href="https://nginx.org">nginx</a>.</li>
                   <li><a href="https://www.postgresql.org">PostgreSQL</a> - топовая SQL-БД.</li>
@@ -1065,6 +1061,7 @@ export default function () {
                   <li><a href="https://2gis.ru">2GIS</a> - лучшие карты</li>
                   <li><a href="https://www.gosuslugi.ru">gosuslugi.ru</a> - приложение от хайпового стартапа</li>
                   <li><a href="https://www.tradingview.com">TradingView</a> - мониторинг акций</li>
+                  <li><a href="https://www.videolan.org">VLC</a> - старый, но лучший видеоплеер</li>
                 </ul>
               </section>
             </category>
