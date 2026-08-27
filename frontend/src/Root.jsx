@@ -964,8 +964,8 @@ export default function () {
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  <a href="https://yazi-rs.github.io">Yazi</a> -
-                  32 000 звезд на <a href="TODO">Github</a>.
+                  <a href="https://yazi-rs.github.io">Yazi</a>
+                  (42k звезд на <a href="https://github.com/sxyazi/yazi">Github</a>).
                   Самая главная фишка в том, что работает в терминале и управляется как Vim.
                   Он бы был идеальным если бы он был двухпанельным, поэтому отпадает сразу.
                 </p>
@@ -1063,7 +1063,7 @@ export default function () {
               <topper style={styles.topper}>Скриншоты</topper>
 
               <p style={styles.p}>
-                Безоговорочный лидер - <a href="https://getsharex.com">ShareX</a> (40k звезд на <a href="TODO">Github</a>).
+                Безоговорочный лидер - <a href="https://getsharex.com">ShareX</a> (39k звезд на <a href="https://github.com/ShareX/ShareX">Github</a>).
                 Он может делать не только для скриншоты, он так же содержит и много других инструментов, которые я использую :пипетку, линейка, для записи видео.
               </p>
 
@@ -1100,6 +1100,7 @@ export default function () {
                     </li>
                     <li>
                       <a href="https://github.com/rcmaehl/MSEdgeRedirect">MSEdgeRedirect</a>
+                      (6k звезд на <a href="https://github.com/rcmaehl/MSEdgeRedirect">Github</a>)
                       - чтобы <a href="https://www.microsoft.com/windows">Windows</a> открывала <a href="https://www.google.com/chrome/">Chrome</a> вместо <a href="https://www.microsoft.com/edge">Edge</a>
                     </li>
                     <li>
@@ -1124,10 +1125,11 @@ export default function () {
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
                 <p style={styles.p}>
                   Магазины
-                  <ul style={styles.ul}>                    <li><a href="https://aliexpress.com">aliexpress.com</a> - совершенно ужасный интерфейс, но там можно купить вообще все и дешевле чем на других маркетпелйсах, долгая доставка.</li>
-                    <li><a href="https://wildberries.ru">wildberries.ru</a> - если нужно что-то купить и не хочу ждать доставку с <a href="https://aliexpress.com">aliexpress.com</a>.</li>
-                    <li><a href="https://ozon.ru">ozon.ru</a> - использую для доставки продуктов.</li>
-                    <li><a href="https://ebay.com">ebay.com</a>  - если нужно купить что‑то с рук в РФ. </li>
+                  <ul style={styles.ul}>
+                    <li><a href="https://aliexpress.com">aliexpress.com</a> - совершенно ужасный интерфейс, долгая доставка, но там можно купить все и дешевле чем на других маркетплейсах.</li>
+                    <li><a href="https://wildberries.ru">wildberries.ru</a> - если нужно что-то купить и не хочется ждать доставку с китая.</li>
+                    <li><a href="https://ozon.ru">ozon.ru</a> - доставка продуктов.</li>
+                    <li><a href="https://ebay.com">ebay.com</a>  - если нужно купить что‑то с рук в РФ.</li>
                     <li><a href="https://avito.com">avito.com</a>  - если нужно купить что‑то с рук за пределами РФ. Альтернатив по большому счету нет.</li>
                     <li><a href="https://github.com/rcmaehl/MSEdgeRedirect">ek.ua</a> - лучший вебсайт по выбору железу, намного лучше <a href="TODO">dns-shop.ru</a> / <a href="pcpartpicker.com">pcpartpicker.com</a> / <a href="newegg.com">newegg.com</a>.</li>
                   </ul>
@@ -1138,7 +1140,7 @@ export default function () {
                 <p style={styles.p}>
                   Компиляторы и рантаймы - ставлю все, авось пригодится.
                   <ul style={styles.ul}>
-                    <li><a href="https://github.com/PowerShell/PowerShell">PowerShell 7</a> - последняя версия (по умолчанию ставится старая)</li>
+                    <li><a href="https://github.com/PowerShell/PowerShell">PowerShell 7</a> (55k звезд на <a href="https://github.com/PowerShell/PowerShell">Github</a>) - последняя версия (по умолчанию ставится старая)</li>
                     <li><a href="https://nodejs.org">Node</a> - далеко не самый лучший язык, но его главное преимущество в том, что позволяет писать <term style={styles.term}>Frontend</term> и <term style={styles.term}>Backend</term> на одном и том же языке.</li>
                     <li><a href="https://deno.com">Deno</a> - более продвинутый форк <a href="https://nodejs.org">Node</a>.</li>
                     <li><a href="https://www.rust-lang.org">Rust</a> - лучший язык программирования на текущий момент по моему мнению.</li>
@@ -1178,7 +1180,8 @@ export default function () {
 
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
                 <p style={styles.p}>
-                  Форумы: по сути их сейчас заменили нейросети, но иногда все же приходится заходить.
+                  Форумы: по сути их сейчас заменили нейросети.
+                  Захожу раз месяц и просматриваю топ самых популярных вопросов.
                   <ul style={styles.ul}>
                     <li><a href="https://stackoverflow.com">stackoverflow.com</a> - вопросы по программированию.</li>
                     <li><a href="https://superuser.com">superuser.com</a> - вопросы продвинутых пользователей.</li>
@@ -1193,11 +1196,12 @@ export default function () {
                 <p style={styles.p}>
                   Инструменты для программирования
                   <ul style={styles.ul}>
-                    <li><a href="https://git-scm.com">Git</a> - как по мне <a style={styles.term}>Mercurial</a> лучше, но гит это стандарт де-факто.</li>
+                    <li><a href="https://git-scm.com">Git</a> - как по мне лучше, но гит это стандарт де-факто.</li>
+                    <li><a href="https://git-scm.com">Jujutsu</a> - более современный аналог гита.</li>
                     <li><a href="https://github.com">GitHub</a> - использую что бы мониторить самые последние и свежие инструменты.</li>
                     <li><a href="https://www.virtualbox.org">VirtualBox</a> - в основном использую что бы запускать софт которому не доверяю.</li>
                     <li><a href="https://www.cloudflare.com">Cloudflare</a> - DNS-хостинг, анти-DDoS и публичный кэш.</li>
-                    <li><a href="https://github.com/FiloSottile/mkcert">mkcert</a> - утилита для управления сертификатами.</li>
+                    <li><a href="https://github.com/FiloSottile/mkcert">mkcert</a> (59k звезд на <a href="https://github.com/FiloSottile/mkcert">Github</a>) - утилита для управления сертификатами.</li>
                     <li><a href="https://caddyserver.com">Caddy</a> - более современный аналог <a href="https://nginx.org">nginx</a>.</li>
                     <li><a href="https://www.postgresql.org">PostgreSQL</a> - топовая SQL-БД.</li>
                     <li><a href="https://www.mongodb.com">MongoDB</a> - топовая NoSQL-БД.</li>
@@ -1228,7 +1232,7 @@ export default function () {
                     <li><a href="https://2gis.ru">2GIS</a> - справочник организаций и карты. <a href="TODO">Яндекс картами</a> не пользуюсь потому что там много рекламы.</li>
                     <li><a href="https://www.gosuslugi.ru">gosuslugi.ru</a> - приложение от хайпового стартапа.</li>
                     <li><a href="https://www.videolan.org">VLC</a> - старый, но лучший видеоплеер.</li>
-                    <li><a href="https://github.com/microsoft/PowerToys">PowerToys</a> - несмотря на популярность инструмент единственные функции, которые я в нем использую - это поверх всех окон и поиск процессов, которые держат файл.</li>
+                    <li><a href="https://github.com/microsoft/PowerToys">PowerToys</a> (138k звезд на <a href="https://github.com/microsoft/PowerToys">Github</a>) - несмотря на популярность инструмент единственные функции, которые я в нем использую - это поверх всех окон и поиск процессов, которые держат файл.</li>
                   </ul>
                 </p>
               </section>
@@ -1249,10 +1253,10 @@ export default function () {
               </p>
 
               <p style={styles.p}>
-                <a href="https://github.com/ArcadeRenegade/SidebarDiagnostics">SideBar</a> - сомнительная необходимость: показывает нагрузку на железо, но по сути это редко нужно.
+                <a href="https://github.com/ArcadeRenegade/SidebarDiagnostics">SideBar</a> (3k звезд на <a href="https://github.com/ArcadeRenegade/SidebarDiagnostics">Github</a>) - сомнительная необходимость: показывает нагрузку на железо, но по сути это редко нужно.
               </p>
               <p style={styles.p}>
-                <a href="https://github.com/tw93/Pake">Pake</a> - позволяет собирать бинарники из сайтов; непонятно зачем, если можно создать ярлык.
+                <a href="https://github.com/tw93/Pake">Pake</a> (61k звезд на <a href="https://github.com/tw93/Pake">Github</a>) - позволяет собирать бинарники из сайтов; непонятно зачем, если можно создать ярлык.
               </p>
               <p style={styles.p}>
                 <li><a href="https://www.voidtools.com">Everything</a> - локальный поисковик файлов.</li>
