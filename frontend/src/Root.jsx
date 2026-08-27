@@ -248,13 +248,14 @@ export default function () {
     fontFamily: 'Play',
     borderRadius: 5,
     padding: '0px 4px',
-    border: '1px solid rgba(255, 255, 255, 0.1)',
+    border: `1px solid ${colors.border.strong}`,
     letterSpacing: 1
   };
 
   styles.b = {
     marginRight: 5,
-    fontWeight: 600
+    color: colors.text.strong,
+    fontWeight: 500
   };
 
   styles.p = {
@@ -359,12 +360,12 @@ export default function () {
 
             <separator style={styles.separator}>
               <line style={styles.separator.line} />
-              <caption style={styles.separator.caption}>Железо</caption>
+              <caption style={styles.separator.caption}>Рабочее место</caption>
               <line style={styles.separator.line} />
             </separator>
 
             <category style={styles.category}>
-							<topper style={styles.topper}>Рабочий стол</topper>
+							<topper style={styles.topper}>Стол</topper>
 
               <p style={styles.p}>
                 Стол у меня не обычный, а <clickable onClick={() => alert('TODO')} style={styles.clickable}>угловой</clickable>.
@@ -391,10 +392,60 @@ export default function () {
 						</category>
 
             <category style={styles.category}>
+              <topper style={styles.topper}>Стул</topper>
+
+              <p style={styles.p}>
+                Казалось бы стул это мелочь, но я провожу сидя за компьютером в день по 8 часов.
+                И удобство стула для меня намного важнее, чем количество ядер у процессора.
+              </p>
+
+              <p style={styles.p}>
+                Первое требование к стулу - что бы не было подлокотников (или их можно было убрать).
+                Логти у меня всегда на столе, подлокотники только мешают.
+              </p>
+
+              <p style={styles.p}>
+                Второе это что бы можно было сидеть в позе <clickable onClick={() => alert('TODO')} style={styles.clickable}>наездника</clickable>.
+                Мне удобно время от времени менять позы.
+                По этой причине я отказался от хайпового <a href="https://www.hermanmiller.com">Herman Miller Aeron</a>.
+              </p>
+
+              <p style={styles.p}>
+                Остановился на одном из самых популярных оффисных стульев в мире - <a href="https://ikeamega.ru/officechairs/tproduct/951877794252-markus-markus-ofisnoe-kreslo-vissle-svet" style={styles.term}>IKEA Marcus</a>.
+                Подлокотники убираются, низкая посадка, можно сидеть в позе наездника.
+              </p>
+            </category>
+
+            <category style={styles.category}>
+              <topper style={styles.topper}>Очки</topper>
+
+              <p style={styles.p}>
+                Если вы хотите прокачать рабочее место - уделите внимание очкам <b style={styles.b}>даже если</b> на зрение не жалуетесь.
+              </p>
+
+              <p style={styles.p}>
+                Я вот на зрение не жалуюсь совсем, вывески на улице читаю нормально, номера автобусов вижу издалека.
+                Но несмотря на это в очках читать текст на экране <b style={styles.b}>заметно удобнее</b>.
+                Возможно, у вас будет так же.
+              </p>
+
+              <p style={styles.p}>
+                Многие концентрируются на характеристиках железа, но не знают про то, что очки могут улучшить изображение <b style={styles.b}>сильнее</b> чем дорогой монитор или видеокарта.
+                Плюс к тому глаза будут меньше уставать, что позволит сохранить вас зрение.
+              </p>
+            </category>
+
+            <separator style={styles.separator}>
+              <line style={styles.separator.line} />
+              <caption style={styles.separator.caption}>Железо</caption>
+              <line style={styles.separator.line} />
+            </separator>
+
+            <category style={styles.category}>
               <topper style={styles.topper}>Мониторы</topper>
 
               <p style={styles.p}>
-                Для меня важно, чтобы было много пространства для приложений.
+                Количество мониторов для меня намного важнее, чем мощная видеокарта или процессор.
                 Я использую <clickable onClick={() => alert('TODO')} style={styles.clickable}>5 мониторов</clickable>: один основной (горизонтальный, 222 дюйма) и 4 дополнительных (вертикальных, 222 дюйма).
               </p>
 
@@ -436,20 +487,20 @@ export default function () {
               </p>
 
               <p style={styles.p}>
-                <b style={styles.b}>Удобное расположение модификаторов.</b>
+                <b style={styles.b}>Расположение модификаторов.</b>
                 На обычных клавиатурах большим пальцем жмешь только пробел, а модификаторы - мизинцем.
                 На моей клавиатуре пальцами я могу нажать 12 клавиш, по 6 на каждый большой палец: <term style={styles.term}>PageUp</term> <term style={styles.term}>PageDown</term> <term style={styles.term}>Backspace</term> <term style={styles.term}>Delete</term> <term style={styles.term}>Home</term> <term style={styles.term}>End</term> <term style={styles.term}>Space</term> <term style={styles.term}>Enter</term> <term style={styles.term}>Alt</term> <term style={styles.term}>Ctrl</term> <term style={styles.term}>Alt+Shift</term> <term style={styles.term}>Alt+Ctrl</term> <term style={styles.term}>Alt+Ctrl+Shift</term>.
                 Последние 3 настроены через макрос, зажимается одна клавиша и равносильно нажатию сразу нескольких модификаторов.
               </p>
 
               <p style={styles.p}>
-                <b style={styles.b}>Удобное расположение стрелок.</b>
+                <b style={styles.b}>Расположение стрелок.</b>
                 Стрелки нажимаются указательным и средним пальцем <clickable style={styles.clickable}>без переноса руки</clickable>.
                 На обычных клавиатурах для навигации приходится двигать кисть.
               </p>
 
               <p style={styles.p}>
-                <b style={styles.b}>Удобная позиция для локтей.</b>
+                <b style={styles.b}>Позиция для локтей.</b>
                 Локти разведены дальше, вместе с угловым столом это очень удобная позиция.
               </p>
 
@@ -462,6 +513,79 @@ export default function () {
                 Первое время было очень неудобно, но оно того стоило.
                 Для игр приходится переопределять <term style={styles.term}>WASD</term> на <term style={styles.term}>ESDF</term>.
               </p>
+            </category>
+
+            <category style={styles.category}>
+              <topper style={styles.topper}>Видеокарта</topper>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  Видео-карту (да и вообще железо) лучше выбирать по бенчмаркам, а не по техническим характеристикам.
+                  Технические характеристики - это просто информация о том, как достигается тот или иной показатель в бенчмарке.
+                </p>
+              </section>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  В плане видеокарт <a href="TODO">AMD</a> даже близко не стоит с <a href="TODO">Nvidia</a>. Мощная видео-карта влияет на скорость работы локальных нейросетей. Выбрал <a href="TODO">GeForce RTX 5090</a>.
+                  Топовая видеокарта от
+                  Стабильно выдает на локальных моделях по 40-50 токенов в секунду.
+                  По бенчмаркам выдает...
+                </p>
+              </section>
+            </category>
+
+            <category style={styles.category}>
+              <topper style={styles.topper}>Процессор</topper>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  А вот процессоры у <term style={styles.term}>AMD</term> лучше чем у <term style={styles.term}>Intel</term>. Влияет на скорость работы приложений и тех локальных нейросетей, которые не помещаются в памяти видеокарты. <a href="TODO">Core Ultra 9 285k</a>.
+                </p>
+              </section>
+            </category>
+
+            <category style={styles.category}>
+              <topper style={styles.topper}>Накопитель</topper>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  Хороший SSD влияет на общую производительность практически всех операций скорее всего даже больше, чем мощный процессор.
+                  <a href="TODO">Samsung SSD 9100 Pro</a>
+                </p>
+              </section>
+            </category>
+
+            <category style={styles.category}>
+              <topper style={styles.topper}>Оперативка</topper>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <a href="TODO">G.Skill Trident Z5 CK</a> две штуки.
+                  Всего 64 гб.
+                  1234 в бенчмарке Performance Test.
+                </p>
+              </section>
+            </category>
+
+            <category style={styles.category}>
+              <topper style={styles.topper}>Материнска плата</topper>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <a href="https://www.asus.com/motherboards-components/motherboards/prime/prime-b850m-k/">Asus Prime B850M-K</a>.
+                  Самое главное, что бы материнская плата поддерживала все выбранное железо.
+                  Если ваша цель - это запуск локальных нейросетей обратите внимание на параметр, он увеличивает скорость до 30%.
+                </p>
+              </section>
+            </category>
+
+            <category style={styles.category}>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <a href="https://us.sennheiser-hearing.com/products/momentum-5-wireless?variant=62714248495475">Sennhizer Momentum 4 Wireless</a>. Самый главный критерий - что бы были беспроводными и долго держали заряд.
+                </p>
+              </section>
             </category>
 
             <category style={styles.category}>
@@ -491,76 +615,6 @@ export default function () {
               </p>
             </category>
 
-            <category style={styles.category}>
-              <topper style={styles.topper}>Стул</topper>
-
-              <p style={styles.p}>
-                Казалось бы стул это мелочь, но я провожу сидя за компьютером в день по 8 часов.
-                И удобство стула для меня намного важнее, чем количество ядер у процессора.
-              </p>
-
-              <p style={styles.p}>
-                Первое требование к стулу - что бы не было подлокотников (или их можно было убрать).
-                Логти у меня всегда на столе.
-              </p>
-
-              <p style={styles.p}>
-                Второе это что бы можно было сидеть в позе <clickable onClick={() => alert('TODO')} style={styles.clickable}>наездника</clickable>.
-                Мне удобно время от времени менять позы.
-                По этой причине я отказался от хайпового <a href="https://www.hermanmiller.com">Herman Miller Aeron</a>.
-              </p>
-
-              <p style={styles.p}>
-                Остановился на одном из самых популярных оффисных стульев в мире - <a href="https://ikeamega.ru/officechairs/tproduct/951877794252-markus-markus-ofisnoe-kreslo-vissle-svet" style={styles.term}>IKEA Marcus</a>.
-                Подлокотники убираются, низкая посадка, можно сидеть в позе наездника.
-              </p>
-            </category>
-
-            <category style={styles.category}>
-              <topper style={styles.topper}>Очки</topper>
-
-              <p style={styles.p}>
-                Весьма странно, упоминать этот пункт в разделе про железо, но мой сетап заточен под программирование.
-                Так что если вы хотите прокачать рабочее место - уделите внимание очкам <b style={styles.b}>даже если</b> на зрение не жалуетесь.
-              </p>
-
-              <p style={styles.p}>
-                Я вот на зрение не жалуюсь совсем, вывески на улице читаю нормально, но в очках читать текст на экране <b style={styles.b}>заметно удобнее</b>.
-                Возможно, у вас будет так же.
-              </p>
-
-              <p style={styles.p}>
-                Многие концентрируются на характеристиках видеокарты и мониторах, но забывают про то, что очки могут улучшить изображение намного сильнее.
-              </p>
-            </category>
-
-            <category style={styles.category}>
-              <topper style={styles.topper}>Железо</topper>
-
-              <p style={styles.p}>
-                Железо я намеренно оставляю в самом конце: в программировании редко когда оно является бутылочным горлышком.
-                Любой из пунктов выше дает мне больше реального удобства, чем топовая видеокарта или процессор.
-                Тем не менее железо у меня самое последнее, просто потому что хочется что бы все было идеально.
-              </p>
-
-              <p style={styles.p}>
-                Вот конкретные модели:
-
-                <ul style={styles.ul}>
-                  <li>Видеокарта: <a href="TODO">GeForce RTX 5090</a>. В плане видео-карт <term style={styles.term}>AMD</term> даже близко не стоит с <term style={styles.term}>Nvidia</term>. Использую для запуска локальных нейросетей.</li>
-                  <li>Процессор: <a href="TODO">Core Ultra 9 285k</a>. А вот процессоры у <term style={styles.term}>AMD</term> лучше чем у <term style={styles.term}>Intel</term>. Влияет на скорость работы приложений и локальных нейросетей (если в памяти видеокарты вся нейросеть не помещается).</li>
-                  <li>Жесткий диск: <a href="TODO">Samsung SSD 9100 Pro</a>. Samsung безоговорочный лидер в плане жестких дисков.</li>
-                  <li>Оперативка: <a href="TODO">G.Skill Trident Z5 CK</a> x2. </li>
-                  <li>Материнская плата: <a href="https://www.asus.com/motherboards-components/motherboards/prime/prime-b850m-k/">Asus Prime B850M-K</a>. Самое главное, что бы материнская плата поддерживала все выбранное железо. </li>
-                  <li>Наушники: <a href="https://us.sennheiser-hearing.com/products/momentum-5-wireless?variant=62714248495475">Sennhizer Momentum 4 Wireless</a>. Самый главный критерий - что бы были беспроводными и долго держали заряд.</li>
-                  <li>Колонка: <a href="https://www.harmankardon.com/HK+GO+PLAY.html">Harman Kardon</a>. Использую исключительно для белого шума во время работы. Для фильмов, музыки и созвонов я использую наушники.</li>
-                  <li>Корпус: <a href="https://www.asus.com/motherboards-components/cases/prime/asus-prime-ap303-mesh-panel">The ASUS Prime AP303</a>. Корпус, как корпус, тут нет комментариев.</li>
-                </ul>
-              </p>
-
-
-            </category>
-
             <separator style={styles.separator}>
               <line style={styles.separator.line} />
               <caption style={styles.separator.caption}>Софт</caption>
@@ -572,19 +626,10 @@ export default function () {
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  Тут есть 4 варианта:
-                  <a href="https://www.microsoft.com/windows">Windows</a>,
-                  <a style={{marginLeft: 5}} href="https://www.apple.com/macos">MacOS</a>,
-                  <a style={{marginLeft: 5}} href="https://ubuntu.com">Ubuntu</a>.
-                </p>
-
-                <p style={styles.p}>
-                  Вы можете подумать, что раз я такой техногик, то у меня какой-нибудь <term style={styles.term}>Linux</term> - но нет.
-                  Я абсолютный фанат <a href="https://www.microsoft.com/windows">Windows</a> на десктопе и считаю, что ни <a href="https://www.apple.com/macos">MacOS</a>, ни <a href="https://ubuntu.com">Ubuntu</a> даже близко не сравнятся с ней по удобству.
-                </p>
-                <p style={styles.p}>
-                  На <a href="https://www.microsoft.com/windows">Windows</a> я очень активно использую <a href="https://www.autohotkey.com">AutoHotkey</a> - аналогов нет ни на <a href="https://www.apple.com/macos">MacOS</a>, ни на <a href="https://ubuntu.com">Ubuntu</a>.
-                  Одного этого мне достаточно, чтобы не смотреть в их сторону.
+                  Вы можете подумать, что раз я такой техногик, то у меня какой-нибудь <term style={styles.term}>Linux</term> типа <a href="TODO">Ubuntu</a>.
+                  Но это совершенно не так.
+                  Самым главным минусом убунты для меня является то, что ней не работает <a href="https://www.autohotkey.com">AutoHotkey</a> (и отсутствуют полноценных альтернативы).
+                  По этой же причине я не смотретю в сторону <a href="https://www.apple.com/macos">MacOS</a>.
                 </p>
               </section>
 
@@ -600,14 +645,17 @@ export default function () {
               </section>
 
               <p style={styles.p}>
-                На <a href="https://www.microsoft.com/windows">Windows</a> (как и на всех ОС) полный кавардак с установкой приложений.
+                Я абсолютный фанат <a href="https://www.microsoft.com/windows">Windows</a> на десктопе и считаю, что ни <a href="https://www.apple.com/macos">MacOS</a>, ни <a href="https://ubuntu.com">Ubuntu</a> даже близко не сравнятся с ней по удобству.
+
+                На <a href="https://www.microsoft.com/windows">Windows</a> (как и на всех ОС) полный кавардак с установкой приложений по историческим причинам.
 
                 <ul style={styles.ul}>
                   <li>Winget</li>
                   <li>Windows Store</li>
-                  <li>PWA приложения. Это браузерные приложения, которые можно устанавливать как десктопные.</li>
+                  <li>Веб-приложения (открываются через браузер).</li>
+                  <li>PWA приложения (браузерные приложения, которые можно устанавливать как десктопные)</li>
+
                   <li>Предустановленны приложения.</li>
-                  <li>Приложения которые скачиваются с веб-сайтов.</li>
                   <li>Браузер (что по сути то же платформа для приложений)</li>
                 </ul>
               </p>
@@ -623,7 +671,7 @@ export default function () {
               </p>
 
               <p style={styles.p}>
-                Магазин приложений не использую вообще.
+                <a href="TODO">Windows Store</a> приложений не использую вообще.
                 Не все веб-приложения можно установить как <term style={styles.term}>PWA</term> приложение, но создать ярлык можно для любого веб-приложения, поэтому я пользуюсь только функционалом создания ярлыков.
                 Ярлыки создаю только для часто используемых веб-приложений, если я использую веб-приложение раз в месяц, то я просто открываю его в браузере.
               </p>
@@ -645,12 +693,12 @@ export default function () {
                   Вот вам <clickable style={styles.clickable}>картинка</clickable> для наглядности где какие клавиши расположены.
 
                   <ul>
-                    <li><term style={styles.term}>Caps Lock</term> = <term style={styles.term}>CTRL</term> - это нужно же было додуматься на одну из самых удобных клавиш назначить насктолько бесполезную функцию.</li>
-                    <li><term style={styles.term}>Win</term> = <term style={styles.term}>CTRL-SHIFT</term> - функционал Win перенесена на <term style={styles.term}>ESC</term>.</li>
+                    <li><term style={styles.term}>Caps Lock</term> = <term style={styles.term}>CTRL</term>.</li>
+                    <li><term style={styles.term}>Win</term> = <term style={styles.term}>CTRL-SHIFT</term>.</li>
                     <li><term style={styles.term}>Right Ctrl</term> = <term style={styles.term}>ALT-SHIFT</term></li>
                     <li><term style={styles.term}>Left-Ctrl</term> = <term style={styles.term}>ALT-CTRL-SHIFT</term></li>
-                    <li><term style={styles.term}>/</term> = свитчинг (о нем дальше)</li>
-                    <li><term style={styles.term}>Insert</term> = <term style={styles.term}>Shift-Tab</term> - обычный таб это фокус вперед, <term style={styles.term}>Shift-Tab</term> - фокус назад</li>
+                    <li><term style={styles.term}>/</term> = <term style={styles.term}>ALT-TAB</term>.</li>
+                    <li><term style={styles.term}>Insert</term> = <term style={styles.term}>Shift-Tab</term>.</li>
                   </ul>
                 </p>
               </section>
@@ -745,9 +793,10 @@ export default function () {
                   Но мне не пофиг на то, когда веб-приложения ломаются.
                   Пускай собирают свою телеметрию, благодаря этому разработчики фиксят баги и делают продукт лучше.
                 </p>
+              </section>
 
+              <section style={styles.category.section}>
                 <p style={styles.p}>
-                  От <a href="https://www.mozilla.org/firefox/">Firefox</a> я отказался потому что мне не нравится его интерфейс.
                   В <a href="https://www.opera.com">Opera</a> много разного встроенного функционала, но который можно в <a href="https://www.google.com/chrome/">Chrome</a> реализовать через плагины.
                   Поэтому я остановился на <a href="https://www.google.com/chrome/">Chrome</a> для браузинга и <a href="https://www.chromium.org">Chromium</a> для разработки (им назначены разные горячие клавиши и они открываются на разных мониторах).
                 </p>
@@ -755,7 +804,14 @@ export default function () {
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  Список плагинов:
+                  От <a href="https://www.mozilla.org/firefox/">Firefox</a> я отказался потому что мне не нравится его интерфейс.
+                </p>
+              </section>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  Поэтому я остановился на <a href="">Chrome</a>.
+                  Вот список моих маст хэв плагинов:
                   <ul style={styles.ul}>
                     <li><a href="https://1password.com">1Password</a> - в браузере работает идеально.</li>
                     <li><a href="https://ublockorigin.com/">uBlock Origin</a> - заметно лучше <a href="https://adblockplus.org">AdBlock Plus</a> и <a href="https://getadblock.com">AdBlock</a>.</li>
@@ -772,17 +828,17 @@ export default function () {
                 </p>
               </section>
 
+              <section style={styles.p}>
+                <p>
+                  К сожелению в хроме нативно нельзя редактировать горячие клавиши, но на помощ к нам приходит <a href="TODO">AutoHotkey</a>.
+                  <ul></ul>
+                </p>
+              </section>
+
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  Вообще, мне не особо нравится сама концепция браузера - это платформа для запуска приложений.
-                  Но операционная система это уже платформа для запуска приложений, а браузер еще одна внутри платформа внутри платформы.
-                  Поэтому из сайтов, которыми часто пользуюсь я создаю десктопные ярлыки, которые запускают определенное веб-приложение, но без URL-бара и вкладок.
-                  Редко используемые веб-приложения открываю в браузере без создания ярлыков.
-                </p>
-
-                <p style={styles.p}>
-                  Мой <a href="https://www.autohotkey.com">AutoHotkey</a> скрипт настроен так, что показывает позволяет запускать такие вебсайты так же как и обычные приложения.
-                  По этому я впринципе не пользуюсь функционалом закладок в браузере.
+                  Чего мне не хватает - fuzzy поиск на странице.
+                  Идея для нового Open Source проекта
                 </p>
               </section>
             </category>
@@ -790,65 +846,63 @@ export default function () {
             <category style={styles.category}>
               <topper style={styles.topper}>Редактор кода</topper>
 
-              <p style={styles.p}>
-                Выбирал между <a href="https://cursor.com">Cursor</a>, <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>, <a href="https://zed.dev">Zed</a> - явный фаворит <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
-              </p>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <a href="https://cursor.com">Cursor</a> - не очень нравится, что он построен на веб‑технологиях.
+                  Позиционируется как IDE с самой продвинутой поддержкой нейросетей, но честно-говоря не особо заметил разницу WebStorm и Claude плагином.
+                </p>
 
-              <p style={styles.p}>
-                В <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> <b style={styles.b}>очень</b> много функционала, которым пользуюсь каждый день:
-                <ul style={styles.ul}>
-                  <li>Очень хорошая поддержка <a href="https://git-scm.com">Git</a></li>
-                  <li>Последние открытые файлы (вкладки даже отключил)</li>
-                  <li>Локальная история</li>
-                  <li>Отдельные окна</li>
-                  <li>Интенты</li>
-                  <li>Предпросмотр файла в дереве</li>
-                  <li>Скоупы (Frontend и Backend помечаю разными цветами)</li>
-                  <li>Вкладки при поиске</li>
-                  <li>Quicklists: LocalHistory, <a href="https://git-scm.com">Git</a>, <a href="https://github.com">GitHub</a></li>
-                  <li>И еще <b style={styles.b}>очень много</b> других мелочей.</li>
-                </ul>
-              </p>
+                <p style={styles.p}>
+                  Но при этом покупая подписку на Claude вы можете его использовать в браузере и на телефоне и как TUI на сервере.
+                </p>
 
-              <p style={styles.p}>
-                В <a href="https://cursor.com">Cursor</a> не нравится, что он построен на веб‑технологиях.
-                Понимаю: легкий сайт писать в браузере - ок. Но полноценную IDE на JavaScript?
-              </p>
+                <p style={styles.p}>
+                  Многие говорят, что плюсом курсора является то, что можно менять нейросети на лету, это прикольно, но честно говоря не думаю это такая прям киллер фича.
+                </p>
+              </section>
 
-              <p style={styles.p}>
-                Пытался перейти на <a href="https://zed.dev">Zed</a> - очень понравилось, насколько мало памяти он жрет (в 20 раз меньше).
-                Но функциональность важнее минимализма, вернулся на <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
-              </p>
 
-              <p style={styles.p}>
-                Вы будете смеяться, но вкладки я отключил.
-                Вместо них - Recent Files.
-              </p>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <a href="https://zed.dev">Zed</a> - очень понравилось то насколько мало памяти он жрет (в 20 раз меньше).
+                  Пытался на него перейти, но по функциональности он намного слабже <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
+                </p>
+              </section>
 
-              <ul style={styles.ul}>
-                <li>
-                  Самый большой минус: <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> жрет гигантское количество оперативки по сравнению с <a href="https://zed.dev">Zed</a>.
-                  Разница в 20 раз.
-                  Но оперативка и скорость запуска - не бутылочное горлышко: приятно, когда IDE стартует за секунду, а не за 10, но не критично.
-                  При этом поддержка нейросетей ничуть не хуже, чем в хайповом <a href="https://cursor.com">Cursor</a>.
-                </li>
-              </ul>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  В <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> <b style={styles.b}>очень</b> много функционала, которым пользуюсь каждый день:
+                  <ul style={styles.ul}>
+                    <li>Очень хорошая поддержка <a href="https://git-scm.com">Git</a></li>
+                    <li>Последние открытые файлы (вкладки даже отключил)</li>
+                    <li>Локальная история</li>
+                    <li>Отдельные окна</li>
+                    <li>Интенты</li>
+                    <li>Предпросмотр файла в дереве</li>
+                    <li>Скоупы (Frontend и Backend помечаю разными цветами)</li>
+                    <li>Вкладки при поиске</li>
+                    <li>Quicklists: LocalHistory, <a href="https://git-scm.com">Git</a>, <a href="https://github.com">GitHub</a></li>
+                    <li>И еще <b style={styles.b}>очень много</b> других мелочей.</li>
+                  </ul>
+                </p>
 
-              <p style={styles.p}>
-                При этом в <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> мне все равно очень не хватает функционала.
-              </p>
+                <p style={styles.p}>
+                  Вы будете смеяться, но вкладки я отключил.
+                  Вместо них - Recent Files.
+                </p>
 
-              <p style={styles.p}>
-                Вот мой конфиг - можете импортировать.
-              </p>
+                <p style={styles.p}>
+                  Вот мой конфиг - можете импортировать.
+                </p>
 
-              <p style={styles.p}>
-                Вот мои настройки <clickable onClick={() => alert('TODO')} style={styles.clickable}>WebStorm</clickable>.
-              </p>
+                <p style={styles.p}>
+                  Вот мои настройки <clickable onClick={() => alert('TODO')} style={styles.clickable}>WebStorm</clickable>.
+                </p>
 
-              <p style={styles.p}>
-                Список плагинов: <a href="https://plugins.jetbrains.com/plugin/22072-kursor">Kursor</a> для подсветки.
-              </p>
+                <p style={styles.p}>
+                  Список плагинов: <a href="https://plugins.jetbrains.com/plugin/22072-kursor">Kursor</a> для подсветки.
+                </p>
+              </section>
             </category>
 
 
@@ -901,50 +955,47 @@ export default function () {
             <category style={styles.category}>
               <topper style={styles.topper}>Файловый менеджер</topper>
 
-              <p style={styles.p}>Главные игроки: <a href="https://www.farmanager.com">Far Manager</a> (2 000), <a href="https://files.community">Files</a>, <a href="https://yazi-rs.github.io">Yazi</a> (32 000), <a href="https://www.ghisler.com">Total Commander</a>.</p>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  Вообще не должно быть такого, что бы требовался файловый менеджер, этот функционал должен нативно поддерживаться операционной системой, без необходимости ставить сторонние приложения.
+                  Но имеет то, что имеем.
+                </p>
+              </section>
 
-              <p style={styles.p}>
-                 Хайповый <a href="https://yazi-rs.github.io">Yazi</a> не двухпанельный, поэтому отпадает сразу.
-              </p>
-              <p style={styles.p}>
-                <a href="https://www.farmanager.com">Far Manager</a> - двухпанельный, но по функционалу явно проигрывает <a href="https://www.ghisler.com">Total Commander</a>.
-              </p>
-              <p style={styles.p}>
-                <a href="https://files.community">Files</a> - красивый интерфейс, но слишком казуальный и далеко не такой функциональный, как <a href="https://www.ghisler.com">Total Commander</a>.
-              </p>
-              <p style={styles.p}>
-                У <a href="https://www.ghisler.com">Total Commander</a> интерфейс мог бы быть по лучше, но он двух-панельный, функциональный и позволяет гибко настраивать горячие клавиши.
-              </p>
-              <p style={styles.p}>
-                В <a href="https://www.ghisler.com">Total Commander</a> включил темную тему, убрал лишний UI, поставил шрифт <a href="https://sourcefoundry.org/hack/">Hack</a>.
-                Горячие клавиши заточены под мою клавиатуру и симметричны с теми, что в <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
-                Вот как выглядит <clickable style={styles.clickable}>внешний вид</clickable> и вот мой <clickable style={styles.clickable}>конфиг</clickable>.
-              </p>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <a href="https://yazi-rs.github.io">Yazi</a> -
+                  32 000 звезд на <a href="TODO">Github</a>.
+                  Самая главная фишка в том, что работает в терминале и управляется как Vim.
+                  Он бы был идеальным если бы он был двухпанельным, поэтому отпадает сразу.
+                </p>
+              </section>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <a href="https://www.farmanager.com">Far Manager</a> -
+                  Старый двухпанельный файловый менеджер.
+                  По функционалу и интерфейсу явно проигрывает <a href="https://www.ghisler.com">Total Commander</a>.
+                </p>
+              </section>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <a href="https://files.community">Files</a> -
+                  Неплохой дизайн, но слишком казуальный и по функционалу так же проигрывает <a href="https://www.ghisler.com">Total Commander</a>.
+                </p>
+              </section>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  <a href="https://www.ghisler.com">Total Commander</a>.
+                  Интерфейс мог бы быть по лучше, но он двух-панельный, функциональный и позволяет гибко настраивать горячие клавиши.
+                  В <a href="https://www.ghisler.com">Total Commander</a> включил темную тему, убрал лишний UI, поставил шрифт <a href="https://sourcefoundry.org/hack/">Hack</a>.
+                  Горячие клавиши заточены под мою клавиатуру и симметричны с теми, что в <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
+                  Вот как выглядит <clickable style={styles.clickable}>внешний вид</clickable> и вот мой <clickable style={styles.clickable}>конфиг</clickable>.
+                </p>
+              </section>
             </category>
-
-						<category style={styles.category}>
-							<topper style={styles.topper}>Скриншоты</topper>
-
-              <p style={styles.p}>
-                Безоговорочный лидер - <a href="https://getsharex.com">ShareX</a>.
-                Это не просто утилита для скриншотов: использую ее еще как пипетку, линейку и для записи видео.
-              </p>
-
-              <p style={styles.p}>
-                <b style={styles.b}>Утилиты.</b>
-                Глобальные функциональные клавиши назначены на стандартные инструменты.
-
-                <ul style={styles.ul}>
-                  <li><term style={styles.term}>F9</term> - сделать скриншот.</li>
-                  <li><term style={styles.term}>F10</term> - распознать текст (полезно что бы отправить его нейросети, обычные картинки жрут очень много токенов).</li>
-                  <li><term style={styles.term}>F11</term> - записать гифку.</li>
-                  <li><term style={styles.term}>F12</term> - запустить пипетка.</li>
-                  <li><term style={styles.term}>Print Screen</term> - экранная линейка.</li>
-                  <li><term style={styles.term}>Scroll Lock</term> - скриншот со скроллом.</li>
-                  <li><term style={styles.term}>Pause Break</term> - просмотреть мета-данные о файле.</li>
-                </ul>
-              </p>
-						</category>
 
 						<category style={styles.category}>
 							<topper style={styles.topper}>Терминал</topper>
@@ -970,34 +1021,8 @@ export default function () {
               </p>
 						</category>
 
-						<category style={styles.category}>
-							<topper style={styles.topper}>Локальный поисковик</topper>
-
-              <p style={styles.p}>Либо <a href="https://www.voidtools.com">Everything</a>, либо <a href="https://omnisearch.ai">Omnisearch</a>.</p>
-
-              <p style={styles.p}>
-                <a href="https://omnisearch.ai">Omni</a> выглядит посовременнее - обычно софт, который появился позже, лучше.
-                Но после ввода в поиск не работают стрелки (стрелки, Карл!) - настолько очевидный функционал.
-                Сразу после установки удалил это говно.
-              </p>
-						</category>
-
-						<category style={styles.category}>
-							<topper style={styles.topper}>Менеджер паролей</topper>
-
-              <p style={styles.p}>
-                Аутентификация - снова тот функционал, который должен быть в ядре ОС.
-                По историческим причинам этого нет, и сейчас можно войти через email, <a href="https://accounts.google.com">Google</a> или менеджер паролей.
-                Нужно определиться с одним способом входа и дальше использовать только его.
-              </p>
-              <p style={styles.p}>
-                <a href="https://1password.com">1Password</a> - стопроцентный фаворит.
-                Можно хранить коды двухфакторной аутентификации (чего нет в <a href="https://accounts.google.com">Google</a>).
-              </p>
-						</category>
-
-						<category style={styles.category}>
-							<topper style={styles.topper}>Почта</topper>
+            <category style={styles.category}>
+              <topper style={styles.topper}>Почта</topper>
 
               <p style={styles.p}>
                 Для меня самое важное в почтовом клиенте - вкладки.
@@ -1018,7 +1043,45 @@ export default function () {
               <p style={styles.p}>
                 При этом все телефонные SMS и пуш‑уведомления у меня идут через почту.
               </p>
+            </category>
+
+						<category style={styles.category}>
+							<topper style={styles.topper}>Менеджер паролей</topper>
+
+              <p style={styles.p}>
+                Аутентификация - снова тот функционал, который должен быть в ядре ОС.
+                По историческим причинам этого нет, и сейчас можно войти через email, <a href="https://accounts.google.com">Google</a> или менеджер паролей.
+                Нужно определиться с одним способом входа и дальше использовать только его.
+              </p>
+              <p style={styles.p}>
+                <a href="https://1password.com">1Password</a> - стопроцентный фаворит.
+                Можно хранить коды двухфакторной аутентификации (чего нет в <a href="https://accounts.google.com">Google</a>).
+              </p>
 						</category>
+
+            <category style={styles.category}>
+              <topper style={styles.topper}>Скриншоты</topper>
+
+              <p style={styles.p}>
+                Безоговорочный лидер - <a href="https://getsharex.com">ShareX</a> (40k звезд на <a href="TODO">Github</a>).
+                Он может делать не только для скриншоты, он так же содержит и много других инструментов, которые я использую :пипетку, линейка, для записи видео.
+              </p>
+
+              <p style={styles.p}>
+                <b style={styles.b}>Утилиты.</b>
+                Глобальные функциональные клавиши назначены на стандартные инструменты.
+
+                <ul style={styles.ul}>
+                  <li><term style={styles.term}>F9</term> - сделать скриншот.</li>
+                  <li><term style={styles.term}>F10</term> - распознать текст (полезно что бы отправить его нейросети, обычные картинки жрут очень много токенов).</li>
+                  <li><term style={styles.term}>F11</term> - записать гифку.</li>
+                  <li><term style={styles.term}>F12</term> - запустить пипетка.</li>
+                  <li><term style={styles.term}>Print Screen</term> - экранная линейка.</li>
+                  <li><term style={styles.term}>Scroll Lock</term> - скриншот со скроллом.</li>
+                  <li><term style={styles.term}>Pause Break</term> - просмотреть мета-данные о файле.</li>
+                </ul>
+              </p>
+            </category>
 
             <category style={styles.category}>
               <topper style={styles.topper}>Остальные приложения</topper>
@@ -1036,17 +1099,12 @@ export default function () {
                       - замер скорости интернета
                     </li>
                     <li>
-                      <a href="https://www.speedtest.net">e-katalog.ua</a>
-                      - замер скорости интернета
-                    </li>
-                    <li>
                       <a href="https://github.com/rcmaehl/MSEdgeRedirect">MSEdgeRedirect</a>
                       - чтобы <a href="https://www.microsoft.com/windows">Windows</a> открывала <a href="https://www.google.com/chrome/">Chrome</a> вместо <a href="https://www.microsoft.com/edge">Edge</a>
                     </li>
-
                     <li>
-                      <a href="https://github.com/rcmaehl/MSEdgeRedirect">e-katalog.us</a>
-                      - лучший вебсайт по выбору железу, намного лучше <a href="TODO">dns-shop.ru</a> / <a href="pcpartpicker.com">PCPartPicker</a> / <a href="newegg.com">newegg.com</a>.
+                      <a href="TODO">GeekBench</a>
+                      - замер скорости CPU, GPU. По интерфейсу мне нравится больше чем <a href="TODO">Performance Test</a> и <a href="TODO">Cinebench</a>.
                     </li>
                   </ul>
                 </p>
@@ -1079,12 +1137,12 @@ export default function () {
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
                 <p style={styles.p}>
                   Магазины
-                  <ul style={styles.ul}>
-                    <li><a href="https://aliexpress.com">aliexpress.com</a> - совершенно ужасный интерфейс, но там можно купить вообще все и дешевле чем на других маркетпелйсах, долгая доставка.</li>
-                    <li><a href="https://wildberries.ru">wildberries.ru</a> - использую как замену aliexpress, если нужно что-то купить и нет времени ждать доставку из китая.</li>
+                  <ul style={styles.ul}>                    <li><a href="https://aliexpress.com">aliexpress.com</a> - совершенно ужасный интерфейс, но там можно купить вообще все и дешевле чем на других маркетпелйсах, долгая доставка.</li>
+                    <li><a href="https://wildberries.ru">wildberries.ru</a> - если нужно что-то купить и не хочу ждать доставку с <a href="https://aliexpress.com">aliexpress.com</a>.</li>
                     <li><a href="https://ozon.ru">ozon.ru</a> - использую для доставки продуктов.</li>
-                    <li><a href="https://ebay.com">ebay.com</a>  - если нужно купить что‑то с рук в РФ.</li>
-                    <li><a href="https://avito.com">avito.com</a>  - если нужно купить что‑то с рук за пределами РФ.</li>
+                    <li><a href="https://ebay.com">ebay.com</a>  - если нужно купить что‑то с рук в РФ. </li>
+                    <li><a href="https://avito.com">avito.com</a>  - если нужно купить что‑то с рук за пределами РФ. Альтернатив по большому счету нет.</li>
+                    <li><a href="https://github.com/rcmaehl/MSEdgeRedirect">ek.ua</a> - лучший вебсайт по выбору железу, намного лучше <a href="TODO">dns-shop.ru</a> / <a href="pcpartpicker.com">pcpartpicker.com</a> / <a href="newegg.com">newegg.com</a>.</li>
                   </ul>
                 </p>
               </section>
@@ -1107,7 +1165,7 @@ export default function () {
                   Развлечения:
                   <ul style={styles.ul}>
                     <li><a href="https://youtube.com">YouTube</a> - основное развлекательное приложение.</li>
-                    <li><a href="https://reddit.com">Reddit</a> - самый лучший форум в мире.</li>
+                    <li><a href="https://reddit.com">Reddit</a> - самый популярных форум в мире.</li>
                     <li><a href="https://x.com">Twitter</a> - основная соц сеть для чтение мировых новостей (нужно только подписаться на правильных людей).</li>
                     <li><a href="https://threads.net">Threads</a> - на мой взгляд круче чем <a href="https://x.com">Twitter</a> по интерфейсу, но к сожалению появился намного позже и поэтому менее популярен.</li>
                     <li><a href="https://bash.im">Bash</a> - старый добрый цитатник.</li>
@@ -1165,10 +1223,11 @@ export default function () {
                     <li><a href="https://www.microsoft.com/software-download/windows11">MediaCreationTool</a> - создание установочных флешек.</li>
                     <li><a href="https://veracrypt.fr">VeraCrypt</a> - лучшее решение для шифрования диска.</li>
                     <li><a href="https://www.qbittorrent.org">qBittorrent</a> - торренты.</li>
-                    <li><a href="https://2gis.ru">2GIS</a> - лучшие карты.</li>
+                    <li><a href="https://2gis.ru">2GIS</a> - справочник организаций и карты. <a href="TODO">Яндекс картами</a> не пользуюсь потому что там много рекламы.</li>
                     <li><a href="https://www.gosuslugi.ru">gosuslugi.ru</a> - приложение от хайпового стартапа.</li>
                     <li><a href="https://www.tradingview.com">TradingView</a> - мониторинг акций.</li>
                     <li><a href="https://www.videolan.org">VLC</a> - старый, но лучший видеоплеер.</li>
+                    <li><a href="https://github.com/microsoft/PowerToys">PowerToys</a> - несмотря на популярность инструмент единственные функции, которые я в нем использую - это поверх всех окон и поиск процессов, которые держат файл.</li>
                   </ul>
                 </p>
               </section>
@@ -1189,13 +1248,18 @@ export default function () {
               </p>
 
               <p style={styles.p}>
-                <a href="https://github.com/microsoft/PowerToys">PowerToys</a> - расхайпленный проект на 100 000 звезд на <a href="https://github.com">GitHub</a>, но ни одну утилиту из него я так и не встроил в свой сетап.
-              </p>
-              <p style={styles.p}>
                 <a href="https://github.com/ArcadeRenegade/SidebarDiagnostics">SideBar</a> - сомнительная необходимость: показывает нагрузку на железо, но по сути это редко нужно.
               </p>
               <p style={styles.p}>
                 <a href="https://github.com/tw93/Pake">Pake</a> - позволяет собирать бинарники из сайтов; непонятно зачем, если можно создать ярлык.
+              </p>
+              <p style={styles.p}>
+                <li><a href="https://www.voidtools.com">Everything</a> - локальный поисковик файлов.</li>
+                Локальный поисковик файлов, полностью заменил поиск в <a href="TODO">TotalCommander</a>.
+              </p>
+              <p style={styles.p}>
+                <li><a href="TODO">Rufus</a> - продвинутый инструмент для создания загрузочных флешек.</li>
+                Весь тот функционал, который там есть не особо требуется, по большому MediaCreationTool адресует все мои потребности.
               </p>
 						</category>
 
