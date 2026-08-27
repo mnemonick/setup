@@ -1112,24 +1112,11 @@ export default function () {
 
               <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
                 <p style={styles.p}>
-                  Компиляторы и рантаймы - ставлю все, авось пригодится.
-                  <ul style={styles.ul}>
-                    <li><a href="https://github.com/PowerShell/PowerShell">PowerShell 7</a> - последняя версия (по умолчанию ставится старая)</li>
-                    <li><a href="https://nodejs.org">Node</a> - далеко не самый лучший язык, но его главное преимущество в том, что позволяет писать <term style={styles.term}>Frontend</term> и <term style={styles.term}>Backend</term> на одном и том же языке.</li>
-                    <li><a href="https://deno.com">Deno</a> - более продвинутый форк <a href="https://nodejs.org">Node</a>.</li>
-                    <li><a href="https://www.rust-lang.org">Rust</a> - лучший язык программирования на текущий момент по моему мнению.</li>
-                    <li><a href="https://go.dev">Go</a> - из-за своей простоты лучше всего подходит для вайбкодинга.</li>
-                    <li><a href="https://www.python.org">Python</a> - не особо часто использую, но требуется для некоторых инструментов.</li>
-                  </ul>
-                </p>
-              </section>
-
-              <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
-                <p style={styles.p}>
-                  Банковские приложения
+                  Деньги
                   <ul style={styles.ul}>
                     <li><a href="https://alfabank.ru">alfabank.ru</a> - так же крупный банк и маловероятно что с ним что-то случится, но кто знает.</li>
                     <li><a href="https://www.sberbank.ru">sberbank.ru</a> - пользуюсь Сбером, самый крупный банк; учитывая текущую экономическую ситуацию, кто знает, что будет с другими. Про Lehman Brothers тоже говорили, что он непотопляем, а ситуация в РФ сейчас тяжелее, чем в США в 2008.</li>
+                    <li><a href="https://www.tradingview.com">TradingView</a> - мониторинг акций.</li>
                   </ul>
                 </p>
               </section>
@@ -1143,6 +1130,21 @@ export default function () {
                     <li><a href="https://ebay.com">ebay.com</a>  - если нужно купить что‑то с рук в РФ. </li>
                     <li><a href="https://avito.com">avito.com</a>  - если нужно купить что‑то с рук за пределами РФ. Альтернатив по большому счету нет.</li>
                     <li><a href="https://github.com/rcmaehl/MSEdgeRedirect">ek.ua</a> - лучший вебсайт по выбору железу, намного лучше <a href="TODO">dns-shop.ru</a> / <a href="pcpartpicker.com">pcpartpicker.com</a> / <a href="newegg.com">newegg.com</a>.</li>
+                  </ul>
+                </p>
+              </section>
+
+              <section style={{...styles.category.section, borderBottom: styles.topper.borderBottom}}>
+                <p style={styles.p}>
+                  Компиляторы и рантаймы - ставлю все, авось пригодится.
+                  <ul style={styles.ul}>
+                    <li><a href="https://github.com/PowerShell/PowerShell">PowerShell 7</a> - последняя версия (по умолчанию ставится старая)</li>
+                    <li><a href="https://nodejs.org">Node</a> - далеко не самый лучший язык, но его главное преимущество в том, что позволяет писать <term style={styles.term}>Frontend</term> и <term style={styles.term}>Backend</term> на одном и том же языке.</li>
+                    <li><a href="https://deno.com">Deno</a> - более продвинутый форк <a href="https://nodejs.org">Node</a>.</li>
+                    <li><a href="https://www.rust-lang.org">Rust</a> - лучший язык программирования на текущий момент по моему мнению.</li>
+                    <li><a href="https://go.dev">Go</a> - из-за своей простоты лучше всего подходит для вайбкодинга.</li>
+                    <li><a href="https://www.python.org">Python</a> - не особо часто использую, но требуется для некоторых инструментов.</li>
+                    <li><a href="https://www.whatsmydns.net/">whatsmydns.net</a></li> - проверить как ведут себя днс.
                   </ul>
                 </p>
               </section>
@@ -1225,7 +1227,6 @@ export default function () {
                     <li><a href="https://www.qbittorrent.org">qBittorrent</a> - торренты.</li>
                     <li><a href="https://2gis.ru">2GIS</a> - справочник организаций и карты. <a href="TODO">Яндекс картами</a> не пользуюсь потому что там много рекламы.</li>
                     <li><a href="https://www.gosuslugi.ru">gosuslugi.ru</a> - приложение от хайпового стартапа.</li>
-                    <li><a href="https://www.tradingview.com">TradingView</a> - мониторинг акций.</li>
                     <li><a href="https://www.videolan.org">VLC</a> - старый, но лучший видеоплеер.</li>
                     <li><a href="https://github.com/microsoft/PowerToys">PowerToys</a> - несмотря на популярность инструмент единственные функции, которые я в нем использую - это поверх всех окон и поиск процессов, которые держат файл.</li>
                   </ul>
