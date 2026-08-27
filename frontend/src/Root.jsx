@@ -472,6 +472,13 @@ export default function () {
               </p>
 
               <p style={styles.p}>
+                Что самое интересное под задачи дополнительных мониторов, вертикальные 22 дюймовые подходят <b>намного лучше</b>, чем горизонтальные 29 дюймововые.
+                Нейросети, терминал, браузер с дебаггером (сверху веб-приложение, снизу дебаггер), thunderbird (сверху письма, снизу текст), все мессенджеры, Instagram, Twitter - всем этим пользоваться <b>удобнее</b> на вертикальном мониторе.
+                Горизонтальный монитор удобнее для редактора (открыто два файла одновременно + дерево проектов), просмотр видео и фотографий.
+                Вертикально ставить 29 дюймовый монитор не советую, очень высоко будет верхняя граница, не удобно.
+              </p>
+
+              <p style={styles.p}>
                 Больше пяти мониторов уже непрактично.
                 Если ставить по бокам - они будут слишком далеко, а два ряда - плохая идея: смотреть неудобно физиологически.
               </p>
@@ -520,17 +527,46 @@ export default function () {
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  Видео-карту (да и вообще железо) лучше выбирать по бенчмаркам, а не по техническим характеристикам.
-                  Технические характеристики - это просто информация о том, как достигается тот или иной показатель в бенчмарке.
+                  Мощная видео-карта влияет на скорость работы локальных нейросетей и на FPS в играх.
+                  Если вы не пользуетесь ни тем ни тем, то мощная видеокарта вам не нужна.
                 </p>
               </section>
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  В плане видеокарт <a href="TODO">AMD</a> даже близко не стоит с <a href="TODO">Nvidia</a>. Мощная видео-карта влияет на скорость работы локальных нейросетей. Выбрал <a href="TODO">GeForce RTX 5090</a>.
-                  Топовая видеокарта от
-                  Стабильно выдает на локальных моделях по 40-50 токенов в секунду.
-                  По бенчмаркам выдает...
+                  Видео-карту (да и вообще любое другое железо) лучше выбирать по бенчмаркам, а не по техническим характеристикам.
+                  Для замера производительности в играх и производительности нейросетей используются разные бенчмарки.
+                  Технические характеристики - это просто информация о том, как достигается тот или иной показатель в бенчмарке.
+
+                </p>
+              </section>
+
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  Для замера скорости работы нейросетей запускается локально <a href="TODO">Llama 3 8B at Q4_K_M</a> и смотрят сколько токенов в секунду генерирует нейросеть.
+                  <ul style={styles.ul}>
+                    <li><a href="TODO">Nvidia RTX 5090</a> - 220 tokens/s</li>
+                    <li><a href="TODO">AMD RX 9070 XT</a> - 95 tokens/s</li>
+                  </ul>
+                </p>
+
+                <p style={styles.p}>
+                  Разница огромная, но <a href="TODO">Nvidia RTX 5090</a> стоит около $4.000, а <a href="TODO">AMD RX 9070 XT</a> около 800$.
+                  Каждый решает сам, готов ли он переплачивать или нет.
+                </p>
+
+                <p style={styles.p}>
+                  Просто для сравнения <term style={styles.term}>GPT-5.6 Luna</term> (модель по умолчанию <term style={styles.term}>ChatGPT</term> в бесплатном тарифе) выдает примерно 200 tokens/s.
+                  Иногда я выбираю очень тяжелые модели и даже 40 tokens/s мне более чем достаточно.
+                </p>
+
+                <p style={styles.p}>
+                  Так что если для вас цена это важный фактор то можете смело брать <a href="TODO">AMD RX 9070 XT</a>.
+                  По соотношению цена / качество она даже <b>лучше</b> чем <a href="TODO">AMD RX 9070 XT</a>.
+                </p>
+
+                <p style={styles.p}>
+                  Я перфекционист, у меня стоит <a href="TODO">Nvidia RTX 5090</a>.
                 </p>
               </section>
             </category>
@@ -539,6 +575,16 @@ export default function () {
               <topper style={styles.topper}>Процессор</topper>
 
               <section style={styles.category.section}>
+                <p style={styles.p}>
+                  При выборе процессора я смотрю на показатели <a href="TODO">GeekBench</a> бенчмарка.
+                </p>
+
+                <p>
+                  <ul>
+                    <li><a href="TODO">Amd Ryzen 5090</a></li>
+                  </ul>
+                </p>
+
                 <p style={styles.p}>
                   А вот процессоры у <term style={styles.term}>AMD</term> лучше чем у <term style={styles.term}>Intel</term>. Влияет на скорость работы приложений и тех локальных нейросетей, которые не помещаются в памяти видеокарты. <a href="TODO">Core Ultra 9 285k</a>.
                 </p>
@@ -645,18 +691,14 @@ export default function () {
               </section>
 
               <p style={styles.p}>
-                Я абсолютный фанат <a href="https://www.microsoft.com/windows">Windows</a> на десктопе и считаю, что ни <a href="https://www.apple.com/macos">MacOS</a>, ни <a href="https://ubuntu.com">Ubuntu</a> даже близко не сравнятся с ней по удобству.
-
                 На <a href="https://www.microsoft.com/windows">Windows</a> (как и на всех ОС) полный кавардак с установкой приложений по историческим причинам.
 
                 <ul style={styles.ul}>
-                  <li>Winget</li>
-                  <li>Windows Store</li>
-                  <li>Веб-приложения (открываются через браузер).</li>
-                  <li>PWA приложения (браузерные приложения, которые можно устанавливать как десктопные)</li>
-
-                  <li>Предустановленны приложения.</li>
-                  <li>Браузер (что по сути то же платформа для приложений)</li>
+                  <li>Приложение можно поставить через <a href="TODO">winget</a>.</li>
+                  <li>Приложение можно скачать через <a href="TODO">Windows Store</a>.</li>
+                  <li>Приложение можно открыть в браузере.</li>
+                  <li>Приложение можно скачать из веб-приложения.</li>
+                  <li>Из вебсайта можно создать <clickable style={styles.clickable}>ярлык</clickable>, <clickable style={styles.clickable}>PWA</clickable>, <clickable style={styles.clickable}>установить как приложение</clickable>.</li>
                 </ul>
               </p>
 
@@ -665,15 +707,20 @@ export default function () {
 
                 <ul style={styles.ul}>
                   <li>Сначала пытаюсь поставить приложение через <a href="https://learn.microsoft.com/windows/package-manager/winget/">winget</a>.</li>
-                  <li>Если в <a href="https://learn.microsoft.com/windows/package-manager/winget/">winget</a> приложения нет и это вебсайт то создаю ярлык на рабочем столе через свой скрипт install-webapp.</li>
-                  <li>Если в <a href="https://learn.microsoft.com/windows/package-manager/winget/">winget</a> приложения нет и это не выбсайт то гружу приложения с официального сайта.</li>
+                  <li>
+                    Если в <a href="https://learn.microsoft.com/windows/package-manager/winget/">winget</a> приложения нет:
+                    <ul>
+                      <li>Если это веб-приложение то создаю <clickable style={styles.clickable}>десктопное приложение</clickable>.</li>
+                      <li>Если это нативное приложение то гружу приложения с официального сайта.</li>
+                    </ul>
+                  </li>
                 </ul>
               </p>
 
               <p style={styles.p}>
-                <a href="TODO">Windows Store</a> приложений не использую вообще.
-                Не все веб-приложения можно установить как <term style={styles.term}>PWA</term> приложение, но создать ярлык можно для любого веб-приложения, поэтому я пользуюсь только функционалом создания ярлыков.
-                Ярлыки создаю только для часто используемых веб-приложений, если я использую веб-приложение раз в месяц, то я просто открываю его в браузере.
+                Из моей практики это покрывает все пограничные случаи, почти не приходится пользоваться <a>Windows Store</a> (это скорее исключение).
+                Ну а игры гружу через <a href="TODO">Steam</a>.
+                Редко используемые веб-приложения открываю в браузере.
               </p>
 						</category>
 
@@ -690,15 +737,19 @@ export default function () {
               <section style={styles.category.section}>
                 <p style={styles.p}>
                   <b style={styles.b}>Макросы.</b>
+                  Не смотря на то что я очень люблю свою клавиатуру, определенные клавиши имеют удобное расположение, но то действие которое они выполняют используется крайне редко.
+                  Это поправимо макросами.
                   Вот вам <clickable style={styles.clickable}>картинка</clickable> для наглядности где какие клавиши расположены.
 
                   <ul>
-                    <li><term style={styles.term}>Caps Lock</term> = <term style={styles.term}>CTRL</term>.</li>
-                    <li><term style={styles.term}>Win</term> = <term style={styles.term}>CTRL-SHIFT</term>.</li>
-                    <li><term style={styles.term}>Right Ctrl</term> = <term style={styles.term}>ALT-SHIFT</term></li>
-                    <li><term style={styles.term}>Left-Ctrl</term> = <term style={styles.term}>ALT-CTRL-SHIFT</term></li>
-                    <li><term style={styles.term}>/</term> = <term style={styles.term}>ALT-TAB</term>.</li>
+                    <li><term style={styles.term}>Caps Lock</term> = <term style={styles.term}>Ctrl</term>.</li>
+                    <li><term style={styles.term}>Win</term> = <term style={styles.term}>Ctrl-Shift</term>.</li>
+                    <li><term style={styles.term}>Right Ctrl</term> = <term style={styles.term}>Alt-Shift</term></li>
+                    <li><term style={styles.term}>Left-Ctrl</term> = <term style={styles.term}>Alt-Ctrl-Shift</term></li>
+                    <li><term style={styles.term}>/</term> = <term style={styles.term}>Alt-Tab</term>.</li>
                     <li><term style={styles.term}>Insert</term> = <term style={styles.term}>Shift-Tab</term>.</li>
+                    <li><term style={styles.term}>~</term> = <term style={styles.term}>Esc</term>.</li>
+                    <li><term style={styles.term}>ESC</term> = <term style={styles.term}>Win</term>.</li>
                   </ul>
                 </p>
               </section>
@@ -715,16 +766,17 @@ export default function () {
               <section style={styles.category.section}>
                 <p style={styles.p}>
                   <b style={styles.b}>Клавиатурные жесты.</b>
-                  Сейчас по умолчанию долгом зажатии клавиши символ печатается много раз одна и та же буква - это поведение совершенно бесполезно.
-                  Я сделал так, что при долгом зажатии запускается определенное приложение.
-                  Это поведение раз в 100 полезнее, чем печать большого количества одного и того же символа.
+                  Сейчас по умолчанию долгом зажатии клавиши символ печатается много раз одна и та же буква - это поведение полезно при навигации, но абсолютно бесполезно на буквах.
+                  Я сделал так, что при долгом зажатии буквы (или цифры) запускается определенное приложение.
+                  Это поведение раз в миллион полезнее, чем печать большого количества одного и того же символа.
+                  Вот <clickable style={styles.clickable}>список</clickable> моих биндов.
                 </p>
               </section>
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
                   <b style={styles.b}>Свитчинг.</b>
-                  При нажатии на обратный слэш, происходит переключение фокуса между текущим и предыдущим приложением.
+                  При нажатии на обратный слэш, происходит переключение фокуса между текущим и предыдущим приложением (эмулируется нажатие <term style={styles.term}>Alt-Tab</term>).
                   Это супер-удобная клавиша для нажатия, но на которую печатается символ, который требуется один раз в неделю.
                 </p>
               </section>
@@ -738,20 +790,16 @@ export default function () {
                 </p>
 
                 <p style={styles.p}>
-                  Для каждого установленного приложения (как веб так и нативного) я создаю ярлык на рабочем столе.
-                  При долгом нажатии на клавишу <term style={styles.term}>a</term> запускается селектор в котором все ярлыки сортируются с помощью <a href="">fzf</a>.
-                </p>
-
-                <p style={styles.p}>
-                  Так же добавлена проверка, если приложение не запущено, то оно запускается, если запущено, то фокусируется.
+                  При долгом нажатии на клавишу <term style={styles.term}>a</term> запускается селектор в котором все ярлыки сортируются с помощью <a href="TODO">fzf</a>.
+                  Так же добавлена проверка, если приложение запущено, то оно фокусируется, если нет то запускается.
                   То есть фокусировка и запуск приложения происходит через один и тот же интерфейс.
-
                   <clickable onClick={() => alert('TODO')} style={{...styles.clickable, marginLeft: 5}}>Вот как это работает</clickable>.
                 </p>
 
                 <p style={styles.p}>
-                  В итоге если приложению назначен клавиатурный жест - я запускаю его через него.
+                  В итоге если приложению назначен клавиатурный жест - я запускаю его через долгое нажатие.
                   Если нет - то использую свой селектор.
+                  При этом запуск и фокус веб-приложений так же происходит через этот селектор (при установке веб-приложения автоматически создается ярлык на десктопе).
                 </p>
               </section>
 
@@ -764,12 +812,15 @@ export default function () {
 
                 <p style={styles.p}>
                   Я заметил, что проблемы с раскладкой возникают только в момент начала печати.
-                  В моем скрипте написана логика, что при смене фокуса язык приложения сбрасывается на значение по умолчанию (у каждого приложения оно свое).
+                  В моем скрипте написана логика, что при смене фокуса язык приложения сбрасывается на значение по умолчанию (язык указывается в названии ярлыка на десктопе, например <term style={styles.term}>warp.en.lnk</term>).
                 </p>
 
                 <p style={styles.p}>
                   Таким образом легко нарабатывается навык при котором запоминается начальная раскладка каждого приложения.
-                  Когда текст уже печатается то раскладка удерживается в голове, и переключать ее не вызывает проблем.
+                  А когда текст уже печатается то раскладка удерживается в голове, и переключать ее не вызывает проблем.
+                </p>
+
+                <p style={styles.p}>
                   Во время печати, я управляю раскладкой вручную через одиночное нажатие на правый <term style={styles.term}>Shift</term> без модификаторов.
                 </p>
               </section>
@@ -797,25 +848,28 @@ export default function () {
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  В <a href="https://www.opera.com">Opera</a> много разного встроенного функционала, но который можно в <a href="https://www.google.com/chrome/">Chrome</a> реализовать через плагины.
-                  Поэтому я остановился на <a href="https://www.google.com/chrome/">Chrome</a> для браузинга и <a href="https://www.chromium.org">Chromium</a> для разработки (им назначены разные горячие клавиши и они открываются на разных мониторах).
+                  В <a href="https://www.opera.com">Opera</a> много разного различного встроенного функционала, но его можно легко реализовать через плагины в <a href="https://www.google.com/chrome/">Chrome</a>.
                 </p>
               </section>
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
                   От <a href="https://www.mozilla.org/firefox/">Firefox</a> я отказался потому что мне не нравится его интерфейс.
+                  Устанавливаю его исключительно для кросс-браузерной разработки.
+                </p>
+
+                <p style={styles.p}>
+                  Я остановился на <a href="https://www.google.com/chrome/">Chrome</a> для браузинга и <a href="https://www.chromium.org">Chromium</a> для разработки (им назначены разные горячие клавиши и они открываются на разных мониторах).
                 </p>
               </section>
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  Поэтому я остановился на <a href="">Chrome</a>.
-                  Вот список моих маст хэв плагинов:
+                  Вот список моих маст хэв плагинов (ставятся в <a href="https://www.google.com/chrome/">Chrome</a>, не <a href="https://www.chromium.org">Chromium</a>):
                   <ul style={styles.ul}>
-                    <li><a href="https://1password.com">1Password</a> - в браузере работает идеально.</li>
-                    <li><a href="https://ublockorigin.com/">uBlock Origin</a> - заметно лучше <a href="https://adblockplus.org">AdBlock Plus</a> и <a href="https://getadblock.com">AdBlock</a>.</li>
-                    <li><a href="https://claude.ai/">Claude</a> - можно общаться с Claude о содержимом на странице (требуется подписка).</li>
+                    <li><a href="https://claude.ai/">Claude</a> - можно общаться с <a href="TODO">Claude</a> о содержимом на странице (требуется подписка).</li>
+                    <li><a href="https://1password.com">1Password</a> - менеджер паролей.</li>
+                    <li><a href="https://ublockorigin.com/">uBlock Origin</a> - по бенчмаркам лучше <a href="https://adblockplus.org">AdBlock Plus</a>, <a href="https://getadblock.com">AdBlock</a> и <a href="TODO">AdGuard</a>.</li>
                     <li><a href="https://crxmouse.com/">CxMouse</a> - плагин для жестов. У меня настроено только четыре жеста. Влево / вправо - фокус левой / правой вкладки. Вниз - закрыть вкладку. Вверх - создать новую вкладку.</li>
                     <li><a href="https://chromewebstore.google.com/detail/dont-close-window-with-la/dlnpfhfhmkiebpnlllpehlmklgdggbhn">Dont Close The Window with Last Tab</a> - блокирует закрытие окна при закрытии последней вкладки.</li>
                     <li><a href="https://www.i-dont-care-about-cookies.eu/">I dont care about cookies</a> - автоматически принимает все куки.</li>
@@ -823,22 +877,26 @@ export default function () {
                     <li><a href="https://returnyoutubedislike.com">Return Youtube Dislike</a> - возвращает количество дизлайков на youtube.</li>
                     <li><a href="https://chromewebstore.google.com/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle">Enhancer For Youtube</a> - полезные утилитки для youtube.</li>
                     <li><a href="https://chromewebstore.google.com/detail/no-new-tabs/gneobebnilffgkejpfhlgkmpkipgbcno?hl=en">No New Tabs</a> - запрещает браузеру создавать новые вкладки. Бесит когда веб-приложение сам создает новые вкладки, если я захочу открыть новую вкладку я сам это сделаю.</li>
-                    <li><a href="https://tampermonkey.net">Tamper Monkey</a> - позволяет добавлять свой JS на страницу (добавляю фиксированные заголовки веб-сайтам, что бы фокусировать их через <a href="">AutoHotkey</a>).</li>
+                    <li><a href="https://tampermonkey.net">Tamper Monkey</a> - позволяет добавлять свой JS на страницу (добавляю фиксированные заголовки веб-сайтам, что бы фокусировать их через <a href="TODO">AutoHotkey</a>).</li>
+                    <li><a href="https://chromewebstore.google.com/detail/search-navigator-%E2%80%93-keyboa/fpinaaaiplppifhmkjdfkimodkkdnoha">Search Navigator</a> - добавляет горячие клавиши к результатам поиска гугла (почему гугл нативно это не реализовал - не понятно).</li>
+                    <li><a href="https://chromewebstore.google.com/detail/currency-converter-pro/amlcmfdiddkikfmljhdhhookgjmnpedc">CurrencyConverter</a> - конвертация валют (особенно полезно на <a href="TODO">ek.ua</a>).</li>
+                    <li><a href="https://chromewebstore.google.com/detail/copy-url-%E2%80%94-one-click-url/ndpdhbnlllblljkmbcdolnjpbcfolnme">Copy URL</a> - создает горячую клавишу для копирования урла.</li>
+                    <li><a href="https://chromewebstore.google.com/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=en">Google Translate</a> - перевод слова при выделении.</li>
                   </ul>
-                </p>
-              </section>
-
-              <section style={styles.p}>
-                <p>
-                  К сожелению в хроме нативно нельзя редактировать горячие клавиши, но на помощ к нам приходит <a href="TODO">AutoHotkey</a>.
-                  <ul></ul>
                 </p>
               </section>
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  Чего мне не хватает - fuzzy поиск на странице.
-                  Идея для нового Open Source проекта
+                  В хроме нельзя редактировать горячие клавиши, но на помощ к нам приходит <a href="TODO">AutoHotkey</a>.
+                  Вот <clickable style={styles.clickable}>список</clickable> моих горячих клавиш для хрома.
+                </p>
+              </section>
+
+              <section style={{...styles.category.section, borderBottom: null}}>
+                <p style={styles.p}>
+                  Я искал, но не нашел плагина для инкрементального fuzzy поиска на странице.
+                  Если кто-то ищет идею для своего небольшого open source проекта то вот она.
                 </p>
               </section>
             </category>
@@ -848,12 +906,12 @@ export default function () {
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  <a href="https://cursor.com">Cursor</a> - не очень нравится, что он построен на веб‑технологиях.
-                  Позиционируется как IDE с самой продвинутой поддержкой нейросетей, но честно-говоря не особо заметил разницу WebStorm и Claude плагином.
+                  <a href="https://cursor.com">Cursor</a> - позиционируется как редактор с самой продвинутой поддержкой нейросетей, но честно-говоря в поддержки ии я особо разрницы не заметил с <a href="">WebStorm</a> с установленным <a href="TODO">Claude</a> плагином.
                 </p>
 
                 <p style={styles.p}>
-                  Но при этом покупая подписку на Claude вы можете его использовать в браузере и на телефоне и как TUI на сервере.
+                  Но при этом покупая подписку на <a href="TODO">Claude</a> вы можете его использовать: в браузере, на телефоне, как TUI на сервере и так же получаете API ключ, который вы можете вставлять куда хотите.
+                  <a href="https://cursor.com">Cursor</a> ничего из этого не поддерживает.
                 </p>
 
                 <p style={styles.p}>
@@ -871,12 +929,17 @@ export default function () {
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  В <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> <b style={styles.b}>очень</b> много функционала, которым пользуюсь каждый день:
+                  <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> - самый функциональный редактор для разработки веб-приложений на текущий момент.
+                  Если используете не для коммерческой разработки, то он бесплатен.
+                </p>
+
+                <p>
+                  Вот список того функционала, которым пользуюсь каждый день и который в <a href="TODO">Zed</a> так и <a href="TODO">Cursor</a> либо полностью отсутствует либо реализован хуже:
                   <ul style={styles.ul}>
-                    <li>Очень хорошая поддержка <a href="https://git-scm.com">Git</a></li>
-                    <li>Последние открытые файлы (вкладки даже отключил)</li>
+                    <li>Поддержка <a href="https://git-scm.com">Git</a></li>
+                    <li>История последних открытых файлов (вкладки даже отключил)</li>
                     <li>Локальная история</li>
-                    <li>Отдельные окна</li>
+                    <li>Открытие панелей в отдельных окнах</li>
                     <li>Интенты</li>
                     <li>Предпросмотр файла в дереве</li>
                     <li>Скоупы (Frontend и Backend помечаю разными цветами)</li>
