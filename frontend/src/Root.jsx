@@ -545,8 +545,8 @@ export default function () {
                 <p style={styles.p}>
                   Для замера скорости работы нейросетей запускается локально <a href="TODO">Llama 3 8B at Q4_K_M</a> и смотрят сколько токенов в секунду генерирует нейросеть.
                   <ul style={styles.ul}>
-                    <li><a href="TODO">Nvidia RTX 5090</a> - 220 tokens/s</li>
-                    <li><a href="TODO">AMD RX 9070 XT</a> - 95 tokens/s</li>
+                    <li><a href="TODO">Nvidia 5090</a> - 220 tokens/s</li>
+                    <li><a href="TODO">AMD 9070 XT</a> - 95 tokens/s</li>
                   </ul>
                 </p>
 
