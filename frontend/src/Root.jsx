@@ -335,20 +335,13 @@ export default function () {
 							<topper style={styles.topper}>Введение</topper>
 
               <p style={styles.p}>
-                В детстве я, как и все, играл в компьютерные игры и заметил: мне больше нравилось не сам процесс игры, а ковырять в ее настройках.
+                В детстве я много играл в компьютерные игры и заметил, что мне больше нравилась не сама игра, а процесс ее настройки.
+                Я даже специально скачивал конфиги про игроков, смотрел какие у них настройки и дорабатывал свой конфиг.
               </p>
 
               <p style={styles.p}>
-                Также хотелось бы, чтобы это превратилось в волну, где люди публикуют свои сетапы (а то, честное слово, задолбали новости про ИИ) - чтобы можно было почерпнуть чужие фишки.
-              </p>
-
-              <p style={styles.p}>
-                Этот сетап заточен именно под <b style={styles.b}>программирование</b>.
-                Скорее всего он не подойдет, если ваша цель это игры, видеомонтаж или дизайн.
-              </p>
-
-              <p style={styles.p}>
-                Полностью этот сетап с нуля вряд ли кто-то будет повторять: скорее всего каждый возьмет только отдельные куски.
+                Прошло время, в игры я играть перестал, но интерес к настройке всего и вся у меня остался.
+                В этой статье я хочу опубликовать свой "конфиг" заточенный под программирование.
               </p>
 
               <p style={styles.p}>
@@ -368,8 +361,9 @@ export default function () {
 							<topper style={styles.topper}>Стол</topper>
 
               <p style={styles.p}>
-                Стол у меня не обычный, а <clickable onClick={() => alert('TODO')} style={styles.clickable}>угловой</clickable>.
-                У этого два главных преимущества:
+                На рынке есть огромная куча супер дорогих столов со всякими наворотами: куча розеток, usb-портов, rgb-подсветка, но это все мне вообще не нужно.
+                Самое главное требования у меня к столу - это то, что бы он был <clickable onClick={() => alert('TODO')} style={styles.clickable}>угловой</clickable>.
+                У этого два больших преимущества:
 
                 <ul style={styles.ul}>
                   <li>
@@ -378,16 +372,20 @@ export default function () {
                   </li>
                   <li>
                     <b style={styles.b}>Больше пространства для мониторов.</b>
-                    В работе я использую 5 мониторов; за обычным столом расположить их так же удобно не получилось бы.
+                    В работе я использую 5 мониторов, за обычным столом расположить их так же удобно не получилось бы.
                   </li>
                 </ul>
               </p>
 
               <p style={styles.p}>
-                Нормальных угловых столов на рынке я не нашел, поэтому купил два стола из <term style={styles.term}>IKEA</term> (запрещенная в РФ организация) и соединил их снизу <clickable onClick={() => alert('TODO')} style={styles.clickable}>пластинами</clickable>.
+                Нормальных угловых столов на рынке я не нашел.
+                У тех которые есть слишком узкая столешница, либо они не достаточно длинные.
+                Я купил два самых обычных стола из <term style={styles.term}>IKEA</term> и соединил их снизу <clickable onClick={() => alert('TODO')} style={styles.clickable}>пластинами</clickable>.
+                Это намного дешевле и удобнее чем все эти умные RGB, геймерские столы с кучей розеток и USB портов.
               </p>
+
               <p style={styles.p}>
-                Главный недостаток: снизу постоянно мешает <clickable onClick={() => alert('TODO')} style={styles.clickable}>ножка стола</clickable>, но я к ней уже привык.
+                У этого есть небольшой недостаток - снизу постоянно мешает <clickable onClick={() => alert('TODO')} style={styles.clickable}>ножка стола</clickable>, но к этому я уже привык.
               </p>
 						</category>
 
@@ -413,6 +411,7 @@ export default function () {
               <p style={styles.p}>
                 Остановился на одном из самых популярных оффисных стульев в мире - <a href="https://ikeamega.ru/officechairs/tproduct/951877794252-markus-markus-ofisnoe-kreslo-vissle-svet" style={styles.term}>IKEA Marcus</a>.
                 Подлокотники убираются, низкая посадка, можно сидеть в позе наездника.
+                Мне более ничего и не нужно.
               </p>
             </category>
 
@@ -420,7 +419,7 @@ export default function () {
               <topper style={styles.topper}>Очки</topper>
 
               <p style={styles.p}>
-                Если вы хотите прокачать рабочее место - уделите внимание очкам <b style={styles.b}>даже если</b> на зрение не жалуетесь.
+                Если вы хотите прокачать рабочее место - уделите внимание очкам <b style={styles.b}>даже если</b>на зрение не жалуетесь.
               </p>
 
               <p style={styles.p}>
@@ -448,63 +447,67 @@ export default function () {
                 <p style={styles.p}>
                   Количество мониторов для меня это самый важный параметр.
                   Намного важнее, чем мощный процессор или видео-карта.
-                  У меня стоит 5 мониторов, один основной по центру, и четыре дополнительных по бокам вертикально.
+                  У меня стоит 5 мониторов: один основной по центру, и четыре дополнительных по бокам вертикально.
                 </p>
 
                 <p style={styles.p}>
-                  Большее количество мониторов запихнуть уже не практично, если ставить больше боковых то они будут слишком далеко.
-                  Если ставить мониторы выше - то вверх смотреть <b style={styles.b}>крайне не удобно</b>.
-                  Верхняя граница горизонтального монитора должна быть на уровне глаз (не по центру, вниз смотреть удобнее, чем вверх).
-                  Смотреть в самый верх вертикальных мониторов уже немного дискомфортно, но благо туда приходится смотреть не часто.
+                  Использовать большее пяти мониторов - это уже не практично.
+                  Если ставить больше дополнительных, то они будут слишком далеко.
+                  Если ставить мониторы выше - то вверх смотреть <b style={styles.b}>крайне не удобно</b> (был печальный опыт).
+                  В идеале верхняя граница горизонтального монитора должна быть на уровне глаз (не по центру, вниз смотреть удобнее, чем вверх).
+                  Смотреть в самый верх вертикальных мониторов мне уже немного дискомфортно, но благо туда приходится смотреть не часто.
                 </p>
 
                 <p style={styles.p}>
-                  Мои требования к мониторам
-                  <ul>
+                  Мои требования к мониторам:
+                  <ul style={styles.ul}>
                     <li>
                       <b style={styles.b}>Диогональ:</b> 27 для основного, 24 для дополнительных.
-                      Если вертикально ставить мониторы шире 24 дюймов, то это уже слишком высоко и не удобно.
-                      Если основной монитор больше 27 дюймов, то дополнительные уезжают слишком далеко.
+                      Если диогональ основного монитора больше 27 дюймов, то дополнительные уезжают слишком далеко.
+                      Если вертикально ставить мониторы с диогональю больше 24 дюймов, то это будет уже слишком высоко и не удобно.
                       Все обычно гонятся за большими мониторами, но в программировании в этом нет необходимости.
+                      27 дюймов для основного и 24 для дополнительных - это самые оптимальные диогонали.
                     </li>
                     <li>
-                      <b style={styles.b}>Расширение:</b> 3840x2160 для основного, 2560x1440 для дополнительных.
-                      На основном мониторе должно быть достаточно места что бы помещалось 2 сплита и дерево проектов в IDE.
-                      На дополнительных мониторах ширина составляет 1440 пикселей, а это самая популярная ширина на ноутбуках.
-                      Так что 90 процентов приложений отображаются более чем нормально на такой ширине.
-                    </li>
-                    <li>
-                      <b style={styles.b}>Покрытие:</b> обязательно матовое (не глянцевым). Глянцевое лучше передает цвета, на матовом меньше бликов. В программировании совершенно пофиг на цвета, а вот отражение в глянце бесит.
+                      <b style={styles.b}>Разрешение:</b> <term style={styles.term}>3840x2160</term> для основного, <term style={styles.term}>2560x1440</term> для дополнительных.
+                      На основном мониторе должно быть достаточно места что бы в IDE помещалось <clickable style={styles.clickable} onClick={() => alert('TODO')}>2 сплита и дерево файлов</clickable>.
+                      На дополнительных мониторах ширина составляет <term style={styles.term}>1440</term> пикселей, а это самая популярная ширина на ноутбуках.
+                      Так что практически все приложения будут отображаться нормально, не смотря на то что монитор стоит вертикально.
                     </li>
                     <li>
                       <b style={styles.b}>Матрица:</b> желательно какой-нибудь <term style={styles.term}>OLED</term> (<term style={styles.term}>WOLED</term> или <term style={styles.term}>QD-OLED</term>), но и <term style={styles.term}>IPS</term> подойдет.
-                      Матрица влияет на цветопередачу, на которую в программировании по большому счету пофиг.
+                      Матрица влияет на качество картинки, на которую в программировании по большому счету пофиг.
+                    </li>
+                    <li>
+                      <b style={styles.b}>Покрытие:</b> обязательно матовое (не глянцевое).
+                      Глянцевое лучше передает цвета, но на матовом меньше бликов.
+                      Отсутствие бликов важнее, чем красивая картинка.
                     </li>
                   </ul>
                 </p>
+
                 <p style={styles.p}>
-                  Подойдут совершенно любые мониторы удовлетворяющие этим критериям, я использую:
+                  Под эти критерии подходит достаточно большое количество мониторов, я выбрал:
                   <ul style={styles.ul}>
-                    <li><a href="https://www.acer.com/us-en/predator/monitors/x27u-qd-oled/pdp/UM.GXXAA.109">Acer X1BMIIPPRUZX</a> - основной.</li>
-                    <li><a href="https://www.philips.co.uk/c-p/24B2U3601_00/business-monitor-lcd-monitor-with-usb-c">Philips 24B2U3601</a> - дополнительные.</li>
+                    <li>Основной - <a href="TODO">Samsung G80SH</a>.</li>
+                    <li>Четыре дополнительных - <a href="https://www.philips.co.uk/c-p/24B2U3601_00/business-monitor-lcd-monitor-with-usb-c">Philips 24B2U3601</a>.</li>
                   </ul>
+                </p>
+                <p style={styles.p}>
+                  Все мониторы стоят на кронштейнах и скреплены сзади <clickable onClick={() => alert('TODO')} style={styles.clickable}>суперклеем с дверными петлями</clickable>, чтобы не было зазоров.
                 </p>
               </section>
 
               <section style={{...styles.category.section, borderBottom: null}}>
                 <p style={styles.p}>
-                  Все мониторы на кронштейнах и скреплены <clickable onClick={() => alert('TODO')} style={styles.clickable}>суперклеем с дверными петлями</clickable>, чтобы не было зазоров.
-                </p>
-
-                <p style={styles.p}>
-                  Каждое приложение я ментально закрепляю за своим монитором:
+                  Каждое приложение я размещаю за своим монитором:
 
                   <ul style={styles.ul}>
-                    <li>Слева-слева: <a href="https://www.warp.dev">Warp</a>.</li>
+                    <li>Слева-слева: <a href="https://www.warp.dev">Warp</a> (это продвинутый терминал).</li>
                     <li>Слева: <a href="https://www.chromium.org">Chromium</a> с открытым дебаггером.</li>
                     <li>Центр: <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> | <a href="https://www.google.com/chrome/">Chrome</a> | любое другое временное приложение.</li>
-                    <li>Справа: <a href="https://claude.ai">Claude</a>.</li>
-                    <li>Справа-справа: <a href="https://www.thunderbird.net">Thunderbird</a> | <a href="https://telegram.org">Telegram</a> | <a href="https://slack.com">Slack</a>.</li>
+                    <li>Справа: <a href="https://claude.ai">Claude</a> | любая другая нейросеть.</li>
+                    <li>Справа-справа: <a href="https://www.thunderbird.net">Thunderbird</a> | <a href="https://telegram.org">Telegram</a> | <a href="https://slack.com">Slack</a> | любой другой мессенджер.</li>
                   </ul>
                 </p>
               </section>
@@ -520,10 +523,12 @@ export default function () {
               </p>
 
               <p style={styles.p}>
-                <b style={styles.b}>Расположение модификаторов.</b>
-                На обычных клавиатурах большим пальцем жмешь только пробел, а модификаторы - мизинцем.
-                На моей клавиатуре пальцами я могу нажать 12 клавиш, по 6 на каждый большой палец: <term style={styles.term}>PageUp</term> <term style={styles.term}>PageDown</term> <term style={styles.term}>Backspace</term> <term style={styles.term}>Delete</term> <term style={styles.term}>Home</term> <term style={styles.term}>End</term> <term style={styles.term}>Space</term> <term style={styles.term}>Enter</term> <term style={styles.term}>Alt</term> <term style={styles.term}>Ctrl</term> <term style={styles.term}>Alt+Shift</term> <term style={styles.term}>Alt+Ctrl</term> <term style={styles.term}>Alt+Ctrl+Shift</term>.
+                <b style={styles.b}>Клавиши под большие пальцы.</b>
+                На обычных клавиатурах большим пальцем можно нажать только на пробел.
+                На <term style={styles.term}>Kinesis Advantage 2</term> большими пальцами можно нажать 12 клавиш (по 6 на каждый большой палец): <term style={styles.term}>PageUp</term> <term style={styles.term}>PageDown</term> <term style={styles.term}>Backspace</term> <term style={styles.term}>Delete</term> <term style={styles.term}>Home</term> <term style={styles.term}>End</term> <term style={styles.term}>Space</term> <term style={styles.term}>Enter</term> <term style={styles.term}>Alt</term> <term style={styles.term}>Ctrl</term> <term style={styles.term}>Alt+Shift</term> <term style={styles.term}>Alt+Ctrl</term> <term style={styles.term}>Alt+Ctrl+Shift</term>.
                 Последние 3 настроены через макрос, зажимается одна клавиша и равносильно нажатию сразу нескольких модификаторов.
+                Большое палец - это самый функциональный палец на руке, и клавиатура спроектирована так, что им нажимаются самые часто-используемые клавиши.
+                Это очень удобно.
               </p>
 
               <p style={styles.p}>
@@ -538,24 +543,34 @@ export default function () {
               </p>
 
               <p style={styles.p}>
+                <b style={styles.b}>Углубления.</b>
                 Благодаря углублениям на клавиатуре ладонь лежит удобнее с физиологической точки зрения.
               </p>
 
               <p style={styles.p}>
-                Но к этой клавиатуре нужно привыкнуть - у меня ушло примерно пару месяцев.
-                Первое время было очень неудобно, но оно того стоило.
-                Для игр приходится переопределять <term style={styles.term}>WASD</term> на <term style={styles.term}>ESDF</term>.
+                У этой клавиатуры есть три минуса:
+
+                <ul style={styles.ul}>
+                  <li>
+                    <b style={styles.b}>Цена:</b>
+                    $499 долларов за обычную версию $600 за bluetooth
+                  </li>
+                  <li>
+                    <b style={styles.b}>Порог входа:</b>
+                    Требуется достаточно много времени на то, что бы привыкнуть к другому расположению клавишь.
+                    Вы даже не представляете насколько сложно глубоко в подсознании сидит навык печати.
+                    Первые месяц-два будет очень тяжело.
+                  </li>
+                  <li>
+                    <b style={styles.b}>Не для игр:</b>
+                    Расположение клавиш хорошо подходит для удобной печати, но не для игр.
+                  </li>
+                </ul>
               </p>
             </category>
 
             <category style={styles.category}>
               <topper style={styles.topper}>Мышка</topper>
-
-              <p style={styles.p}>
-                Первое требование к мышке это форма.
-                Форма должна быть симметричная (так удобнее перетаскивать ее).
-                Размер должен быть такой, что бы можно было упереться ладонью в ковер и доводить курсор до нужно точки пальцами.
-              </p>
 
               <p style={styles.p}>
                 Мои требования к мышке:
@@ -584,7 +599,7 @@ export default function () {
 
               <p style={styles.p}>
                 Дальше просто выбираем мышку, которая удовлетворяет всем этим требованиям и держит заряд больше всего.
-                Под эти требования подходит много мышек, я выбрал <a href="https://www.logitechg.com/en-us/shop/p/pro-x2-superlight-wireless-mouse">Logitech G Pro X Superlight 2</a>.
+                Под эти требования подходит очень много мышек, я выбрал <a href="https://www.logitechg.com/en-us/shop/p/pro-x2-superlight-wireless-mouse">Logitech G Pro X Superlight 2</a>.
               </p>
             </category>
 
@@ -593,17 +608,22 @@ export default function () {
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  Мой сетап заточен под программирования, FPS в играх меня не интересует вообще.
-                  Но, мощная видеокарта очень сильно влияет на скорость работы локальных нейросетей.
-                  Если бы не локальные нейросети, то мне бы подошла практическая любая видеокарта, поддерживающая 5 мониторов.
+                  Сразу скажу, что FPS в играх меня не интересует вообще.
+                  Видеокарта очень сильно влияет на скорость работы локальных нейросетей, которые я время от времени использую.
+                  Если бы не локальные нейросети, то мне бы подошла практическая любая видеокарта.
+                  Поэтому к видеокарте у меня одно единственное требование - локальные нейросети должны работать как можно быстрее.
                 </p>
               </section>
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
                   Для замера скорости работы нейросетей запускается локально <a href="TODO">Llama 3 8B at Q4_K_M</a> и смотрят сколько токенов в секунду генерирует нейросеть.
+                </p>
+
+                <p style={styles.p}>
+                  Вот показатели флагманских видеокарт от <term style={styles.term}>Nvidia</term> и <term style={styles.term}>AMD</term>:
                   <ul style={styles.ul}>
-                    <li><a href="TODO">Nvidia 5090</a> - 220 tokens/s</li>
+                    <li><a href="TODO">Nvidia RTX 5090</a> - 220 tokens/s</li>
                     <li><a href="TODO">AMD 9070 XT</a> - 95 tokens/s</li>
                   </ul>
                 </p>
@@ -611,15 +631,7 @@ export default function () {
                 <p style={styles.p}>
                   Разница огромная, но <a href="TODO">Nvidia RTX 5090</a> стоит около $4.000, а <a href="TODO">AMD RX 9070 XT</a> около 800$.
                   Каждый решает сам, готов ли он переплачивать или нет.
-                </p>
-
-                <p style={styles.p}>
-                  Просто для ориентира <term style={styles.term}>GPT-5.6 Luna</term> (модель по умолчанию <term style={styles.term}>ChatGPT</term> в бесплатном тарифе) выдает примерно 200 tokens/s.
-                  По большому счету даже 40 tokens/s более чем достаточно.
-                </p>
-
-                <p style={styles.p}>
-                  Но я перфекционист, у меня стоит <a href="TODO">Nvidia RTX 5090</a>.
+                  Я очень активно использую локальные нейросети, поэтому я выбрал <a href="TODO">Nvidia RTX 5090</a>.
                 </p>
               </section>
             </category>
@@ -629,43 +641,80 @@ export default function () {
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  Процессор так не является определяющим фактором в программировании.
-                  При выборе процессора я смотрю на показатели <a href="TODO">GeekBench</a> бенчмарка.
-                  На этом процессоре можно подкрутить тактовую частоту, что ускоряет скорость обмена данными между оперативкой и процессором, что дает прирост в скорости работы локальных нейросетей на 30%.
+                  Процессор сильно влияет на скорость работы всех приложений и так же на скорость работы локальных нейростей (если те не полностью помещаются в память видеокарты).
                 </p>
 
-                <p>
-                  <ul>
-                    <li><a href="TODO">Amd Ryzen 5090</a></li>
+                <p style={styles.p}>
+                  Процессор, как собственно и любой другое железо, я выбираю не по техническим характеристикам, а по бенчмаркам.
+                  Есть огромное количество различных бенчмарков, замерящих скорость процессоров, я предпочитаю больше всего <a href="TODO">GeekBench</a>.
+                  Процессоры сейчас делают только <term style={styles.term}>AMD</term> и <term style={styles.term}>Intel</term>:
+
+                  <ul style={styles.ul}>
+                    <li><a href="TODO">Amd Ryzen 9950X</a> - 999 очков</li>
+                    <li><a href="TODO">Intel Core Ultra 9 285k</a> - 999 очков</li>
                   </ul>
                 </p>
 
                 <p style={styles.p}>
-                  А вот процессоры у <term style={styles.term}>AMD</term> лучше чем у <term style={styles.term}>Intel</term>. Влияет на скорость работы приложений и тех локальных нейросетей, которые не помещаются в памяти видеокарты. <a href="TODO">Core Ultra 9 285k</a>.
+                  К тому же на <term style={styles.term}>AMD</term> процессорах можно увеличить тактовую частоту <term style={styles.term}>Infinity Fabric</term>, и получить прирост в скорости работы локальных нейросетей на 30%.
+                  Поэтому я выбираю <term style={styles.term}>AMD Ryzen 5090</term>.
                 </p>
               </section>
             </category>
 
             <category style={styles.category}>
-              <topper style={styles.topper}>Накопитель</topper>
+              <topper style={styles.topper}>SSD</topper>
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  Каких-либо специфичных требований к SSD у меня нет.
-                  Должен быть быстрым и не менее 1TB.
-                  <a href="TODO">Samsung SSD 9100 Pro</a>
+                  Быстрый SSD влияет на скорость работы программ намного больше чем мощный процессор.
+                  Cамое главный параметр на который нужно смотреть - это <term style={styles.term}>IOPS</term> (Input Output Per Second).
+                  Мне хватает 4TB с большим запасом.
+                </p>
+
+                <p style={styles.p}>
+                  Количество <term style={styles.term}>IOPS</term> у флагманских моделей трех основных конкурентов:
+                  <ul style={styles.ul}>
+                    <li>
+                      <a href="TODO">Crucial T710</a> - 2300 IOPS
+                    </li>
+                    <li>
+                      <a href="TODO">MSI SPATIUM M571</a> - 2600 IOPS.
+                    </li>
+                    <li>
+                      <a href="TODO">Samsung SSD 9100 Pro</a> - 2600 IOPS.
+                    </li>
+                  </ul>
+                </p>
+
+                <p style={styles.p}>
+                  У <term style={styles.term}>Samsung</term> столько же <term style={styles.term}>IOPS</term> столько же сколько и у <term style={styles.term}>MSI</term>, но я предпочитаю <term style={styles.term}>Samsung</term> потому что они сами делаю свой контроллер (другие производители закупают контроллеры у подрядчиков).
                 </p>
               </section>
             </category>
 
             <category style={styles.category}>
-              <topper style={styles.topper}>Оперативка</topper>
+              <topper style={styles.topper}>Оперативная память</topper>
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  <a href="TODO">G.Skill Trident Z5 CK</a> две штуки.
-                  Всего 64 гб.
-                  1234 в бенчмарке Performance Test.
+                  Для программирования по большому счету достаточно даже 32 GB оперативки, но я ведь еще запускаю локальные нейросети.
+                  Если нейросеть полностью не помещается в видеокарту, то определенная ее часть переносится в оперативку.
+                  Для обычных нейросетей будет достаточно 64 GB, но мне хочется запускать самые крутые нейросети с 70B+ параметрами без квантизации, поэтому нужно 128 GB.
+                </p>
+
+                <p style={styles.p}>
+                  Мои критерии при выборе оперативки:
+                  <ul style={styles.ul}>
+                    <li><b style={styles.b}>Тип - DDR5.</b> Это уже стандарт в 2026. Значительно выше пропускная способность и тактовая частота чем у DDR4.</li>
+                    <li><b style={styles.b}>Объем - 64 GB.</b> Две по 64 GB лучше чем четыре по 32 GB, это дает дополнительные 10-20% по бенчмаркам.</li>
+                    <li><b style={styles.b}>Поддержка EXPO.</b> С помощью этой функции можно просто переключить один параметр в BIOS и получить оптимальные параметры, без ковыряния низкоуровневых параметров.</li>
+                    <li><b style={styles.b}>Не геймерская.</b> Очень много какого железа позиционируется как геймерское, для меня это всегда огромный минус.</li>
+                  </ul>
+                </p>
+
+                <p style={styles.p}>
+                  Очень мало моделей подходят под эти критерии, я выбрал <a href="todo">ek.us</a> - это <a href="TODO">Kingston Fury Beast DDR5</a>.
                 </p>
               </section>
             </category>
@@ -675,9 +724,39 @@ export default function () {
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  <a href="https://www.asus.com/motherboards-components/motherboards/prime/prime-b850m-k/">Asus Prime B850M-K</a>.
                   Самое главное, что бы материнская плата поддерживала все выбранное железо.
                   Если ваша цель - это запуск локальных нейросетей обратите внимание на параметр, он увеличивает скорость до 30%.
+                </p>
+
+                <p style={styles.p}>
+                  Мои требования к материнской плате:
+                  <ul style={styles.ul}>
+                    <li>
+                      <b style={styles.b}>Поддержка AMD.</b>
+                      Под <term style={styles.term}>AMD</term> процессор нужен <term style={styles.term}>AMD</term> сокет на материнской плате.
+                    </li>
+                    <li>
+                      <b style={styles.b}>Поддержка FCLK в BIOS.</b>
+                      Этой функцией можно увеличить тактовую частоту <term style={styles.term}>Inifinity Fabric</term>.
+                      По бенчмаркам это дает +20-30% скорости к нейросетям, которые не помещаются в видеокарте и скидываются в <term style={styles.term}>RAM</term>.
+                    </li>
+                    <li>
+                      <b style={styles.b}>Поддержка EXPO.</b>
+                      Вместо ковыряния всех параметров оперативки вручную удобнее просто переключить один тумблер.
+                    </li>
+                    <li>
+                      <b style={styles.b}>Поддержка RAM 128 GB DDR5.</b>
+                      Нужно для нейросетей, описывал выше.
+                    </li>
+                    <li>
+                      <b style={styles.b}>Поддержка WiFi и Bluetooth.</b>
+                      Удобно, если они сразу есть на материнке.
+                    </li>
+                  </ul>
+                </p>
+
+                <p style={styles.p}>
+                  Под эти критерии подходит несколько материнок, выбрал <a href="TODO">MSI MAG X870E Tomahawk</a>.
                 </p>
               </section>
             </category>
@@ -685,7 +764,8 @@ export default function () {
             <category style={styles.category}>
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  <a href="https://us.sennheiser-hearing.com/products/momentum-5-wireless?variant=62714248495475">Sennhizer Momentum 4 Wireless</a>. Самый главный критерий - что бы были беспроводными и долго держали заряд.
+                  <a href="https://us.sennheiser-hearing.com/products/momentum-5-wireless?variant=62714248495475">Sennhizer Momentum 5 Wireless</a>.
+                  Самый главный критерий - что бы были беспроводными и долго держали заряд.
                 </p>
               </section>
             </category>
