@@ -527,8 +527,10 @@ export default function () {
                 На обычных клавиатурах большим пальцем можно нажать только на пробел.
                 На <term style={styles.term}>Kinesis Advantage 2</term> большими пальцами можно нажать 12 клавиш (по 6 на каждый большой палец): <term style={styles.term}>PageUp</term> <term style={styles.term}>PageDown</term> <term style={styles.term}>Backspace</term> <term style={styles.term}>Delete</term> <term style={styles.term}>Home</term> <term style={styles.term}>End</term> <term style={styles.term}>Space</term> <term style={styles.term}>Enter</term> <term style={styles.term}>Alt</term> <term style={styles.term}>Ctrl</term> <term style={styles.term}>Alt+Shift</term> <term style={styles.term}>Alt+Ctrl</term> <term style={styles.term}>Alt+Ctrl+Shift</term>.
                 Последние 3 настроены через макрос, зажимается одна клавиша и равносильно нажатию сразу нескольких модификаторов.
-                Большое палец - это самый функциональный палец на руке, и клавиатура спроектирована так, что им нажимаются самые часто-используемые клавиши.
-                Это очень удобно.
+              </p>
+
+              <p style={styles.p}>
+                Большой палец - это самый функциональный палец на руке, и клавиатура спроектирована так, что им нажимаются самые часто-используемые клавиши.
               </p>
 
               <p style={styles.p}>
@@ -577,22 +579,20 @@ export default function () {
 
                 <ul style={styles.ul}>
                   <li>
-                    <b style={styles.b}>Хват.</b>
-                    Обязательно <term style={styles.term}>Claw</term>.
+                    <b style={styles.b}>Хват - <term style={styles.term}>Claw</term>.</b>
                     Я вообще не понимаю как люди пользуются мышками где рука должна полностью лежать на мышке.
                   </li>
                   <li>
-                    <b style={styles.b}>Форма.</b>
-                    Обязательно <term style={styles.term}>Симметричная</term>.
-                    Желательно что бы бока мышки были немного во внутрь (что бы хватать было удобнее).
+                    <b style={styles.b}>Симметричная форма.</b>
+                    Все эти попытки подстроить мышку под форму руки - не добавляют удобства (по крайней мере для меня).
                   </li>
                   <li>
-                    <b style={styles.b}>Подключение.</b>
-                    Обязательно <term style={styles.term}>Bluetooth</term> (вообще чем меньше проводов - тем лучше).
+                    <b style={styles.b}>Беспроводные.</b>
+                    Вообще чем меньше проводов тем лучше.
                   </li>
                   <li>
                     <b style={styles.b}>Кнопки.</b>
-                    Третье наличие боковых кнопок (я программирую их на копирование и вставку через <a href="https://www.autohotkey.com">AutoHotkey</a>).
+                    Я программирую боковые кнопки на копирование и вставку через <a href="https://www.autohotkey.com">AutoHotkey</a>.
                   </li>
                 </ul>
               </p>
@@ -641,23 +641,27 @@ export default function () {
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  Процессор сильно влияет на скорость работы всех приложений и так же на скорость работы локальных нейростей (если те не полностью помещаются в память видеокарты).
+                  Мощный процессор в программировании не особо-то и нужен.
+                  Но он сильно влияет на скорость работы локальных нейростей, если те не полностью помещаются в видеокарту.
                 </p>
 
                 <p style={styles.p}>
                   Процессор, как собственно и любой другое железо, я выбираю не по техническим характеристикам, а по бенчмаркам.
-                  Есть огромное количество различных бенчмарков, замерящих скорость процессоров, я предпочитаю больше всего <a href="TODO">GeekBench</a>.
-                  Процессоры сейчас делают только <term style={styles.term}>AMD</term> и <term style={styles.term}>Intel</term>:
+                  Есть огромное количество различных бенчмарков, я предпочитаю больше всего <a href="TODO">GeekBench</a>.
+                </p>
+
+                <p style={styles.p}>
+                  Процессоры сейчас делают только <term style={styles.term}>AMD</term> и <term style={styles.term}>Intel</term>, поэтому сравним их флагманские модели:
 
                   <ul style={styles.ul}>
-                    <li><a href="TODO">Amd Ryzen 9950X</a> - 999 очков</li>
+                    <li><a href="TODO">AMD Ryzen 9950X</a> - 999 очков</li>
                     <li><a href="TODO">Intel Core Ultra 9 285k</a> - 999 очков</li>
                   </ul>
                 </p>
 
                 <p style={styles.p}>
                   К тому же на <term style={styles.term}>AMD</term> процессорах можно увеличить тактовую частоту <term style={styles.term}>Infinity Fabric</term>, и получить прирост в скорости работы локальных нейросетей на 30%.
-                  Поэтому я выбираю <term style={styles.term}>AMD Ryzen 5090</term>.
+                  Поэтому я выбираю <a href="TODO" style={styles.term}>AMD Ryzen 9950X</a>.
                 </p>
               </section>
             </category>
@@ -706,15 +710,15 @@ export default function () {
                 <p style={styles.p}>
                   Мои критерии при выборе оперативки:
                   <ul style={styles.ul}>
-                    <li><b style={styles.b}>Тип - DDR5.</b> Это уже стандарт в 2026. Значительно выше пропускная способность и тактовая частота чем у DDR4.</li>
-                    <li><b style={styles.b}>Объем - 64 GB.</b> Две по 64 GB лучше чем четыре по 32 GB, это дает дополнительные 10-20% по бенчмаркам.</li>
+                    <li><b style={styles.b}>Тип - DDR5.</b> Современные процессоры и материнские платы попросту не работают с <term style={styles.term}>DDR4</term> </li>
+                    <li><b style={styles.b}>Объем - 64 GB.</b> 2 по 64 GB лучше чем 4 по 32 GB (это дает дополнительные 10-20% по бенчмаркам).</li>
                     <li><b style={styles.b}>Поддержка EXPO.</b> С помощью этой функции можно просто переключить один параметр в BIOS и получить оптимальные параметры, без ковыряния низкоуровневых параметров.</li>
                     <li><b style={styles.b}>Не геймерская.</b> Очень много какого железа позиционируется как геймерское, для меня это всегда огромный минус.</li>
                   </ul>
                 </p>
 
                 <p style={styles.p}>
-                  Очень мало моделей подходят под эти критерии, я выбрал <a href="todo">ek.us</a> - это <a href="TODO">Kingston Fury Beast DDR5</a>.
+                  Очень мало моделей подходят под эти критерии, я выбрал <a href="TODO">Kingston Fury Beast DDR5</a>.
                 </p>
               </section>
             </category>
@@ -725,32 +729,35 @@ export default function () {
               <section style={styles.category.section}>
                 <p style={styles.p}>
                   Самое главное, что бы материнская плата поддерживала все выбранное железо.
-                  Если ваша цель - это запуск локальных нейросетей обратите внимание на параметр, он увеличивает скорость до 30%.
                 </p>
 
                 <p style={styles.p}>
                   Мои требования к материнской плате:
                   <ul style={styles.ul}>
                     <li>
-                      <b style={styles.b}>Поддержка AMD.</b>
-                      Под <term style={styles.term}>AMD</term> процессор нужен <term style={styles.term}>AMD</term> сокет на материнской плате.
+                      <b style={styles.b}>Поддержка <term style={styles.term}>AM5</term>.</b>
+                      Под <term style={styles.term}>AMD</term> процессор нужен <term style={styles.term}>AM5</term> сокет на материнской плате.
                     </li>
                     <li>
-                      <b style={styles.b}>Поддержка FCLK в BIOS.</b>
+                      <b style={styles.b}>Поддержка <term style={styles.term}>FCLK</term>.</b>
                       Этой функцией можно увеличить тактовую частоту <term style={styles.term}>Inifinity Fabric</term>.
-                      По бенчмаркам это дает +20-30% скорости к нейросетям, которые не помещаются в видеокарте и скидываются в <term style={styles.term}>RAM</term>.
+                      По бенчмаркам это дает +10-20% скорости к нейросетям, которые не помещаются в видеокарте и скидываются в <term style={styles.term}>RAM</term>.
                     </li>
                     <li>
-                      <b style={styles.b}>Поддержка EXPO.</b>
+                      <b style={styles.b}>Поддержка <term style={styles.term}>EXPO</term>.</b>
                       Вместо ковыряния всех параметров оперативки вручную удобнее просто переключить один тумблер.
                     </li>
                     <li>
-                      <b style={styles.b}>Поддержка RAM 128 GB DDR5.</b>
-                      Нужно для нейросетей, описывал выше.
+                      <b style={styles.b}>Поддержка 4 слотов <term style={styles.term}>DDR5</term>.</b>
+                      Сейчас я использую только 2 слота, но пусть будет 4 на случай если захочется больше.
                     </li>
                     <li>
-                      <b style={styles.b}>Поддержка WiFi и Bluetooth.</b>
+                      <b style={styles.b}>Поддержка <term style={styles.term}>WiFi</term> и <term style={styles.term}>Bluetooth</term>.</b>
                       Удобно, если они сразу есть на материнке.
+                    </li>
+                    <li>
+                      <b style={styles.b}>Поддержка <term style={styles.term}>PCIe 5.0</term>.</b>
+                      Процессор общается с диском и видео-картой по <term style={styles.term}>PCIe</term>, чем он быстрее, тем быстрее это общение.
                     </li>
                   </ul>
                 </p>
@@ -781,16 +788,17 @@ export default function () {
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  Вы можете подумать, что раз я такой техногик, то у меня какой-нибудь <term style={styles.term}>Linux</term> типа <a href="TODO">Ubuntu</a>.
+                  Вы можете подумать, что раз я такой техногик, то у меня что-то типа <a href="TODO">Ubuntu</a>.
                   Но это совершенно не так.
-                  Самым главным минусом убунты для меня является то, что ней не работает <a href="https://www.autohotkey.com">AutoHotkey</a> (и отсутствуют полноценных альтернативы).
-                  По этой же причине я не смотретю в сторону <a href="https://www.apple.com/macos">MacOS</a>.
+                  Самым главным минусом убунты для меня является то, что ней не работает <a href="https://www.autohotkey.com">AutoHotkey</a> (который я использую <b style={styles.b}>очень</b> активно).
+                  По этой же причине я не смотрю в сторону <a href="https://www.apple.com/macos">MacOS</a>.
+                  Так же на винде самая удобная система управления окнами.
                 </p>
               </section>
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  Настройка <a href="https://www.microsoft.com/windows">Windows</a> у меня в три этапа:
+                  Настройка <a href="https://www.microsoft.com/windows">Windows</a> у меня происходит в три этапа:
                   <ul style={styles.ul}>
                     <li><clickable onClick={() => setModal("boilerplate")} style={styles.clickable}>Удаление бойлерплейта</clickable></li>
                     <li><clickable onClick={() => setModal("components")} style={styles.clickable}>Отключение компонентов</clickable></li>
@@ -828,8 +836,6 @@ export default function () {
 
               <p style={styles.p}>
                 Из моей практики это покрывает все пограничные случаи, почти не приходится пользоваться <a>Windows Store</a> (это скорее исключение).
-                Ну а игры гружу через <a href="TODO">Steam</a>.
-                Редко используемые веб-приложения открываю в браузере.
               </p>
 						</category>
 
@@ -948,10 +954,10 @@ export default function () {
               <section style={styles.category.section}>
                 <p style={styles.p}>
                   Браузеры с фокусом на приватность сразу идут лесом (<a href="https://duckduckgo.com/app">Duckduckgo</a>, <a href="https://brave.com">Brave</a>, <a href="https://mullvad.net/en/browser">Mullvad</a>).
-                  Как показывает практика, браузеры в своих попытках обеспечить приватность зачастую ломают функционал веб приложения.
-                  Честное слово, мне абсолютно пофиг на то что веб-приложения мониторят мою активность и собирают аналитику.
+                  Как показывает практика, браузеры в своих попытках обеспечить приватность зачастую ломают функционал.
+                  Честное слово, мне абсолютно пофиг на то что какое-то приложение мониторит мою активность и собирают аналитику.
                   Но мне не пофиг на то, когда веб-приложения ломаются.
-                  Пускай собирают свою телеметрию, благодаря этому разработчики фиксят баги и делают продукт лучше.
+                  Пускай собирают свою телеметрию, благодаря этому разработчики исправляют ошибки и делают продукт лучше.
                 </p>
               </section>
 
