@@ -342,12 +342,12 @@ export default function () {
               <p style={styles.p}>
                 Прошло время, в игры я играть перестал, но интерес к настройке всего и вся у меня остался.
                 В этой статье я хочу опубликовать свой "конфиг" заточенный под программирование.
+                Железо, софт и горячие клавиши для меня один стек: если действие делается руками каждый день, оно должно стать хоткеем или скриптом.
               </p>
 
               <p style={styles.p}>
                 Этот текст написан человеком.
                 ИИ использовался только для обучения и проверки на ошибки.
-                Хотите, чтобы я переписал это в более дружелюбном стиле, или оставить как есть?
               </p>
 						</category>
 
@@ -471,6 +471,8 @@ export default function () {
                     <li>
                       <b style={styles.b}>Разрешение:</b> <term style={styles.term}>3840x2160</term> для основного, <term style={styles.term}>2560x1440</term> для дополнительных.
                       На основном мониторе должно быть достаточно места что бы в IDE помещалось <clickable style={styles.clickable} onClick={() => alert('TODO')}>2 сплита и дерево файлов</clickable>.
+                      27" 4K это около <term style={styles.term}>163 PPI</term>, 24" QHD около <term style={styles.term}>123 PPI</term>.
+                      Текст на основном острый, боковые не мылят, если согласовать масштаб Windows.
                       На дополнительных мониторах ширина составляет <term style={styles.term}>1440</term> пикселей, а это самая популярная ширина на ноутбуках.
                       Так что практически все приложения будут отображаться нормально, не смотря на то что монитор стоит вертикально.
                     </li>
@@ -495,6 +497,18 @@ export default function () {
                 </p>
                 <p style={styles.p}>
                   Все мониторы стоят на кронштейнах и скреплены сзади <clickable onClick={() => alert('TODO')} style={styles.clickable}>суперклеем с дверными петлями</clickable>, чтобы не было зазоров.
+                </p>
+
+                <p style={styles.p}>
+                  Пять мониторов это ещё и задачка по портам.
+                  У флагманской видеокарты обычно 3–4 выхода, а экранов у меня пять.
+                  Поэтому дополнительные <term style={styles.term}>Philips</term> выбраны ещё и из‑за <term style={styles.term}>DisplayPort Out</term>: их можно вешать цепочкой <term style={styles.term}>MST / daisy chain</term>, а не покупать док и не резать слот видеокарты.
+                </p>
+
+                <p style={styles.p}>
+                  Масштаб Windows на основном 4K держу так, чтобы логическая ширина совпадала с боковыми <term style={styles.term}>1440</term>.
+                  Иначе окна, которые перетаскиваешь с центра на вертикальный монитор, прыгают по размеру.
+                  Гнаться за ультрашироким 49" я не стал: в IDE мне нужны независимые приложения, а не одна огромная поверхность.
                 </p>
               </section>
 
@@ -547,6 +561,12 @@ export default function () {
               <p style={styles.p}>
                 <b style={styles.b}>Углубления.</b>
                 Благодаря углублениям на клавиатуре ладонь лежит удобнее с физиологической точки зрения.
+              </p>
+
+              <p style={styles.p}>
+                Раскладку не менял на <term style={styles.term}>Colemak</term> / <term style={styles.term}>Dvorak</term> / <term style={styles.term}>Workman</term>.
+                В вакууме они быстрее, но я живу в хоткеях IDE, браузера и <a href="https://www.autohotkey.com">AutoHotkey</a>.
+                Ломать <term style={styles.term}>QWERTY</term> ради теоретических WPM — глупо, если <term style={styles.term}>CTRL-S</term> и навигация сидят в мышцах глубже, чем буквы.
               </p>
 
               <p style={styles.p}>
@@ -632,6 +652,8 @@ export default function () {
                   Разница огромная, но <a href="TODO">Nvidia RTX 5090</a> стоит около $4.000, а <a href="TODO">AMD RX 9070 XT</a> около 800$.
                   Каждый решает сам, готов ли он переплачивать или нет.
                   Я очень активно использую локальные нейросети, поэтому я выбрал <a href="TODO">Nvidia RTX 5090</a>.
+                  Мне нужна не картинка в 4K 240 Гц, а объём <term style={styles.term}>VRAM</term> и скорость матричных умножений.
+                  Слот держу в <term style={styles.term}>PCIe 5.0 x16</term>: когда модель не влезает в видеокарту, куски едут из оперативки, и обрезанный x8 уже тормозит.
                 </p>
               </section>
             </category>
@@ -660,7 +682,8 @@ export default function () {
                 </p>
 
                 <p style={styles.p}>
-                  К тому же на <term style={styles.term}>AMD</term> процессорах можно увеличить тактовую частоту <term style={styles.term}>Infinity Fabric</term>, и получить прирост в скорости работы локальных нейросетей на 30%.
+                  К тому же на <term style={styles.term}>AMD</term> процессорах можно увеличить тактовую частоту <term style={styles.term}>Infinity Fabric</term>.
+                  Сладкая точка для меня: память <term style={styles.term}>DDR5-6000</term> и <term style={styles.term}>FCLK 2000</term> в режиме 1:1, без лотереи на 7200 МТ/с.
                   Поэтому я выбираю <a href="TODO" style={styles.term}>AMD Ryzen 9950X</a>.
                 </p>
               </section>
@@ -673,6 +696,7 @@ export default function () {
                 <p style={styles.p}>
                   Быстрый SSD влияет на скорость работы программ намного больше чем мощный процессор.
                   Cамое главный параметр на который нужно смотреть - это <term style={styles.term}>IOPS</term> (Input Output Per Second).
+                  Маркетинг пишет последовательные ГБ/с, а IDE, git status и поиск по репозиторию живут на случайном доступе.
                   Мне хватает 4TB с большим запасом.
                 </p>
 
@@ -711,7 +735,7 @@ export default function () {
                   Мои критерии при выборе оперативки:
                   <ul style={styles.ul}>
                     <li><b style={styles.b}>Тип - DDR5.</b> Современные процессоры и материнские платы попросту не работают с <term style={styles.term}>DDR4</term> </li>
-                    <li><b style={styles.b}>Объем - 64 GB.</b> 2 по 64 GB лучше чем 4 по 32 GB (это дает дополнительные 10-20% по бенчмаркам).</li>
+                    <li><b style={styles.b}>Объем - 128 GB комплектом 2×64.</b> Две планки лучше, чем четыре по 32 GB: контроллер памяти не душит частоту и <term style={styles.term}>FCLK</term>.</li>
                     <li><b style={styles.b}>Поддержка EXPO.</b> С помощью этой функции можно просто переключить один параметр в BIOS и получить оптимальные параметры, без ковыряния низкоуровневых параметров.</li>
                     <li><b style={styles.b}>Не геймерская.</b> Очень много какого железа позиционируется как геймерское, для меня это всегда огромный минус.</li>
                   </ul>
@@ -759,6 +783,11 @@ export default function () {
                       <b style={styles.b}>Поддержка <term style={styles.term}>PCIe 5.0</term>.</b>
                       Процессор общается с диском и видео-картой по <term style={styles.term}>PCIe</term>, чем он быстрее, тем быстрее это общение.
                     </li>
+                    <li>
+                      <b style={styles.b}><term style={styles.term}>Resizable BAR</term>.</b>
+                      Процессор должен видеть всю память видеокарты целиком, а не кусками по 256 МБ.
+                      Для оффлоада модели из <term style={styles.term}>RAM</term> в GPU это не маркетинг, а шина.
+                    </li>
                   </ul>
                 </p>
 
@@ -769,10 +798,19 @@ export default function () {
             </category>
 
             <category style={styles.category}>
+              <topper style={styles.topper}>Наушники</topper>
+
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  <a href="https://us.sennheiser-hearing.com/products/momentum-5-wireless?variant=62714248495475">Sennhizer Momentum 5 Wireless</a>.
-                  Самый главный критерий - что бы были беспроводными и долго держали заряд.
+                  Нужны полноразмерные <term style={styles.term}>over-ear</term> - чаша вокруг уха, не накладные таблетки.
+                  Накладные давят на хрящ, через час уже не работается.
+                  Геймерские гарнитуры с микрофоном на палке и RGB сразу нет - микрофон на столе лучше.
+                </p>
+
+                <p style={styles.p}>
+                  Выбрал <a href="https://us.sennheiser-hearing.com/products/momentum-5-wireless?variant=62714248495475">Sennheiser Momentum 5 Wireless</a>.
+                  Беспроводные, шумодав, до 57 часов с ANC, батарею можно заменить отвёрткой.
+                  Для звонков и самолёта важнее, чем «студийный» провод без микрофона.
                 </p>
               </section>
             </category>
@@ -1273,6 +1311,10 @@ export default function () {
                       - простая и поэтому лучшая утилита для просмотра характеристик железа
                     </li>
                     <li>
+                      <a href="https://www.hwinfo.com">HWiNFO</a>
+                      - когда нужно не "какое железо", а температуры, лимиты питания и что именно троттлит.
+                    </li>
+                    <li>
                       <a href="https://www.speedtest.net">Ookla</a>
                       - замер скорости интернета
                     </li>
@@ -1374,9 +1416,10 @@ export default function () {
                 <p style={styles.p}>
                   Инструменты для программирования
                   <ul style={styles.ul}>
-                    <li><a href="https://git-scm.com">Git</a> - как по мне лучше, но гит это стандарт де-факто.</li>
-                    <li><a href="https://git-scm.com">Jujutsu</a> - более современный аналог гита.</li>
+                    <li><a href="https://git-scm.com">Git</a> - как по мне лучше, но гит это стандарт де-факто. Коммиты подписываю, конфиг с алиасами лежит рядом с остальным сетапом.</li>
+                    <li><a href="https://github.com/jj-vcs/jj">Jujutsu</a> - более современный аналог гита.</li>
                     <li><a href="https://github.com">GitHub</a> - использую что бы мониторить самые последние и свежие инструменты.</li>
+                    <li><a href="https://learn.microsoft.com/sysinternals/downloads/process-explorer">Process Explorer</a> - диспетчер задач для людей, которым нужно увидеть хендлы и DLL, а не просто процент CPU.</li>
                     <li><a href="https://www.virtualbox.org">VirtualBox</a> - в основном использую что бы запускать софт которому не доверяю.</li>
                     <li><a href="https://www.cloudflare.com">Cloudflare</a> - DNS-хостинг, анти-DDoS и публичный кэш.</li>
                     <li><a href="https://github.com/FiloSottile/mkcert">mkcert</a> (59k звезд на <a href="https://github.com/FiloSottile/mkcert">Github</a>) - утилита для управления сертификатами.</li>
