@@ -444,44 +444,70 @@ export default function () {
             <category style={styles.category}>
               <topper style={styles.topper}>Мониторы</topper>
 
-              <p style={styles.p}>
-                Количество мониторов для меня намного важнее, чем мощная видеокарта или процессор.
-                Я использую <clickable onClick={() => alert('TODO')} style={styles.clickable}>5 мониторов</clickable>: один основной (горизонтальный, 222 дюйма) и 4 дополнительных (вертикальных, 222 дюйма).
-              </p>
+              <section style={styles.category.section}>
+                <p style={styles.p}>
+                  Количество мониторов для меня это самый важный параметр.
+                  Намного важнее, чем мощный процессор или видео-карта.
+                  У меня стоит 5 мониторов, один основной по центру, и четыре дополнительных по бокам вертикально.
+                </p>
 
-              <p style={styles.p}>
-                Сейчас найти маленькие мониторы проблематично, все гонятся за большими.
-                Но по факту даже у вертикальных мониторов ширина составляет 1368 пикселей, а это самая популярная ширина на ноутбуках.
-                Так что горизонтального пространства хватает для большинства приложений.
-              </p>
+                <p style={styles.p}>
+                  Большее количество мониторов запихнуть уже не практично, если ставить больше боковых то они будут слишком далеко.
+                  Если ставить мониторы выше - то вверх смотреть <b style={styles.b}>крайне не удобно</b>.
+                  Верхняя граница горизонтального монитора должна быть на уровне глаз (не по центру, вниз смотреть удобнее, чем вверх).
+                  Смотреть в самый верх вертикальных мониторов уже немного дискомфортно, но благо туда приходится смотреть не часто.
+                </p>
 
-              <p style={styles.p}>
-                Все мониторы на кронштейнах и скреплены <clickable onClick={() => alert('TODO')} style={styles.clickable}>суперклеем с дверными петлями</clickable>, чтобы не было зазоров.
-              </p>
+                <p style={styles.p}>
+                  Мои требования к мониторам
+                  <ul>
+                    <li>
+                      <b style={styles.b}>Диогональ:</b> 27 для основного, 24 для дополнительных.
+                      Если вертикально ставить мониторы шире 24 дюймов, то это уже слишком высоко и не удобно.
+                      Если основной монитор больше 27 дюймов, то дополнительные уезжают слишком далеко.
+                      Все обычно гонятся за большими мониторами, но в программировании в этом нет необходимости.
+                    </li>
+                    <li>
+                      <b style={styles.b}>Расширение:</b> 3840x2160 для основного, 2560x1440 для дополнительных.
+                      На основном мониторе должно быть достаточно места что бы помещалось 2 сплита и дерево проектов в IDE.
+                      На дополнительных мониторах ширина составляет 1440 пикселей, а это самая популярная ширина на ноутбуках.
+                      Так что 90 процентов приложений отображаются более чем нормально на такой ширине.
+                    </li>
+                    <li>
+                      <b style={styles.b}>Покрытие:</b> обязательно матовое (не глянцевым). Глянцевое лучше передает цвета, на матовом меньше бликов. В программировании совершенно пофиг на цвета, а вот отражение в глянце бесит.
+                    </li>
+                    <li>
+                      <b style={styles.b}>Матрица:</b> желательно какой-нибудь <term style={styles.term}>OLED</term> (<term style={styles.term}>WOLED</term> или <term style={styles.term}>QD-OLED</term>), но и <term style={styles.term}>IPS</term> подойдет.
+                      Матрица влияет на цветопередачу, на которую в программировании по большому счету пофиг.
+                    </li>
+                  </ul>
+                </p>
+                <p style={styles.p}>
+                  Подойдут совершенно любые мониторы удовлетворяющие этим критериям, я использую:
+                  <ul style={styles.ul}>
+                    <li><a href="https://www.acer.com/us-en/predator/monitors/x27u-qd-oled/pdp/UM.GXXAA.109">Acer X1BMIIPPRUZX</a> - основной.</li>
+                    <li><a href="https://www.philips.co.uk/c-p/24B2U3601_00/business-monitor-lcd-monitor-with-usb-c">Philips 24B2U3601</a> - дополнительные.</li>
+                  </ul>
+                </p>
+              </section>
 
-              <p style={styles.p}>
-                Каждое приложение я ментально закрепляю за своим монитором:
+              <section style={{...styles.category.section, borderBottom: null}}>
+                <p style={styles.p}>
+                  Все мониторы на кронштейнах и скреплены <clickable onClick={() => alert('TODO')} style={styles.clickable}>суперклеем с дверными петлями</clickable>, чтобы не было зазоров.
+                </p>
 
-                <ul style={styles.ul}>
-                  <li>Слева-слева: <a href="https://www.warp.dev">Warp</a>.</li>
-                  <li>Слева: <a href="https://www.chromium.org">Chromium</a> с открытым дебаггером.</li>
-                  <li>Центр: <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> | <a href="https://www.google.com/chrome/">Chrome</a> | любое другое временное приложение.</li>
-                  <li>Справа: <a href="https://claude.ai">Claude</a>.</li>
-                  <li>Справа-справа: <a href="https://www.thunderbird.net">Thunderbird</a> | <a href="https://telegram.org">Telegram</a> | <a href="https://slack.com">Slack</a>.</li>
-                </ul>
-              </p>
+                <p style={styles.p}>
+                  Каждое приложение я ментально закрепляю за своим монитором:
 
-              <p style={styles.p}>
-                Что самое интересное под задачи дополнительных мониторов, вертикальные 22 дюймовые подходят <b>намного лучше</b>, чем горизонтальные 29 дюймововые.
-                Нейросети, терминал, браузер с дебаггером (сверху веб-приложение, снизу дебаггер), thunderbird (сверху письма, снизу текст), все мессенджеры, Instagram, Twitter - всем этим пользоваться <b>удобнее</b> на вертикальном мониторе.
-                Горизонтальный монитор удобнее для редактора (открыто два файла одновременно + дерево проектов), просмотр видео и фотографий.
-                Вертикально ставить 29 дюймовый монитор не советую, очень высоко будет верхняя граница, не удобно.
-              </p>
-
-              <p style={styles.p}>
-                Больше пяти мониторов уже непрактично.
-                Если ставить по бокам - они будут слишком далеко, а два ряда - плохая идея: смотреть неудобно физиологически.
-              </p>
+                  <ul style={styles.ul}>
+                    <li>Слева-слева: <a href="https://www.warp.dev">Warp</a>.</li>
+                    <li>Слева: <a href="https://www.chromium.org">Chromium</a> с открытым дебаггером.</li>
+                    <li>Центр: <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> | <a href="https://www.google.com/chrome/">Chrome</a> | любое другое временное приложение.</li>
+                    <li>Справа: <a href="https://claude.ai">Claude</a>.</li>
+                    <li>Справа-справа: <a href="https://www.thunderbird.net">Thunderbird</a> | <a href="https://telegram.org">Telegram</a> | <a href="https://slack.com">Slack</a>.</li>
+                  </ul>
+                </p>
+              </section>
             </category>
 
             <category style={styles.category}>
@@ -523,21 +549,53 @@ export default function () {
             </category>
 
             <category style={styles.category}>
+              <topper style={styles.topper}>Мышка</topper>
+
+              <p style={styles.p}>
+                Первое требование к мышке это форма.
+                Форма должна быть симметричная (так удобнее перетаскивать ее).
+                Размер должен быть такой, что бы можно было упереться ладонью в ковер и доводить курсор до нужно точки пальцами.
+              </p>
+
+              <p style={styles.p}>
+                Мои требования к мышке:
+
+                <ul style={styles.ul}>
+                  <li>
+                    <b style={styles.b}>Хват.</b>
+                    Обязательно <term style={styles.term}>Claw</term>.
+                    Я вообще не понимаю как люди пользуются мышками где рука должна полностью лежать на мышке.
+                  </li>
+                  <li>
+                    <b style={styles.b}>Форма.</b>
+                    Обязательно <term style={styles.term}>Симметричная</term>.
+                    Желательно что бы бока мышки были немного во внутрь (что бы хватать было удобнее).
+                  </li>
+                  <li>
+                    <b style={styles.b}>Подключение.</b>
+                    Обязательно <term style={styles.term}>Bluetooth</term> (вообще чем меньше проводов - тем лучше).
+                  </li>
+                  <li>
+                    <b style={styles.b}>Кнопки.</b>
+                    Третье наличие боковых кнопок (я программирую их на копирование и вставку через <a href="https://www.autohotkey.com">AutoHotkey</a>).
+                  </li>
+                </ul>
+              </p>
+
+              <p style={styles.p}>
+                Дальше просто выбираем мышку, которая удовлетворяет всем этим требованиям и держит заряд больше всего.
+                Под эти требования подходит много мышек, я выбрал <a href="https://www.logitechg.com/en-us/shop/p/pro-x2-superlight-wireless-mouse">Logitech G Pro X Superlight 2</a>.
+              </p>
+            </category>
+
+            <category style={styles.category}>
               <topper style={styles.topper}>Видеокарта</topper>
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  Мощная видео-карта влияет на скорость работы локальных нейросетей и на FPS в играх.
-                  Если вы не пользуетесь ни тем ни тем, то мощная видеокарта вам не нужна.
-                </p>
-              </section>
-
-              <section style={styles.category.section}>
-                <p style={styles.p}>
-                  Видео-карту (да и вообще любое другое железо) лучше выбирать по бенчмаркам, а не по техническим характеристикам.
-                  Для замера производительности в играх и производительности нейросетей используются разные бенчмарки.
-                  Технические характеристики - это просто информация о том, как достигается тот или иной показатель в бенчмарке.
-
+                  Мой сетап заточен под программирования, FPS в играх меня не интересует вообще.
+                  Но, мощная видеокарта очень сильно влияет на скорость работы локальных нейросетей.
+                  Если бы не локальные нейросети, то мне бы подошла практическая любая видеокарта, поддерживающая 5 мониторов.
                 </p>
               </section>
 
@@ -556,17 +614,12 @@ export default function () {
                 </p>
 
                 <p style={styles.p}>
-                  Просто для сравнения <term style={styles.term}>GPT-5.6 Luna</term> (модель по умолчанию <term style={styles.term}>ChatGPT</term> в бесплатном тарифе) выдает примерно 200 tokens/s.
-                  Иногда я выбираю очень тяжелые модели и даже 40 tokens/s мне более чем достаточно.
+                  Просто для ориентира <term style={styles.term}>GPT-5.6 Luna</term> (модель по умолчанию <term style={styles.term}>ChatGPT</term> в бесплатном тарифе) выдает примерно 200 tokens/s.
+                  По большому счету даже 40 tokens/s более чем достаточно.
                 </p>
 
                 <p style={styles.p}>
-                  Так что если для вас цена это важный фактор то можете смело брать <a href="TODO">AMD RX 9070 XT</a>.
-                  По соотношению цена / качество она даже <b>лучше</b> чем <a href="TODO">AMD RX 9070 XT</a>.
-                </p>
-
-                <p style={styles.p}>
-                  Я перфекционист, у меня стоит <a href="TODO">Nvidia RTX 5090</a>.
+                  Но я перфекционист, у меня стоит <a href="TODO">Nvidia RTX 5090</a>.
                 </p>
               </section>
             </category>
@@ -576,7 +629,9 @@ export default function () {
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
+                  Процессор так не является определяющим фактором в программировании.
                   При выборе процессора я смотрю на показатели <a href="TODO">GeekBench</a> бенчмарка.
+                  На этом процессоре можно подкрутить тактовую частоту, что ускоряет скорость обмена данными между оперативкой и процессором, что дает прирост в скорости работы локальных нейросетей на 30%.
                 </p>
 
                 <p>
@@ -596,7 +651,8 @@ export default function () {
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  Хороший SSD влияет на общую производительность практически всех операций скорее всего даже больше, чем мощный процессор.
+                  Каких-либо специфичных требований к SSD у меня нет.
+                  Должен быть быстрым и не менее 1TB.
                   <a href="TODO">Samsung SSD 9100 Pro</a>
                 </p>
               </section>
@@ -632,33 +688,6 @@ export default function () {
                   <a href="https://us.sennheiser-hearing.com/products/momentum-5-wireless?variant=62714248495475">Sennhizer Momentum 4 Wireless</a>. Самый главный критерий - что бы были беспроводными и долго держали заряд.
                 </p>
               </section>
-            </category>
-
-            <category style={styles.category}>
-              <topper style={styles.topper}>Мышка</topper>
-
-              <p style={styles.p}>
-                Первое требование к мышке это форма.
-                Форма должна быть симметричная (так удобнее перетаскивать ее).
-                Размер должен быть такой, что бы можно было упереться ладонью в ковер и доводить курсор до нужно точки пальцами.
-              </p>
-
-              <p style={styles.p}>
-                Категорически не подходят мышки, где вся ладонь должна лежать на мышке.
-                В этом случае доводить курсор доводить пальцами не получается и из‑за этого заметно падает точность.
-              </p>
-
-              <p style={styles.p}>
-                Второе требование - это что бы мышка беспроводной (вообще чем меньше проводов - тем лучше).
-              </p>
-
-              <p style={styles.p}>
-                Третье требование  - наличие боковых кнопок (я программирую их на копирование и вставку через <a href="https://www.autohotkey.com">AutoHotkey</a>).
-              </p>
-
-              <p style={styles.p}>
-                Под эти требования подходит много мышек, я выбрал <a href="https://www.logitechg.com/en-us/shop/p/pro-x2-superlight-wireless-mouse">Logitech G Pro X Superlight 2</a>.
-              </p>
             </category>
 
             <separator style={styles.separator}>
@@ -933,7 +962,7 @@ export default function () {
                   Если используете не для коммерческой разработки, то он бесплатен.
                 </p>
 
-                <p>
+                <p style={styles.p}>
                   Вот список того функционала, которым пользуюсь каждый день и который в <a href="TODO">Zed</a> так и <a href="TODO">Cursor</a> либо полностью отсутствует либо реализован хуже:
                   <ul style={styles.ul}>
                     <li>Поддержка <a href="https://git-scm.com">Git</a></li>
@@ -975,7 +1004,7 @@ export default function () {
               <section style={styles.category.section}>
                 <p style={styles.p}>
                   Нейросети - совершили революцию, это глупо отрицать.
-                  А в программировании он совершил революцию больше чем где-то бы то ни было еще.
+                  А в программировании они совершил революцию больше чем где-то бы то ни было еще.
                   И очень важно грамтно заинтегрировать нейросети в свой ежедневный рабочий процесс.
                 </p>
               </section>
@@ -1051,8 +1080,8 @@ export default function () {
 
               <section style={styles.category.section}>
                 <p style={styles.p}>
-                  <a href="https://www.ghisler.com">Total Commander</a>.
-                  Интерфейс мог бы быть по лучше, но он двух-панельный, функциональный и позволяет гибко настраивать горячие клавиши.
+                  <a href="https://www.ghisler.com">Total Commander</a> -
+                  интерфейс не самый лучший, но он двух-панельный, функциональный и позволяет гибко настраивать горячие клавиши.
                   В <a href="https://www.ghisler.com">Total Commander</a> включил темную тему, убрал лишний UI, поставил шрифт <a href="https://sourcefoundry.org/hack/">Hack</a>.
                   Горячие клавиши заточены под мою клавиатуру и симметричны с теми, что в <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>.
                   Вот как выглядит <clickable style={styles.clickable}>внешний вид</clickable> и вот мой <clickable style={styles.clickable}>конфиг</clickable>.
@@ -1290,6 +1319,7 @@ export default function () {
                   Остальное
                   <ul style={styles.ul}>
                     <li><a href="https://www.microsoft.com/software-download/windows11">MediaCreationTool</a> - создание установочных флешек.</li>
+                    <li><a href="https://www.voidtools.com">Everything</a> - локальный поисковик файлов.</li>
                     <li><a href="https://veracrypt.fr">VeraCrypt</a> - лучшее решение для шифрования диска.</li>
                     <li><a href="https://www.qbittorrent.org">qBittorrent</a> - торренты.</li>
                     <li><a href="https://2gis.ru">2GIS</a> - справочник организаций и карты. <a href="TODO">Яндекс картами</a> не пользуюсь потому что там много рекламы.</li>
@@ -1322,7 +1352,9 @@ export default function () {
                 <a href="https://github.com/tw93/Pake">Pake</a> (61k звезд на <a href="https://github.com/tw93/Pake">Github</a>) - позволяет собирать бинарники из сайтов; непонятно зачем, если можно создать ярлык.
               </p>
               <p style={styles.p}>
-                <li><a href="https://www.voidtools.com">Everything</a> - локальный поисковик файлов.</li>
+                <li>
+
+                </li>
                 Локальный поисковик файлов, полностью заменил поиск в <a href="TODO">TotalCommander</a>.
               </p>
               <p style={styles.p}>
