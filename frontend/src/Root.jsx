@@ -155,8 +155,7 @@ export default function () {
 		width: layout.left,
 		pointerEvents: "none",
 		overflow: "hidden",
-		WebkitMaskImage:
-			"linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))",
+		WebkitMaskImage: "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))",
 		maskImage: "linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))",
 		backgroundImage: `
       repeating-linear-gradient(to bottom, transparent, transparent 39px, ${colors.border.medium} 39px, ${colors.border.medium} 40px),
@@ -172,8 +171,7 @@ export default function () {
 		width: layout.left,
 		pointerEvents: "none",
 		overflow: "hidden",
-		WebkitMaskImage:
-			"linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))",
+		WebkitMaskImage: "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))",
 		maskImage: "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))",
 		backgroundImage: `
       repeating-linear-gradient(to bottom, transparent, transparent 39px, ${colors.border.medium} 39px, ${colors.border.medium} 40px),
