@@ -1,5 +1,9 @@
 .idea
-sender/public/assets
-sender/public/index.html
-sender/public/index.js
-sender/public/index.js.map
+node_modules
+
+sender/public
+
+.env
+
+*.pid
+*.log

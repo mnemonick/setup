@@ -1,9 +1,41 @@
 {
-  "nodeModulesDir": "auto",
+  "$schema": "https://raw.githubusercontent.com/denoland/deno/main/cli/schemas/config-file.v1.json",
+  "tasks": {
+    "watch": "deno run --permission-set=vite vite build --configLoader native --mode=development --watch",
+    "validate": "deno check frontend.jsx vite.config.ts",
+    "lint": "deno run --permission-set=biome @biomejs/biome lint --write --error-on-warnings",
+    "format": "deno run --permission-set=biome @biomejs/biome format --write",
+    "build": "deno run --permission-set=vite vite build --configLoader native --mode=production",
+    "check": "deno run --permission-set=biome @biomejs/biome ci --error-on-warnings"
+  },
   "imports": {
-    "@biomejs/biome": "npm:@biomejs/biome@^2.5.9",
-    "react": "npm:react@^19.2.8",
-    "react-dom": "npm:react-dom@^19.2.8",
-    "vite": "npm:vite@8.2.1"
+    "~/": "./",
+    "@types/react": "npm:@types/react@19.3.0",
+    "@types/react-dom": "npm:@types/react-dom@19.3.0",
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@2.0.3",
+    "react": "npm:react@19.3.0",
+    "react-dom": "npm:react-dom@19.3.0",
+    "vite": "npm:vite@8.3.0"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "jsxImportSourceTypes": "@types/react",
+    "lib": ["dom", "dom.iterable", "dom.asynciterable", "esnext", "deno.ns"],
+    "types": ["vite/client"]
+  },
+  "permissions": {
+    "vite": {
+      "env": true,
+      "sys": true,
+      "ffi": true,
+      "run": true,
+      "read": true,
+      "write": true
+    },
+    "biome": {
+      "run": true,
+      "env": true
+    }
   }
 }

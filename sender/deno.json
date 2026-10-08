@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/denoland/deno/main/cli/schemas/config-file.v1.json",
+  "tasks": {
+    "watch": "deno watch --permission-set=default --env-file=../.env sender.ts",
+    "validate": "deno check sender.ts",
+    "lint": "deno run --permission-set=biome @biomejs/biome lint --write --error-on-warnings",
+    "format": "deno run --permission-set=biome @biomejs/biome format --write",
+    "start": "deno run --permission-set=default --env-file=../.env sender.ts",
+    "check": "deno run --permission-set=biome @biomejs/biome ci --error-on-warnings"
+  },
+  "permissions": {
+    "default": {
+      "read": ["./public", "/usr/local/etc/letsencrypt"],
+      "net": true,
+      "env": true
+    },
+    "biome": {
+      "run": true,
+      "env": true
+    }
+  }
+}

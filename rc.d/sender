@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# PROVIDE: sender
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name="sender"
+rcvar="${name}_enable"
+
+load_rc_config $name
+: ${sender_enable:="NO"}
+: ${sender_chdir:="/root/setup/sender"}
+
+# daemon(8) detaches the process, restarts it if it crashes (-r) and writes its output to a log file.
+pidfile="${sender_chdir}/${name}.pid"
+procname="daemon"
+command="/usr/sbin/daemon"
+command_args="-r -t ${name} -P ${pidfile} -o ${sender_chdir}/${name}.log /usr/local/bin/deno task start"
+
+run_rc_command "$1"
