@@ -1,4 +1,5 @@
-import Modal from "~/components/Modal.jsx";
+import Modal from "~/components/Modal.tsx";
+import colors from "~/globals/colors.ts";
 
 const items = [
 	"powercfg /change monitor-timeout-ac 0",
@@ -7,7 +8,7 @@ const items = [
 	"powercfg /change standby-timeout-dc 0",
 ];
 
-export default function (props) {
+export default function (props: { onClose: () => void }) {
 	const width = Math.min(720, window.innerWidth - 40);
 
 	return (

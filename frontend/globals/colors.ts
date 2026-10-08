@@ -1,4 +1,4 @@
-window.colors = {
+export default {
   main: 'hsl(211,51%,9%)',
   hover: 'hsla(215, 20%, 30%, 0.15)',
   code: 'hsl(221.54deg 62.24% 45.23% / 29%)',

@@ -1,4 +1,5 @@
-import Modal from "~/components/Modal.jsx";
+import Modal from "~/components/Modal.tsx";
+import colors from "~/globals/colors.ts";
 
 const items = [
 	"winget uninstall -e --id Microsoft.Teams",
@@ -33,7 +34,7 @@ const items = [
 	"winget uninstall -e --id MicrosoftWindows.CrossDevice",
 ];
 
-export default function (props) {
+export default function (props: { onClose: () => void }) {
 	const width = Math.min(720, window.innerWidth - 40);
 
 	return (

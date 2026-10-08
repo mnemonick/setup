@@ -1,3 +1,5 @@
+import colors from "~/globals/colors.ts";
+
 const style = document.createElement('style');
 
 style.textContent = `

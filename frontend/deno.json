@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/denoland/deno/main/cli/schemas/config-file.v1.json",
   "tasks": {
     "watch": "deno run --permission-set=vite vite build --configLoader native --mode=development --watch",
-    "validate": "deno check frontend.jsx vite.config.ts",
+    "validate": "deno check frontend.tsx vite.config.ts",
     "lint": "deno run --permission-set=biome @biomejs/biome lint --write --error-on-warnings",
     "format": "deno run --permission-set=biome @biomejs/biome format --write",
     "build": "deno run --permission-set=vite vite build --configLoader native --mode=production",

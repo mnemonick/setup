@@ -1,9 +1,9 @@
-import {useEffect} from "react";
+import {type ReactNode, type MouseEvent, type CSSProperties, useEffect} from "react";
 
-export default function (props) {
-  const styles = {};
+import colors from "~/globals/colors.ts";
 
-  styles.backdrop = {
+export default function (props: { children?: ReactNode; onClose: () => void }) {
+  const $backdrop: CSSProperties = {
     position: 'fixed',
     top: 0,
     left: 0,
@@ -17,14 +17,14 @@ export default function (props) {
     backdropFilter: 'blur(2px)'
   };
 
-  styles.content = {
+  const $content: CSSProperties = {
     background: 'black',
     // width: content.desktop ? 'auto' : 'calc(100% - 40px)',
     width: true ? 'auto' : 'calc(100% - 40px)',
     borderRadius: 20,
     border: `1px solid ${colors.border.strong}`,
     boxShadow: '0 24px 80px rgba(0, 0, 0, 0.35)',
-    marginBottom: null
+    marginBottom: undefined
     // marginBottom: content.desktop ? null : 20
   };
 
@@ -34,20 +34,20 @@ export default function (props) {
   }, []);
 
   return (
-    <backdrop style={styles.backdrop} onClick={onClose}>
-      <content style={styles.content}>
+    <backdrop style={$backdrop} onClick={onClose}>
+      <content style={$content}>
         {props.children}
       </content>
     </backdrop>
   );
 
-  function onKeyDown(event) {
+  function onKeyDown(event: KeyboardEvent) {
     if (event.key === 'Escape') {
       props.onClose();
     }
   }
 
-  function onClose(event) {
+  function onClose(event: MouseEvent) {
     if (event.target === event.currentTarget) {
       props.onClose();
     }
