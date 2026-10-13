@@ -15,7 +15,8 @@ export default function translate<T extends Lexemes>(lexemes: T): Record<keyof T
 
       const html = translation.includes('<') && translation.includes('>');
 
-      return html ? createElement(prop, {
+      return html ? createElement("span", {
+        style: {display: "inline"},
         dangerouslySetInnerHTML: {__html: translation}
       }) : translation
     }

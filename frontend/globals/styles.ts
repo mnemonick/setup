@@ -56,10 +56,25 @@ style.textContent = `
     background: ${colors.hover};
 	}
 
-	:not(html):not(head):not(script):not(style):not(b):not(span):not(i):not(a):not(em):not(strong):not(del):not(li):not(table):not(thead):not(tr):not(td):not(th):not(tbody) { 
-    display: block; 
+	:not(html):not(head):not(script):not(style):not(b):not(span):not(i):not(a):not(em):not(strong):not(del):not(li):not(table):not(thead):not(tr):not(td):not(th):not(tbody) {
+    display: block;
   }
-  
+
+  term {
+    display: inline;
+    font-family: Play;
+    border-radius: 5px;
+    padding: 0px 4px;
+    border: 1px solid ${colors.border.strong};
+    letter-spacing: 1px;
+  }
+
+  b {
+    margin-right: 5px;
+    color: ${colors.text.strong};
+    font-weight: 500;
+  }
+
   root {
     height: 100%;
   }
