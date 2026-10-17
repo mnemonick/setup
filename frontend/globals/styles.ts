@@ -67,6 +67,7 @@ style.textContent = `
     padding: 0px 4px;
     border: 1px solid ${colors.border.strong};
     letter-spacing: 1px;
+		margin-bottom: 2px;
   }
 
   b {
